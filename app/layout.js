@@ -1,5 +1,3 @@
-</> JavaScript
-
 import "./global.css";
 
 export const metadata = {
