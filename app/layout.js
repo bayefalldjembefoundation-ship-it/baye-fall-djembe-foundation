@@ -1,4 +1,7 @@
 </> JavaScript
+
+import "./global.css";
+
 export const metadata = {
   title: "Baye Fall Djembe Foundation",
   description:
