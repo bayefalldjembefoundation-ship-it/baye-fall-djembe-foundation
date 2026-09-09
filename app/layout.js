@@ -12,8 +12,12 @@ export default function RootLayout({ children }) {
       <body>
         <header>
           <nav>
-            <a href="/">Baye Fall Djembe Foundation</a>
-
+             <a href="/">
+              <img
+                src="/images/logo.jpg"
+                alt="Baye Fall Djembe Foundation"
+              />
+            </a>
             <div>
               <a href="/">Home</a>
               <a href="/founder">Founder</a>
