@@ -680,3 +680,40 @@ nav div a:hover {
 nav div a:hover::after {
   width: 100%;
 }
+
+/* MISSION — EDITORIAL LAYOUT */
+
+#mission {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  border-top: 1px solid rgba(201, 162, 74, 0.15);
+}
+
+#mission h2 {
+  max-width: 900px;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  letter-spacing: -0.035em;
+}
+
+#mission h2::before {
+  content: "OUR PURPOSE";
+  display: block;
+  margin-bottom: 28px;
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+}
+
+#mission p {
+  max-width: 720px;
+  margin-top: 35px;
+  color: rgba(245, 239, 227, 0.68);
+  font-size: 1.12rem;
+  line-height: 2;
+}
