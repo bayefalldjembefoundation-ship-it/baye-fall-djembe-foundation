@@ -13,7 +13,7 @@ export default function Home() {
         <button>Support Our Mission</button>
       </section>
 
-      <section>
+      <section id="mission">
         <h2>Our Mission</h2>
 
         <p>
@@ -25,7 +25,7 @@ export default function Home() {
         </p>
      </section>
 
-     <section>
+     <section id="programs">
         <h2>Our Programs</h2>
             
         <div>
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section id="get involved">
         <h2>Get Involved</h2>
 
         <h3>Be part of something bigger!</h3>
