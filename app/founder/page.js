@@ -144,7 +144,7 @@ export default function FounderPage() {
         </p>
       </section>
 
-      {/ BRIDGING TWO WORLDS */}
+      {/* BRIDGING TWO WORLDS */}
       <section>
         <h2>Bridging Two Worlds</h2>
 
