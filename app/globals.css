@@ -629,3 +629,54 @@ nav > a img {
   background: var(--gold);
   opacity: 0.8;
 }
+
+/* LUXURY NAVIGATION */
+
+header {
+  padding: 22px 5%;
+  background: rgba(0, 0, 0, 0.78);
+  border-bottom: 1px solid rgba(201, 162, 74, 0.18);
+}
+
+nav {
+  max-width: 1500px;
+}
+
+nav > a img {
+  width: 190px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+nav > a:hover img {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+nav div {
+  gap: 30px;
+}
+
+nav div a {
+  position: relative;
+  padding: 8px 0;
+  color: rgba(245, 239, 227, 0.82);
+}
+
+nav div a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+nav div a:hover {
+  color: var(--gold);
+}
+
+nav div a:hover::after {
+  width: 100%;
+}
