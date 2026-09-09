@@ -52,8 +52,9 @@ h2,
 h3 {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.02em;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -136,11 +137,11 @@ nav div {
 nav div a {
   color: var(--ivory);
   text-decoration: none;
-
-  font-size: 0.72rem;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.68rem;
   font-weight: 500;
 
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 
   transition: color 0.3s ease;
