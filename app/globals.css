@@ -511,3 +511,80 @@ nav > a img {
   height: auto;
   object-fit: contain;
 }
+
+/* LUXURY HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  max-width: none;
+  margin: 0;
+  padding: 180px 8% 120px;
+  display: flex;
+  align-items: center;
+  background: #000000;
+  border-bottom: 1px solid rgba(201, 162, 74, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+}
+
+.eyebrow {
+  margin: 0 0 28px;
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0 0 35px;
+  max-width: 1000px;
+  color: var(--ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4.5rem, 10vw, 9rem);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 42px;
+  padding: 16px 32px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background: var(--gold);
+  color: #000000;
+  transform: translateY(-3px);
+}
