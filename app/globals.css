@@ -717,3 +717,86 @@ nav div a:hover::after {
   font-size: 1.12rem;
   line-height: 2;
 }
+
+/* PROGRAMS — CULTURAL PILLARS */
+
+#programs {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background: #050505;
+}
+
+#programs > h2 {
+  max-width: 900px;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+}
+
+#programs > h2::before {
+  content: "WHAT WE DO";
+  display: block;
+  margin-bottom: 28px;
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+}
+
+#programs > div {
+  margin-top: 80px;
+}
+
+#programs > div > div {
+  position: relative;
+  padding: 55px 0 55px 90px;
+  border-top: 1px solid rgba(245, 239, 227, 0.12);
+}
+
+#programs > div > div::before {
+  position: absolute;
+  left: 0;
+  top: 55px;
+  color: rgba(201, 162, 74, 0.65);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+}
+
+#programs > div > div:nth-child(1)::before {
+  content: "01";
+}
+
+#programs > div > div:nth-child(2)::before {
+  content: "02";
+}
+
+#programs > div > div:nth-child(3)::before {
+  content: "03";
+}
+
+#programs > div > div h3 {
+  margin: 0 0 18px;
+  color: var(--ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+#programs > div > div p {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(245, 239, 227, 0.62);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+#programs > div > div:hover {
+  transform: translateX(10px);
+  border-top-color: rgba(201, 162, 74, 0.65);
+}
+
+#programs > div > div:hover h3 {
+  color: var(--gold);
+}
