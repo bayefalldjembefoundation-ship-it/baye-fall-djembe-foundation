@@ -56,7 +56,7 @@ export default function Home() {
         </div>
 
         <div>
-          <h3>Bridging Two World</h3>
+          <h3>Bridging Two WorldS</h3>
           <p>
             Experience Senegal through an unforgettable cultural journey designed
             to connect you with the heart of West Africa. From music, dance, food,
@@ -67,6 +67,25 @@ export default function Home() {
         </div>
       </section>
 
+       <section id="culture">
+        <p className="eyebrow">CULTURAL HERITAGE</p>
+
+        <h2>The Rhythm of a People</h2>
+
+        <p>
+          West African culture lives through rhythm, movement, storytelling,
+          and community. Through traditional drumming, dance, and cultural
+          education, we create experiences that connect people to the history,
+          spirit, and traditions of West Africa.
+        </p>
+
+        <p>
+          From the heartbeat of the djembe to the traditions passed from one
+          generation to the next, our work keeps culture alive while creating
+          meaningful connections between generations and across borders.
+        </p>
+      </section>
+            
       <section id="get involved">
         <h2>Get Involved</h2>
 
