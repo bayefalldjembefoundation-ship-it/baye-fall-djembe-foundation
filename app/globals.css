@@ -1,0 +1,504 @@
+/* =========================================
+   BAYE FALL DJEMBE FOUNDATION
+   LUXURY SENEGAL / EDITORIAL DESIGN
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================================
+   FOUNDATION
+========================================= */
+
+:root {
+  --black: #050505;
+  --black-soft: #0b0b0b;
+  --ivory: #f5efe3;
+  --gold: #c9a24a;
+  --indigo: #182a4a;
+  --brown: #6b4e32;
+  --muted: #b9b2a6;
+  --line: rgba(201, 162, 74, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--ivory);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+main {
+  background: var(--black);
+  overflow: hidden;
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(4rem, 9vw, 8rem);
+  margin: 0 0 30px;
+}
+
+h2 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  margin: 0 0 30px;
+  color: var(--ivory);
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+strong {
+  color: var(--ivory);
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  padding: 25px 5%;
+
+  background: rgba(5, 5, 5, 0.65);
+  border-bottom: 1px solid rgba(245, 239, 227, 0.08);
+
+  backdrop-filter: blur(12px);
+}
+
+nav {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+nav > a {
+  color: var(--ivory);
+  text-decoration: none;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+nav div a {
+  color: var(--ivory);
+  text-decoration: none;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  transition: color 0.3s ease;
+}
+
+nav div a:hover {
+  color: var(--gold);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section {
+  position: relative;
+
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 140px 7%;
+}
+
+section:nth-child(even) {
+  background: var(--black-soft);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+section:first-child {
+  max-width: none;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 160px 8% 120px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 5, 5, 0.98) 0%,
+      rgba(5, 5, 5, 0.88) 45%,
+      rgba(5, 5, 5, 0.55) 100%
+    );
+
+  border-bottom: 1px solid var(--line);
+}
+
+section:first-child::before {
+  content: "";
+
+  position: absolute;
+  top: 15%;
+  right: 7%;
+
+  width: 1px;
+  height: 70%;
+
+  background: linear-gradient(
+    transparent,
+    var(--gold),
+    transparent
+  );
+
+  opacity: 0.4;
+}
+
+section:first-child h1 {
+  max-width: 1000px;
+
+  color: var(--ivory);
+
+  text-transform: uppercase;
+}
+
+section:first-child h2 {
+  font-family: "Inter", Arial, sans-serif;
+
+  color: var(--gold);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+section:first-child p {
+  max-width: 680px;
+
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   GOLD BUTTONS
+========================================= */
+
+button,
+section a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  margin-top: 30px;
+  padding: 15px 30px;
+
+  background: transparent;
+
+  border: 1px solid var(--gold);
+  border-radius: 0;
+
+  color: var(--gold);
+
+  text-decoration: none;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+button:hover,
+section a:hover {
+  background: var(--gold);
+  color: var(--black);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   EDITORIAL SECTIONS
+========================================= */
+
+section h2 {
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+
+  display: block;
+
+  width: 55px;
+  height: 1px;
+
+  margin-top: 25px;
+
+  background: var(--gold);
+}
+
+section p {
+  margin-bottom: 22px;
+}
+
+
+/* =========================================
+   PROGRAM / CONTENT BLOCKS
+========================================= */
+
+section > div {
+  margin-top: 60px;
+}
+
+section > div > div {
+  padding: 35px 0;
+
+  border-top: 1px solid rgba(245, 239, 227, 0.12);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+section > div > div:hover {
+  border-top-color: var(--gold);
+  transform: translateX(8px);
+}
+
+section > div > div p {
+  max-width: 700px;
+}
+
+
+/* =========================================
+   LISTS
+========================================= */
+
+ul {
+  max-width: 800px;
+
+  margin-top: 35px;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 18px;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+}
+
+li::marker {
+  color: var(--gold);
+}
+
+
+/* =========================================
+   FOUNDER PAGE
+========================================= */
+
+section:nth-child(2),
+section:nth-child(3) {
+  border-top: 1px solid rgba(245, 239, 227, 0.05);
+}
+
+section:nth-child(2) h2,
+section:nth-child(3) h2 {
+  max-width: 850px;
+}
+
+
+/* =========================================
+   GOLD DETAILS
+========================================= */
+
+section::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 40px;
+  right: 7%;
+
+  width: 35px;
+  height: 35px;
+
+  border-right: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+
+  opacity: 0.25;
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 900px) {
+
+  header {
+    padding: 20px 5%;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  nav div {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px 20px;
+  }
+
+  nav div a {
+    font-size: 0.65rem;
+  }
+
+  section {
+    padding: 100px 7%;
+  }
+
+  section:first-child {
+    min-height: 90vh;
+    padding: 140px 7% 100px;
+  }
+
+  section:first-child h1 {
+    font-size: clamp(3.5rem, 15vw, 6rem);
+  }
+
+  h2 {
+    font-size: clamp(2.8rem, 12vw, 5rem);
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 500px) {
+
+  header {
+    padding: 16px 5%;
+  }
+
+  nav > a {
+    font-size: 0.72rem;
+  }
+
+  nav div {
+    gap: 10px 14px;
+  }
+
+  nav div a {
+    font-size: 0.58rem;
+  }
+
+  section {
+    padding: 85px 7%;
+  }
+
+  section:first-child {
+    padding-top: 140px;
+  }
+
+  section:first-child h1 {
+    font-size: 3.3rem;
+  }
+
+  section:first-child p {
+    font-size: 0.95rem;
+  }
+
+  button,
+  section a {
+    width: 100%;
+    text-align: center;
+  }
+}
