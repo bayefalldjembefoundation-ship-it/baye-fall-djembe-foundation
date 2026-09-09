@@ -94,10 +94,11 @@ export default function Home() {
 
               <p>Contact us:</p>
 
-              <p>📧 Email: [bayefalldjembefoundation@gmail.com]</p>
-              <p>📞 Phone: [+1-651-334-0769]</p>
+              <p>📧 Email: bayefalldjembefoundation@gmail.com</p>
+              <p>📞 Phone: +1-651-334-0769</p>
               <p>📍Minnesota</p>
             </div>
+          </div>
         </section>
        </main>
     );
