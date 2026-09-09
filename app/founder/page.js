@@ -1,5 +1,3 @@
-</> JavaScript
-
 export default function FounderPage() {
   return (
     <main>
