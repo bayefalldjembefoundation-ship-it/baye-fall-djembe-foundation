@@ -521,8 +521,15 @@ nav > a img {
   padding: 180px 8% 120px;
   display: flex;
   align-items: center;
-  background: #000000;
-  border-bottom: 1px solid rgba(201, 162, 74, 0.35);
+  background:
+   linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.62) 48%,
+    rgba(0, 0, 0, 0.28) 100%
+   ),
+   url("/images/hero-dad.png") center center / cover no-repeat;
+   border-bottom: 1px solid rgba(201, 162, 74, 0.35);
 }
 
 .hero-content {
