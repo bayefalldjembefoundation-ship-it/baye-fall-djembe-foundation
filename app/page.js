@@ -1,15 +1,21 @@
 export default function Home() {
   return (
     <main>
-      <section>
-        <h1>Baye Fall Djembe Foundation</h1>
+      <section className="hero">
+        <div className="hero-content">
+          <p className="eyebrow">BAYE FALL DJEMBE FOUNDATION</p>
 
-        <p>
-          Connecting communities through West African cultures, music,
-          education,and heritage.
-        </p>
+          <h1>Tradition Builds Tomorrow</h1>
 
-        <button>Support Our Mission</button>
+          <p className="hero-description">
+            Preserving West African heritage through music, education,
+            cultural exchange, and transformative experiences.
+          </p>
+
+          <a href="#mission" className="hero-button">
+            Explore Our Mission →
+          </a>
+        </div>
       </section>
 
       <section id="mission">
