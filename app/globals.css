@@ -184,14 +184,6 @@ section:first-child {
 
   padding: 160px 8% 120px;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 5, 5, 0.98) 0%,
-      rgba(5, 5, 5, 0.88) 45%,
-      rgba(5, 5, 5, 0.55) 100%
-    );
-
   border-bottom: 1px solid var(--line);
 }
 
