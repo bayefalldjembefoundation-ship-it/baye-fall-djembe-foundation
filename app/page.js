@@ -1,16 +1,7 @@
 export default function Home() {
   return (
     <main>
-      <section 
-        className="hero"
-        style={{
-          backgroundImage: 'url("/images/hero-dad.png")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-          >
+      <section className="hero">
         <div className="hero-content">
           <p className="eyebrow">BAYE FALL DJEMBE FOUNDATION</p>
 
