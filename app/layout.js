@@ -27,8 +27,8 @@ export default function RootLayout({ children }) {
               <a href="/get-involved">Get Involved</a>
               <a href="/contact">Contact</a>
 
-              <a href="/donate" className="nav-donate">
-                Donate
+              <a href="/media" className="nav-donate">
+                Media
               </a>
             </div>
           </nav>
