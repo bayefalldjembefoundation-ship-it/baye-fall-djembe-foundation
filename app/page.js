@@ -6,12 +6,12 @@ export default function Home() {
     src="/images/hero-dad.png"
     alt="Baye Fall Djembe Foundation"
     style={{
-      position: "absolute",
-      inset: 0,
+      position: "relative",
+      display: "block",
       width: "100%",
-      height: "100%",
+      height: "500px",
       objectFit: "cover",
-      zIndex: 0,
+      zIndex: 10,
     }}
   />
         <div className="hero-content" style={{ position: "relative", zIndex: 2 }}>
