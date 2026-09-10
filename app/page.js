@@ -4,7 +4,7 @@ export default function Home() {
       <section className="hero">
         <img
     src="/images/hero-dad.png"
-    alt="Baye Fall Djembe Foundation"
+    alt="Dad"
     style={{
       position: "relative",
       display: "block",
