@@ -508,14 +508,11 @@ nav > a img {
 .hero {
   min-height: 100vh;
   padding: 180px 8% 120px;
-  display: flex;
-  align-items: center;
   background-image: url("/images/hero-dad.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .hero-content {
   position: relative;
   z-index: 2;
