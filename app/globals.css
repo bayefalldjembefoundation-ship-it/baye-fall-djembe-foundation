@@ -188,52 +188,27 @@ section {
   position: relative;
 
   width: 100%;
-  max-width: none;
-  min-height: 100vh;
+  max-width: 1500px;
+  min-height: 820px;
 
-  margin: 0;
-  padding: 180px 8% 120px;
+  margin: 0 auto;
+  padding: 170px 7% 110px;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
+  gap: 7%;
 
   overflow: hidden;
 
-  background: #000000;
-}
-
-.hero-image {
-  position: absolute;
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  z-index: 0;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-
-  z-index: 1;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.88) 0%,
-      rgba(0, 0, 0, 0.62) 45%,
-      rgba(0, 0, 0, 0.30) 100%
-    );
+  background: var(--black);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
 
-  max-width: 1000px;
+  max-width: 650px;
 }
 
 .eyebrow {
@@ -250,35 +225,34 @@ section {
 }
 
 .hero h1 {
-  max-width: 1000px;
+  max-width: 650px;
 
   color: var(--ivory);
 
-  font-size: clamp(4.5rem, 10vw, 9rem);
+  font-size: clamp(4rem, 7vw, 7rem);
 
-  line-height: 0.82;
+  line-height: 0.86;
   letter-spacing: -0.035em;
 }
 
 .hero-description {
-  max-width: 620px;
+  max-width: 540px;
 
-  margin-top: 40px;
+  margin-top: 42px;
 
   color: rgba(243, 238, 228, 0.72);
 
-  font-size: 1.05rem;
-  line-height: 1.9;
+  font-size: 1.08rem;
+  line-height: 1.8;
 }
 
-.hero-button,
-.contact-button {
+.hero-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  margin-top: 20px;
-  padding: 15px 30px;
+  margin-top: 18px;
+  padding: 16px 30px;
 
   border: 1px solid var(--gold);
 
@@ -301,20 +275,98 @@ section {
     transform 0.3s ease;
 }
 
-.hero-button:hover,
-.contact-button:hover {
+.hero-button:hover {
   background: var(--gold);
   color: var(--black);
 
   transform: translateY(-3px);
 }
 
-.hero-location {
-  position: absolute;
-  right: 5%;
-  bottom: 12%;
+
+/* =========================================
+   HERO PORTRAIT
+========================================= */
+
+.hero-portrait {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 0;
+}
+
+.hero-frame {
+  position: relative;
+
+  width: min(100%, 590px);
+
+  padding: 12px;
+
+  border: 1px solid rgba(185, 154, 97, 0.7);
+
+  background: #050505;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(243, 228, 194, 0.05);
 
   z-index: 2;
+}
+
+.hero-frame::before {
+  content: "";
+
+  position: absolute;
+  inset: 7px;
+
+  border: 1px solid rgba(243, 228, 194, 0.25);
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+.hero-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 1230 / 1278;
+
+  object-fit: contain;
+
+  background: #080808;
+}
+
+.hero-frame-accent {
+  position: absolute;
+
+  width: 85%;
+  height: 85%;
+
+  right: -18px;
+  bottom: -18px;
+
+  border: 1px solid rgba(185, 154, 97, 0.28);
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   HERO DETAILS
+========================================= */
+
+.hero-location {
+  position: absolute;
+
+  right: 3%;
+  bottom: 17%;
+
+  z-index: 4;
 
   display: flex;
   flex-direction: column;
@@ -325,6 +377,7 @@ section {
   font-size: 0.58rem;
 
   letter-spacing: 0.25em;
+
   writing-mode: vertical-rl;
 }
 
@@ -334,12 +387,13 @@ section {
 
 .hero-scroll {
   position: absolute;
-  left: 8%;
-  bottom: 42px;
 
-  z-index: 2;
+  left: 7%;
+  bottom: 38px;
 
-  color: rgba(243, 238, 228, 0.45);
+  z-index: 4;
+
+  color: rgba(243, 238, 228, 0.4);
 
   font-family: "Cinzel", Georgia, serif;
   font-size: 0.55rem;
@@ -1037,5 +1091,70 @@ section:not(.hero)::after {
 
   .experience-list p {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+
+    padding: 150px 7% 100px;
+
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.5rem, 12vw, 6rem);
+  }
+
+  .hero-portrait {
+    width: 100%;
+  }
+
+  .hero-frame {
+    width: min(100%, 600px);
+  }
+
+  .hero-location {
+    display: none;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 130px 6% 80px;
+
+    gap: 50px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-frame {
+    padding: 8px;
+  }
+
+  .hero-frame::before {
+    inset: 5px;
+  }
+
+  .hero-frame-accent {
+    right: -10px;
+    bottom: -10px;
   }
 }
