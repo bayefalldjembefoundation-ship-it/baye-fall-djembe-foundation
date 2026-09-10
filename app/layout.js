@@ -12,6 +12,13 @@ export default function RootLayout({ children }) {
       <body>
         <header>
           <nav>
+            <a href="/" className="nav-logo">
+              <img
+                src="/images/logo.jpg.jpg"
+                alt="Baye Fall Djembe Foundation"
+              />
+            </a>
+
             <div className="nav-links">
               <a href="/">Home</a>
               <a href="/founder">Founder</a>
@@ -19,14 +26,11 @@ export default function RootLayout({ children }) {
               <a href="/programs">Programs</a>
               <a href="/get-involved">Get Involved</a>
               <a href="/contact">Contact</a>
-            </div>
 
-            <a href="/" className="nav-logo">
-              <img
-                src="/images/logo.jpg.jpg"
-                alt="Baye Fall Djembe Foundation"
-              />
-            </a>
+              <a href="/donate" className="nav-donate">
+                Donate
+              </a>
+            </div>
           </nav>
         </header>
 
