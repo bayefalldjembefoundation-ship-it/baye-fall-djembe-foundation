@@ -2,14 +2,6 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
-        <img
-          src="/images/hero-dad.png"
-          alt="Baye Fall Djembe Foundation"
-          className="hero-image"
-        />
-
-        <div className="hero-overlay"></div>
-
         <div className="hero-content">
           <p className="eyebrow">BAYE FALL DJEMBE FOUNDATION</p>
 
@@ -29,14 +21,27 @@ export default function Home() {
           </a>
         </div>
 
+        <div className="hero-portrait">
+          <div className="hero-frame">
+            <img
+              src="/images/hero-dad.png"
+              alt="Founder of the Baye Fall Djembe Foundation"
+              className="hero-image"
+            />
+          </div>
+
+          <div className="hero-frame-accent"></div>
+        </div>
+
         <div className="hero-location">
           SENEGAL
           <span>WEST AFRICA</span>
         </div>
 
-        <div className="hero-scroll">EXPLORE THE FOUNDATION</div>
+        <div className="hero-scroll">
+          EXPLORE THE FOUNDATION
+        </div>
       </section>
     </main>
   );
 }
-
