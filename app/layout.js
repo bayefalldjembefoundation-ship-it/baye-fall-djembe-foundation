@@ -21,8 +21,8 @@ export default function RootLayout({ children }) {
 
             <div className="nav-links">
               <a href="/">Home</a>
-              <a href="/founder">Founder</a>
               <a href="/about">About</a>
+              <a href="/founder">Founder</a>
               <a href="/programs">Programs</a>
               <a href="/get-involved">Get Involved</a>
               <a href="/contact">Contact</a>
