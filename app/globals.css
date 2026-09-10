@@ -1,24 +1,14 @@
-/* =========================================
-   BAYE FALL DJEMBE FOUNDATION
-   LUXURY SENEGAL / EDITORIAL DESIGN
-========================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-
-/* =========================================
-   FOUNDATION
-========================================= */
-
 :root {
-  --black: #050505;
-  --black-soft: #0b0b0b;
-  --ivory: #f5efe3;
-  --gold: #c9a24a;
-  --indigo: #182a4a;
-  --brown: #6b4e32;
-  --muted: #b9b2a6;
-  --line: rgba(201, 162, 74, 0.35);
+  --black: #000000;
+  --black-soft: #080808;
+  --black-light: #111111;
+  --ivory: #f3eee4;
+  --gold: #c5a15a;
+  --gold-soft: rgba(197, 161, 90, 0.55);
+  --text: rgba(243, 238, 228, 0.68);
+  --line: rgba(197, 161, 90, 0.22);
 }
 
 * {
@@ -42,47 +32,21 @@ main {
   overflow: hidden;
 }
 
-
-/* =========================================
-   TYPOGRAPHY
-========================================= */
-
 h1,
 h2,
 h3 {
+  margin: 0;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 500;
-  line-height: 0.95;
-  letter-spacing: -0.025em;
   text-transform: uppercase;
 }
 
-h1 {
-  font-size: clamp(4rem, 9vw, 8rem);
-  margin: 0 0 30px;
-}
-
-h2 {
-  font-size: clamp(3rem, 6vw, 6rem);
-  margin: 0 0 30px;
-  color: var(--ivory);
-}
-
-h3 {
-  font-size: 2rem;
-  color: var(--gold);
-  margin-bottom: 15px;
-}
-
 p {
-  max-width: 760px;
-  color: var(--muted);
+  margin: 0 0 24px;
+  color: var(--text);
   font-size: 1rem;
   font-weight: 300;
-}
-
-strong {
-  color: var(--ivory);
+  line-height: 1.9;
 }
 
 
@@ -94,38 +58,36 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 1000;
 
-  padding: 25px 5%;
+  width: 100%;
+  padding: 20px 5%;
 
-  background: rgba(5, 5, 5, 0.65);
-  border-bottom: 1px solid rgba(245, 239, 227, 0.08);
+  background: rgba(0, 0, 0, 0.82);
+  border-bottom: 1px solid rgba(197, 161, 90, 0.16);
 
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
 }
 
 nav {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 40px;
 }
 
 nav > a {
-  color: var(--ivory);
-  text-decoration: none;
+  display: block;
+}
 
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+nav > a img {
+  display: block;
+  width: 190px;
+  height: auto;
+  object-fit: contain;
 }
 
 nav div {
@@ -135,10 +97,16 @@ nav div {
 }
 
 nav div a {
-  color: var(--ivory);
+  position: relative;
+
+  padding: 8px 0;
+
+  color: rgba(243, 238, 228, 0.78);
+
   text-decoration: none;
+
   font-family: "Cinzel", Georgia, serif;
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 500;
 
   letter-spacing: 0.18em;
@@ -147,525 +115,18 @@ nav div a {
   transition: color 0.3s ease;
 }
 
-nav div a:hover {
-  color: var(--gold);
-}
-
-
-/* =========================================
-   GENERAL SECTIONS
-========================================= */
-
-section {
-  position: relative;
-
-  max-width: 1400px;
-  margin: 0 auto;
-
-  padding: 140px 7%;
-}
-
-section:nth-child(even) {
-  background: var(--black-soft);
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
-section:first-child {
-  max-width: none;
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 160px 8% 120px;
-
-  border-bottom: 1px solid var(--line);
-}
-
-section:first-child::before {
-  content: "";
-
-  position: absolute;
-  top: 15%;
-  right: 7%;
-
-  width: 1px;
-  height: 70%;
-
-  background: linear-gradient(
-    transparent,
-    var(--gold),
-    transparent
-  );
-
-  opacity: 0.4;
-}
-
-section:first-child h1 {
-  max-width: 1000px;
-
-  color: var(--ivory);
-
-  text-transform: uppercase;
-}
-
-section:first-child h2 {
-  font-family: "Inter", Arial, sans-serif;
-
-  color: var(--gold);
-
-  font-size: 0.8rem;
-  font-weight: 600;
-
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-}
-
-section:first-child p {
-  max-width: 680px;
-
-  font-size: 1.1rem;
-  line-height: 1.9;
-}
-
-
-/* =========================================
-   GOLD BUTTONS
-========================================= */
-
-button,
-section a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: fit-content;
-
-  margin-top: 30px;
-  padding: 15px 30px;
-
-  background: transparent;
-
-  border: 1px solid var(--gold);
-  border-radius: 0;
-
-  color: var(--gold);
-
-  text-decoration: none;
-
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-button:hover,
-section a:hover {
-  background: var(--gold);
-  color: var(--black);
-
-  transform: translateY(-3px);
-}
-
-
-/* =========================================
-   EDITORIAL SECTIONS
-========================================= */
-
-section h2 {
-  position: relative;
-}
-
-section h2::after {
-  content: "";
-
-  display: block;
-
-  width: 55px;
-  height: 1px;
-
-  margin-top: 25px;
-
-  background: var(--gold);
-}
-
-section p {
-  margin-bottom: 22px;
-}
-
-
-/* =========================================
-   PROGRAM / CONTENT BLOCKS
-========================================= */
-
-section > div {
-  margin-top: 60px;
-}
-
-section > div > div {
-  padding: 35px 0;
-
-  border-top: 1px solid rgba(245, 239, 227, 0.12);
-
-  transition:
-    border-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-section > div > div:hover {
-  border-top-color: var(--gold);
-  transform: translateX(8px);
-}
-
-section > div > div p {
-  max-width: 700px;
-}
-
-
-/* =========================================
-   LISTS
-========================================= */
-
-ul {
-  max-width: 800px;
-
-  margin-top: 35px;
-  padding-left: 25px;
-}
-
-li {
-  margin-bottom: 18px;
-
-  color: var(--muted);
-
-  font-size: 1rem;
-}
-
-li::marker {
-  color: var(--gold);
-}
-
-
-/* =========================================
-   FOUNDER PAGE
-========================================= */
-
-section:nth-child(2),
-section:nth-child(3) {
-  border-top: 1px solid rgba(245, 239, 227, 0.05);
-}
-
-section:nth-child(2) h2,
-section:nth-child(3) h2 {
-  max-width: 850px;
-}
-
-
-/* =========================================
-   GOLD DETAILS
-========================================= */
-
-section::after {
-  content: "";
-
-  position: absolute;
-
-  bottom: 40px;
-  right: 7%;
-
-  width: 35px;
-  height: 35px;
-
-  border-right: 1px solid var(--gold);
-  border-bottom: 1px solid var(--gold);
-
-  opacity: 0.25;
-}
-
-
-/* =========================================
-   MOBILE NAVIGATION
-========================================= */
-
-@media (max-width: 900px) {
-
-  header {
-    padding: 20px 5%;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-  }
-
-  nav div {
-    width: 100%;
-
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 12px 20px;
-  }
-
-  nav div a {
-    font-size: 0.65rem;
-  }
-
-  section {
-    padding: 100px 7%;
-  }
-
-  section:first-child {
-    min-height: 90vh;
-    padding: 140px 7% 100px;
-  }
-
-  section:first-child h1 {
-    font-size: clamp(3.5rem, 15vw, 6rem);
-  }
-
-  h2 {
-    font-size: clamp(2.8rem, 12vw, 5rem);
-  }
-
-  h3 {
-    font-size: 1.8rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-}
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media (max-width: 500px) {
-
-  header {
-    padding: 16px 5%;
-  }
-
-  nav > a {
-    font-size: 0.72rem;
-  }
-
-  nav div {
-    gap: 10px 14px;
-  }
-
-  nav div a {
-    font-size: 0.58rem;
-  }
-
-  section {
-    padding: 85px 7%;
-  }
-
-  section:first-child {
-    padding-top: 140px;
-  }
-
-  section:first-child h1 {
-    font-size: 3.3rem;
-  }
-
-  section:first-child p {
-    font-size: 0.95rem;
-  }
-
-  button,
-  section a {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* FOUNDATION LOGO */
-nav > a img {
-  display: block;
-  width: 180px;
-  height: auto;
-  object-fit: contain;
-}
-
-/* LUXURY HERO */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 180px 8% 120px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-
-  background-image: url("/images/hero-dad.png") !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 950px;
-}
-
-.eyebrow {
-  margin: 0 0 28px;
-  color: var(--gold);
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  margin: 0 0 35px;
-  max-width: 1000px;
-  color: var(--ivory);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(4.5rem, 10vw, 9rem);
-  font-weight: 500;
-  line-height: 0.82;
-  letter-spacing: -0.035em;
-  text-transform: uppercase;
-}
-
-.hero-description {
-  max-width: 650px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 1.08rem;
-  font-weight: 300;
-  line-height: 1.9;
-}
-
-.hero-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 42px;
-  padding: 16px 32px;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  background: transparent;
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.hero-button:hover {
-  background: var(--gold);
-  color: #000000;
-  transform: translateY(-3px);
-}
-
-/* CINEMATIC HERO DETAILS */
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 18%;
-  right: 8%;
-  width: 1px;
-  height: 64%;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(201, 162, 74, 0.65),
-    transparent
-  );
-  opacity: 0.7;
-}
-
-.hero::after {
-  content: "SENEGAL • WEST AFRICA";
-  position: absolute;
-  right: 4%;
-  bottom: 12%;
-  color: rgba(201, 162, 74, 0.55);
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 0.58rem;
-  letter-spacing: 0.28em;
-  writing-mode: vertical-rl;
-  text-transform: uppercase;
-}
-
-.hero-content::before {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 1px;
-  margin-bottom: 28px;
-  background: var(--gold);
-  opacity: 0.8;
-}
-
-/* LUXURY NAVIGATION */
-
-header {
-  padding: 22px 5%;
-  background: rgba(0, 0, 0, 0.78);
-  border-bottom: 1px solid rgba(201, 162, 74, 0.18);
-}
-
-nav {
-  max-width: 1500px;
-}
-
-nav > a img {
-  width: 190px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-nav > a:hover img {
-  opacity: 0.85;
-  transform: scale(1.02);
-}
-
-nav div {
-  gap: 30px;
-}
-
-nav div a {
-  position: relative;
-  padding: 8px 0;
-  color: rgba(245, 239, 227, 0.82);
-}
-
 nav div a::after {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: 0;
+
   width: 0;
   height: 1px;
+
   background: var(--gold);
+
   transition: width 0.3s ease;
 }
 
@@ -677,220 +138,550 @@ nav div a:hover::after {
   width: 100%;
 }
 
-/* MISSION — EDITORIAL LAYOUT */
 
-#mission {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 160px;
-  padding-bottom: 160px;
-  border-top: 1px solid rgba(201, 162, 74, 0.15);
-}
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
 
-#mission h2 {
-  max-width: 900px;
-  font-size: clamp(3.5rem, 7vw, 7rem);
-  letter-spacing: -0.035em;
-}
-
-#mission h2::before {
-  content: "OUR PURPOSE";
-  display: block;
-  margin-bottom: 28px;
-  color: var(--gold);
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.32em;
-}
-
-#mission p {
-  max-width: 720px;
-  margin-top: 35px;
-  color: rgba(245, 239, 227, 0.68);
-  font-size: 1.12rem;
-  line-height: 2;
-}
-
-/* PROGRAMS — CULTURAL PILLARS */
-
-#programs {
-  padding-top: 160px;
-  padding-bottom: 160px;
-  background: #050505;
-}
-
-#programs > h2 {
-  max-width: 900px;
-  font-size: clamp(3.5rem, 7vw, 7rem);
-}
-
-#programs > h2::before {
-  content: "WHAT WE DO";
-  display: block;
-  margin-bottom: 28px;
-  color: var(--gold);
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.32em;
-}
-
-#programs > div {
-  margin-top: 80px;
-}
-
-#programs > div > div {
+section {
   position: relative;
-  padding: 55px 0 55px 90px;
-  border-top: 1px solid rgba(245, 239, 227, 0.12);
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 150px 8%;
 }
 
-#programs > div > div::before {
-  position: absolute;
-  left: 0;
-  top: 55px;
-  color: rgba(201, 162, 74, 0.65);
+.section-label {
+  margin-bottom: 35px;
+
+  color: var(--gold);
+
   font-family: "Cinzel", Georgia, serif;
   font-size: 0.65rem;
-  letter-spacing: 0.15em;
-}
-
-#programs > div > div:nth-child(1)::before {
-  content: "01";
-}
-
-#programs > div > div:nth-child(2)::before {
-  content: "02";
-}
-
-#programs > div > div:nth-child(3)::before {
-  content: "03";
-}
-
-#programs > div > div h3 {
-  margin: 0 0 18px;
-  color: var(--ivory);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
   font-weight: 500;
-  letter-spacing: -0.02em;
+
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
-#programs > div > div p {
-  max-width: 720px;
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+
   margin: 0;
-  color: rgba(245, 239, 227, 0.62);
-  font-size: 1rem;
-  line-height: 1.9;
-}
+  padding: 180px 8% 120px;
 
-#programs > div > div:hover {
-  transform: translateX(10px);
-  border-top-color: rgba(201, 162, 74, 0.65);
-}
-
-#programs > div > div:hover h3 {
-  color: var(--gold);
-}
-
-/* CULTURAL STORYTELLING */
-
-#culture {
-  min-height: 85vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 180px;
-  padding-bottom: 180px;
+  align-items: center;
+
+  overflow: hidden;
+
   background: #000000;
-  border-top: 1px solid rgba(201, 162, 74, 0.15);
 }
 
-#culture h2 {
+.hero-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.62) 45%,
+      rgba(0, 0, 0, 0.30) 100%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
   max-width: 1000px;
-  margin-bottom: 50px;
-  font-size: clamp(4rem, 8vw, 8rem);
-  line-height: 0.88;
 }
 
-#culture h2::before {
-  content: "CULTURAL HERITAGE";
-  display: block;
-  margin-bottom: 30px;
+.eyebrow {
+  margin: 0 0 28px;
+
   color: var(--gold);
+
   font-family: "Cinzel", Georgia, serif;
   font-size: 0.68rem;
   font-weight: 500;
+
   letter-spacing: 0.32em;
+  text-transform: uppercase;
 }
 
-#culture p {
+.hero h1 {
+  max-width: 1000px;
+
+  color: var(--ivory);
+
+  font-size: clamp(4.5rem, 10vw, 9rem);
+
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+}
+
+.hero-description {
+  max-width: 620px;
+
+  margin-top: 40px;
+
+  color: rgba(243, 238, 228, 0.72);
+
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.hero-button,
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+  padding: 15px 30px;
+
+  border: 1px solid var(--gold);
+
+  color: var(--gold);
+
+  background: transparent;
+
+  text-decoration: none;
+
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-button:hover,
+.contact-button:hover {
+  background: var(--gold);
+  color: var(--black);
+
+  transform: translateY(-3px);
+}
+
+.hero-location {
+  position: absolute;
+  right: 5%;
+  bottom: 12%;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  color: rgba(197, 161, 90, 0.7);
+
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.58rem;
+
+  letter-spacing: 0.25em;
+  writing-mode: vertical-rl;
+}
+
+.hero-location span {
+  margin-top: 12px;
+}
+
+.hero-scroll {
+  position: absolute;
+  left: 8%;
+  bottom: 42px;
+
+  z-index: 2;
+
+  color: rgba(243, 238, 228, 0.45);
+
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.55rem;
+
+  letter-spacing: 0.25em;
+}
+
+
+/* =========================================
+   MISSION
+========================================= */
+
+.mission-section {
+  min-height: 75vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: var(--black);
+
+  border-top: 1px solid var(--line);
+}
+
+.mission-section h2 {
+  max-width: 850px;
+
+  color: var(--ivory);
+
+  font-size: clamp(4rem, 8vw, 8rem);
+
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+}
+
+.mission-section > p {
   max-width: 760px;
-  color: rgba(245, 239, 227, 0.68);
-  font-size: 1.12rem;
-  line-height: 2;
+
+  margin-top: 50px;
+
+  font-size: 1.08rem;
 }
 
-#culture::before {
-  content: "";
-  position: absolute;
-  right: 8%;
-  top: 18%;
-  width: 120px;
-  height: 120px;
-  border: 1px solid rgba(201, 162, 74, 0.25);
-  transform: rotate(45deg);
+
+/* =========================================
+   PROGRAMS
+========================================= */
+
+.programs-section {
+  background: var(--black-soft);
+
+  border-top: 1px solid rgba(243, 238, 228, 0.06);
 }
 
-#culture::after {
-  content: "";
-  position: absolute;
-  right: calc(8% + 18px);
-  top: calc(18% + 18px);
-  width: 84px;
-  height: 84px;
-  border: 1px solid rgba(201, 162, 74, 0.15);
-  transform: rotate(45deg);
+.programs-section h2 {
+  max-width: 900px;
+
+  color: var(--ivory);
+
+  font-size: clamp(4rem, 8vw, 8rem);
+
+  line-height: 0.86;
+  letter-spacing: -0.035em;
 }
 
-.hero-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+.program-list {
+  margin-top: 90px;
 }
 
-.hero {
+.program-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 35px;
+
+  padding: 50px 0;
+
+  border-top: 1px solid rgba(243, 238, 228, 0.12);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.program-item:hover {
+  border-top-color: var(--gold);
+  transform: translateX(8px);
+}
+
+.program-number {
+  padding-top: 8px;
+
+  color: var(--gold-soft);
+
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.65rem;
+
+  letter-spacing: 0.15em;
+}
+
+.program-item h3 {
+  margin-bottom: 18px;
+
+  color: var(--ivory);
+
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+  line-height: 0.95;
+}
+
+.program-item p {
+  max-width: 720px;
+  margin: 0;
+}
+
+
+/* =========================================
+   CULTURAL HERITAGE
+========================================= */
+
+.culture-section {
+  min-height: 85vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   background: #000000;
+
+  border-top: 1px solid var(--line);
 }
 
-.hero::before {
+.culture-section h2 {
+  max-width: 1000px;
+
+  margin-bottom: 55px;
+
+  color: var(--ivory);
+
+  font-size: clamp(4rem, 8vw, 8rem);
+
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+}
+
+.culture-section p {
+  max-width: 760px;
+}
+
+
+/* =========================================
+   GET INVOLVED
+========================================= */
+
+.involved-section {
+  background: var(--black-soft);
+
+  border-top: 1px solid rgba(243, 238, 228, 0.06);
+}
+
+.involved-section > h2 {
+  max-width: 900px;
+
+  color: var(--ivory);
+
+  font-size: clamp(4rem, 8vw, 8rem);
+
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+}
+
+.involved-section > h3 {
+  margin-top: 45px;
+  margin-bottom: 20px;
+
+  color: var(--gold);
+
+  font-size: 2rem;
+
+  text-transform: none;
+}
+
+.involved-intro {
+  max-width: 700px;
+}
+
+.involved-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+
+  margin-top: 70px;
+}
+
+.involved-grid > div {
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(243, 238, 228, 0.14);
+}
+
+.involved-grid h3 {
+  margin-bottom: 18px;
+
+  color: var(--ivory);
+
+  font-size: 1.8rem;
+
+  text-transform: uppercase;
+}
+
+.involved-grid p {
+  font-size: 0.95rem;
+}
+
+.contact-button {
+  margin-top: 55px;
+}
+
+
+/* =========================================
+   DECORATIVE DETAILS
+========================================= */
+
+section:not(.hero)::after {
   content: "";
+
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.48);
-  z-index: 1;
+  right: 7%;
+  bottom: 45px;
+
+  width: 28px;
+  height: 28px;
+
+  border-right: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+
+  opacity: 0.22;
 }
 
-.hero-image {
-  z-index: 0;
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  nav div {
+    gap: 18px;
+  }
+
+  nav div a {
+    font-size: 0.58rem;
+  }
+
+  .involved-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .involved-grid > div {
+    padding: 35px 0;
+  }
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: auto;
-  height: auto;
-  top: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.48);
-  z-index: 1;
-  opacity: 1;
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  header {
+    padding: 16px 6%;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  nav > a img {
+    width: 155px;
+  }
+
+  nav div {
+    width: 100%;
+
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  nav div a {
+    font-size: 0.55rem;
+  }
+
+  section {
+    padding: 100px 7%;
+  }
+
+  .hero {
+    min-height: 90vh;
+    padding: 170px 7% 100px;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.88),
+        rgba(0, 0, 0, 0.60)
+      );
+  }
+
+  .hero h1 {
+    font-size: clamp(3.5rem, 15vw, 6rem);
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-location {
+    display: none;
+  }
+
+  .hero-scroll {
+    left: 7%;
+    bottom: 25px;
+  }
+
+  .mission-section h2,
+  .programs-section h2,
+  .culture-section h2,
+  .involved-section > h2 {
+    font-size: clamp(3.3rem, 14vw, 5.5rem);
+  }
+
+  .program-item {
+    grid-template-columns: 45px 1fr;
+    gap: 20px;
+
+    padding: 40px 0;
+  }
+
+  .program-item h3 {
+    font-size: 2rem;
+  }
+
+  .program-item p {
+    font-size: 0.92rem;
+  }
+
+  .section-label {
+    font-size: 0.58rem;
+  }
+
+  section:not(.hero)::after {
+    display: none;
+  }
 }
