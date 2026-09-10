@@ -506,12 +506,20 @@ nav > a img {
 
 /* LUXURY HERO */
 .hero {
+  position: relative;
   min-height: 100vh;
+  width: 100%;
+  max-width: none;
+  margin: 0;
   padding: 180px 8% 120px;
-  background-image: url("/images/hero-dad.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background-image: url("/images/hero-dad.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 .hero-content {
   position: relative;
