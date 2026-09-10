@@ -12,21 +12,21 @@ export default function RootLayout({ children }) {
       <body>
         <header>
           <nav>
-             <a href="/">
+            <div className="nav-links">
+              <a href="/">Home</a>
+              <a href="/founder">Founder</a>
+              <a href="/about">About</a>
+              <a href="/programs">Programs</a>
+              <a href="/get-involved">Get Involved</a>
+              <a href="/contact">Contact</a>
+            </div>
+
+            <a href="/" className="nav-logo">
               <img
-                src="/images/logo.jpg"
+                src="/images/logo.jpg.jpg"
                 alt="Baye Fall Djembe Foundation"
               />
             </a>
-            <div>
-              <a href="/">Home</a>
-              <a href="/founder">Founder</a>
-              <a href="/#mission">About</a>
-              <a href="/#programs">Programs</a>
-              <a href="/#events">Events</a>
-              <a href="/#get-involved">Get Involved</a>
-              <a href="/#contact">Contact</a>
-            </div>
           </nav>
         </header>
 
