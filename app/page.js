@@ -2,7 +2,19 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
-        <div className="hero-content">
+        <img
+    src="/images/hero-dad.png"
+    alt="Baye Fall Djembe Foundation"
+    style={{
+      position: "absolute",
+      inset: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      zIndex: 0,
+    }}
+  />
+        <div className="hero-content" style={{ position: "relative", zIndex: 2 }}>
           <p className="eyebrow">BAYE FALL DJEMBE FOUNDATION</p>
 
           <h1>Tradition Builds Tomorrow</h1>
