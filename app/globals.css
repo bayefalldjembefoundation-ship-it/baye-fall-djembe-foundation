@@ -74,12 +74,13 @@ header {
   z-index: 1000;
 
   width: 100%;
-  padding: 20px 5%;
+  padding: 18px 5%;
 
-  background: rgba(0, 0, 0, 0.82);
-  border-bottom: 1px solid rgba(197, 161, 90, 0.16);
+  background: rgba(0, 0, 0, 0.86);
 
-  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(197, 161, 90, 0.18);
+
+  backdrop-filter: blur(16px);
 }
 
 nav {
@@ -89,27 +90,33 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+
+  gap: 50px;
 }
 
-nav > a {
+.nav-logo {
   display: block;
+  flex-shrink: 0;
 }
 
-nav > a img {
+.nav-logo img {
   display: block;
-  width: 190px;
+
+  width: 165px;
   height: auto;
+
   object-fit: contain;
 }
 
-nav div {
+.nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  justify-content: flex-end;
+
+  gap: 30px;
 }
 
-nav div a {
+.nav-links a {
   position: relative;
 
   padding: 8px 0;
@@ -119,16 +126,19 @@ nav div a {
   text-decoration: none;
 
   font-family: "Cinzel", Georgia, serif;
-  font-size: 0.65rem;
+  font-size: 0.63rem;
   font-weight: 500;
 
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 
-  transition: color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
 }
 
-nav div a::after {
+.nav-links a::after {
   content: "";
 
   position: absolute;
@@ -143,14 +153,37 @@ nav div a::after {
   transition: width 0.3s ease;
 }
 
-nav div a:hover {
+.nav-links a:hover {
   color: var(--gold);
 }
 
-nav div a:hover::after {
+.nav-links a:hover::after {
   width: 100%;
 }
 
+
+/* =========================================
+  MEDIA BUTTON
+========================================= */
+
+.nav-links .nav-donate {
+  margin-left: 8px;
+
+  padding: 11px 20px;
+
+  border: 1px solid var(--gold);
+
+  color: var(--gold);
+}
+
+.nav-links .nav-donate::after {
+  display: none;
+}
+
+.nav-links .nav-donate:hover {
+  background: var(--gold);
+  color: var(--black);
+}
 
 /* =========================================
    GENERAL SECTIONS
