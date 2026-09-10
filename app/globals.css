@@ -1222,3 +1222,77 @@ section:not(.hero)::after {
     bottom: -10px;
   }
 }
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about-page {
+  background: var(--black);
+  color: var(--ivory);
+}
+
+.about-intro {
+  position: relative;
+  min-height: 780px;
+  padding: 190px 8% 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(185, 154, 97, 0.18);
+}
+
+.about-intro::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -180px;
+  top: 120px;
+  border: 1px solid rgba(185, 154, 97, 0.12);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.about-intro::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -100px;
+  top: 190px;
+  border: 1px solid rgba(243, 228, 194, 0.08);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.about-intro .section-label {
+  position: absolute;
+  top: 125px;
+  left: 8%;
+}
+
+.about-intro .eyebrow {
+  margin-bottom: 25px;
+}
+
+.about-intro h1 {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  margin: 0;
+  color: var(--ivory);
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+}
+
+.about-intro-text {
+  position: relative;
+  z-index: 2;
+  max-width: 610px;
+  margin-top: 45px;
+  color: rgba(243, 238, 228, 0.68);
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
