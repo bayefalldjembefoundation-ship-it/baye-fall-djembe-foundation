@@ -34,8 +34,8 @@ export default function Home() {
         </div>
 
         <div className="hero-location">
-          SENEGAL
-          <span>WEST AFRICA</span>
+          BROTHER
+          <span>GHANA</span>
         </div>
 
         <div className="hero-scroll">
