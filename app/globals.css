@@ -321,9 +321,13 @@ section {
   background: var(--gold);
   color: var(--black);
 
-  transform: translateY(-3px);
-}
+  transform: translateY(-4px);
 
+  box-shadow:
+    0 10px 30px rgba(185, 154, 97, 0.18);
+
+  letter-spacing: 0.22em;
+}
 
 /* =========================================
    HERO PORTRAIT
