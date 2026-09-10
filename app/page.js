@@ -3,17 +3,17 @@ export default function Home() {
     <main>
       <section className="hero">
         <img
-    src="/images/hero-dad.png"
-    alt="Dad"
-    style={{
-      position: "relative",
-      display: "block",
-      width: "100%",
-      height: "500px",
-      objectFit: "cover",
-      zIndex: 10,
-    }}
-  />
+  src="/images/hero-dad.png"
+  alt="Dad"
+  style={{
+    position: "relative",
+    display: "block",
+    width: "100%",
+    height: "500px",
+    objectFit: "cover",
+    zIndex: 10,
+  }}
+/>
         <div className="hero-content" style={{ position: "relative", zIndex: 2 }}>
           <p className="eyebrow">BAYE FALL DJEMBE FOUNDATION</p>
 
