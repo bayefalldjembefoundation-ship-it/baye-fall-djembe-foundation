@@ -13,7 +13,7 @@ export default function About() {
           <br />
           Is Meant To
           <br />
-          Be Experienced.
+          Be Experienced
         </h1>
 
         <p className="about-intro-text">
@@ -46,9 +46,6 @@ export default function About() {
             <p className="mission-statement">
               Our mission is to build bridges between the United States and
               West Africa through culture, music, education and community.
-            </p>
-
-            <p>
               We empower youth to discover their roots, celebrate their
               heritage, and create lasting connections across different
               generations, cultures, and borders.
