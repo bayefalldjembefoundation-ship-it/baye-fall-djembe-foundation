@@ -5,7 +5,14 @@ export default function Founder() {
       {/* FOUNDER INTRO */}
       <section className="founder-intro">
         <div className="section-label">01 — THE FOUNDER</div>
-
+        
+        <div className="founder-image-wrap">
+         <img
+          src="/images/founderpg.png.png"
+          alt="Ghana Mbaye, founder of the Baye Fall Djembe Foundation"
+          className="founder-image"
+         />
+        </div>
         <div className="founder-content">
           <p className="eyebrow">THE STORY BEHIND THE FOUNDATION</p>
 
