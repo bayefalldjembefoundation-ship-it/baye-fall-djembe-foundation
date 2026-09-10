@@ -17,7 +17,7 @@ export default function Home() {
         <div className="hero-content" style={{ position: "relative", zIndex: 2 }}>
           <p className="eyebrow">BAYE FALL DJEMBE FOUNDATION</p>
 
-          <h1>Tradition Builds Tomorrow</h1>
+          <h1>TEST 123</h1>
 
           <p className="hero-description">
             Preserving West African heritage through music, education,
