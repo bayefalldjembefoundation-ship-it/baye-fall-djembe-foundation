@@ -1,34 +1,28 @@
 export default function Home() {
   return (
     <main>
-      <section className="hero">
-        <img
-  src="/images/hero-dad.png"
-  alt="Dad"
-  style={{
-    position: "relative",
-    display: "block",
-    width: "100%",
-    height: "500px",
-    objectFit: "cover",
-    zIndex: 10,
-  }}
-/>
-        <div className="hero-content" style={{ position: "relative", zIndex: 2 }}>
-          <p className="eyebrow">BAYE FALL DJEMBE FOUNDATION</p>
+   <section className="hero">
+  <img
+    src="/images/hero-dad.png"
+    alt="Baye Fall Djembe Foundation"
+    className="hero-image"
+  />
 
-          <h1>TEST 123</h1>
+  <div className="hero-content">
+    <p className="eyebrow">BAYE FALL DJEMBE FOUNDATION</p>
 
-          <p className="hero-description">
-            Preserving West African heritage through music, education,
-            cultural exchange, and transformative experiences.
-          </p>
+    <h1>Tradition Builds Tomorrow</h1>
 
-          <a href="#mission" className="hero-button">
-            Explore Our Mission →
-          </a>
-        </div>
-      </section>
+    <p className="hero-description">
+      Preserving West African heritage through music, education,
+      cultural exchange, and transformative experiences.
+    </p>
+
+    <a href="#mission" className="hero-button">
+      Explore Our Mission →
+    </a>
+  </div>
+</section>
 
       <section id="mission">
         <h2>Our Mission</h2>
