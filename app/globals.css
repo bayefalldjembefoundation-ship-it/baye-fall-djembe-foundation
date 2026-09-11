@@ -2597,11 +2597,9 @@ section:not(.hero)::after {
 ========================================= */
 
 .founder-teaching {
+  background: red !important;
   position: relative;
   padding: 160px 8% 140px;
-  background: var(--black);
-  overflow: hidden;
-  border-bottom: 1px solid rgba(185, 154, 97, 0.18);
 }
 
 .founder-teaching .section-label {
