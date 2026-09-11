@@ -25,62 +25,81 @@ export default function About() {
 
 
       {/* OUR MISSION */}
-      <section id="mission" className="mission-section">
+<section id="mission" className="mission-section">
 
-        <div className="section-label">01 — OUR MISSION</div>
+  <div className="section-label">01 — OUR MISSION</div>
 
-        <div className="mission-layout">
+  <div className="mission-layout">
 
-          <div className="mission-heading">
-            <p className="eyebrow">BUILDING BRIDGES</p>
+    <div className="mission-heading">
+      <p className="eyebrow">BUILDING BRIDGES</p>
 
-            <h2>
-              Our
-              <br />
-              Mission
-            </h2>
-          </div>
+      <h2>
+        Our
+        <br />
+        Mission
+      </h2>
+    </div>
 
-          <div className="mission-content">
+    <div className="mission-content">
 
-            <p className="mission-statement">
-              Our mission is to build bridges between the United States and
-              West Africa through culture, music, education and community.
-              We empower youth to discover their roots, celebrate their
-              heritage, and create lasting connections across different
-              generations, cultures, and borders.
-            </p>
+      <p className="mission-statement">
+        Our mission is to build bridges between the United States and West
+        Africa through culture, music, education and community.
+      </p>
 
-          </div>
+      <p>
+        We empower youth to discover their roots, celebrate their heritage,
+        and create lasting connections across different generations,
+        cultures, and borders.
+      </p>
 
-        </div>
+    </div>
 
-        <div className="mission-values">
+  </div>
 
-          <div className="mission-value">
-            <span>01</span>
-            <h3>Culture</h3>
-          </div>
 
-          <div className="mission-value">
-            <span>02</span>
-            <h3>Music</h3>
-          </div>
+  <div className="mission-values">
 
-          <div className="mission-value">
-            <span>03</span>
-            <h3>Education</h3>
-          </div>
+    <div className="mission-value">
+      <span>01</span>
+      <h3>Culture</h3>
+      <p>
+        Keeping West African traditions alive through meaningful cultural
+        experiences.
+      </p>
+    </div>
 
-          <div className="mission-value">
-            <span>04</span>
-            <h3>Community</h3>
-          </div>
+    <div className="mission-value">
+      <span>02</span>
+      <h3>Music</h3>
+      <p>
+        Using rhythm, drumming, movement, and storytelling to bring people
+        together.
+      </p>
+    </div>
 
-        </div>
+    <div className="mission-value">
+      <span>03</span>
+      <h3>Education</h3>
+      <p>
+        Creating opportunities to learn about West African history,
+        traditions, and culture.
+      </p>
+    </div>
 
-      </section>
+    <div className="mission-value">
+      <span>04</span>
+      <h3>Community</h3>
+      <p>
+        Building lasting relationships across generations, cultures, and
+        borders.
+      </p>
+    </div>
 
+  </div>
+
+</section>
 
     {/* CULTURAL HERITAGE */}
       <section id="culture" className="culture-section">
