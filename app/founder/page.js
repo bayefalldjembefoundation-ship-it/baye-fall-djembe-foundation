@@ -117,6 +117,7 @@ export default function Founder() {
   <div className="section-label">03 — A LIFE OF TEACHING</div>
 
   <div className="teaching-intro">
+
     <div className="teaching-heading">
       <p className="eyebrow">28 YEARS OF EXPERIENCE</p>
 
@@ -134,11 +135,24 @@ export default function Founder() {
       <span className="teaching-years">YEARS OF TEACHING</span>
 
       <p>
-        Since 1998, Brother Ghana has dedicated his life to teaching
-        African drumming, cultural traditions, and the spirit of
-        community to generations of students.
+        When Brother Ghana came to the United States in 2000, he brought
+        with him a deep knowledge of African drumming, cultural traditions,
+        and a passion for teaching. Over the years, that passion has taken
+        him into schools and communities across the country, where he has
+        continued to teach, inspire, and create meaningful cultural
+        experiences for generations of students.
       </p>
     </div>
+
+  </div>
+
+  <div className="teaching-image-wrap">
+    <img
+      src="/images/teaching.jpg"
+      alt="Brother Ghana teaching African drumming to students"
+      className="teaching-image"
+    />
+    <div className="teaching-image-accent"></div>
   </div>
 
   <div className="teaching-story">
@@ -148,24 +162,25 @@ export default function Founder() {
     <div className="teaching-story-content">
 
       <p>
-        When Brother Ghana came to the United States in 2000, he brought with
-        him a deep knowledge of African drumming, cultural traditions, and a
-        passion for teaching. Over the years, that passion has taken him into
-        schools and communities across the country, where he has continued to
-        teach, inspire, and create meaningful cultural experiences for
-        generations of students.
+        For more than two decades in the United States, Brother Ghana has
+        continued to share the drum as a powerful tool for learning,
+        connection, and cultural understanding. His teaching is hands-on,
+        energetic, and deeply personal—inviting students not simply to
+        watch, but to listen, participate, move, and discover the rhythm
+        for themselves.
       </p>
 
       <p>
-        For almost three decades in the United States, he has entered
-        classrooms, schools, community spaces, and cultural programs
-        where students have had the opportunity to experience African
-        drumming firsthand.
+        In classrooms and communities, his approach goes beyond learning
+        how to play an instrument. Students learn to listen to one another,
+        work together, find their rhythm, and experience the power of
+        creating something collectively.
       </p>
 
       <p className="teaching-highlight">
-        What began in Senegal in 1998 has grown into nearly three
-        decades of teaching, connection, and cultural exchange.
+        What began in Senegal in 1998 has grown into 28 years of teaching,
+        cultural education, and connection—one student, one rhythm, and one
+        community at a time.
       </p>
 
     </div>
@@ -185,14 +200,13 @@ export default function Founder() {
     </div>
 
     <div className="teaching-bottom-item">
-      <span>28+</span>
+      <span>28</span>
       <p>Years of teaching and cultural education</p>
     </div>
 
   </div>
 
 </section>
-
       {/* THE DRUMS */}
       <section className="founder-section drums-section">
         <div className="section-label">04 — THE DRUMS</div>
