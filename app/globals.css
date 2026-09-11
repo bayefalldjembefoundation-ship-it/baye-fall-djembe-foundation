@@ -1521,6 +1521,39 @@ section:not(.hero)::after {
   .founder-content h1 {
     font-size: clamp(3.5rem, 12vw, 6rem);
   }
+
+  /* FOUNDER — HIS JOURNEY */
+.founder-journey {
+  min-height: auto;
+  padding: 150px 7% 110px;
+}
+
+.founder-journey .section-label {
+  margin-bottom: 55px;
+}
+
+.journey-layout {
+  margin-top: 0;
+  grid-template-columns: 1fr;
+  gap: 65px;
+}
+
+.journey-content {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 700px;
+}
+
+.journey-image-wrap {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 600px;
+}
+
+.journey-content h2 {
+  font-size: clamp(3.5rem, 12vw, 6rem);
+}
+  
 }
 
 @media (max-width: 700px) {
@@ -1656,6 +1689,41 @@ section:not(.hero)::after {
   .founder-content > p:not(.eyebrow):not(.founder-title) {
     font-size: 1rem;
   }
+
+  /* FOUNDER — HIS JOURNEY */
+.founder-journey {
+  padding: 130px 6% 80px;
+}
+
+.founder-journey .section-label {
+  margin-bottom: 45px;
+}
+
+.journey-layout {
+  gap: 50px;
+}
+
+.journey-image-wrap {
+  padding: 8px;
+}
+
+.journey-image-wrap::before {
+  inset: 5px;
+}
+
+.journey-image-accent {
+  left: -10px;
+  bottom: -10px;
+}
+
+.journey-content h2 {
+  font-size: clamp(3rem, 15vw, 4.5rem);
+}
+
+.journey-content > p {
+  font-size: 1rem;
+}
+  
 }
 /* =========================================
    ABOUT PAGE
