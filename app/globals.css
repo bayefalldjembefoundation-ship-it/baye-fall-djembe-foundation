@@ -2878,3 +2878,98 @@ section:not(.hero)::after {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* =========================================
+   DRUM HOVER IMAGES
+   ========================================= */
+
+.drum-item {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+}
+
+.drum-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.08);
+  transition:
+    opacity 0.6s ease,
+    transform 0.8s ease;
+  z-index: -2;
+}
+
+.drum-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.18),
+      rgba(0, 0, 0, 0.72)
+    );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: -1;
+}
+
+.drum-content {
+  position: relative;
+  z-index: 2;
+  transition:
+    transform 0.5s ease,
+    color 0.5s ease;
+}
+
+/* Hover */
+
+.drum-item:hover .drum-image {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.drum-item:hover .drum-overlay {
+  opacity: 1;
+}
+
+.drum-item:hover .drum-content {
+  transform: translateY(-4px);
+}
+
+.drum-item:hover h3,
+.drum-item:hover p,
+.drum-item:hover .program-number {
+  color: var(--ivory);
+}
+
+/* Slight gold emphasis */
+
+.drum-item:hover .program-number {
+  color: var(--gold);
+}
+
+/* Mobile / touch devices */
+
+@media (max-width: 700px) {
+  .drum-image {
+    opacity: 0.22;
+    transform: scale(1);
+  }
+
+  .drum-overlay {
+    opacity: 0.55;
+  }
+
+  .drum-item:hover .drum-image {
+    opacity: 0.22;
+  }
+
+  .drum-item:hover .drum-overlay {
+    opacity: 0.55;
+  }
+}
