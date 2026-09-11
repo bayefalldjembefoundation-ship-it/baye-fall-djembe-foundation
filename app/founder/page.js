@@ -3,38 +3,46 @@ export default function Founder() {
     <main className="inner-page founder-page">
 
       {/* FOUNDER INTRO */}
-      <section className="founder-intro">
-        <div className="section-label">01 — THE FOUNDER</div>
-        
-        <div className="founder-image-wrap">
-         <img
-          src="/images/founderpg.png.png"
-          alt="Ghana Mbaye, founder of the Baye Fall Djembe Foundation"
-          className="founder-image"
-         />
-        </div>
-        <div className="founder-content">
-          <p className="eyebrow">THE STORY BEHIND THE FOUNDATION</p>
+<section className="founder-intro">
+  <div className="section-label">01 — THE FOUNDER</div>
 
-          <h1>Ghana Mbaye</h1>
+  <div className="founder-intro-layout">
 
-          <p className="founder-title">
-            Master Percussionist & Cultural Educator
-          </p>
+    <div className="founder-image-wrap">
+      <img
+        src="/images/founderpg.png.png"
+        alt="Ghana Mbaye, founder of the Baye Fall Djembe Foundation"
+        className="founder-image"
+      />
+      <div className="founder-image-accent"></div>
+    </div>
 
-          <p>
-            Known to many as “Brother Ghana,” Ghana Mbaye is a Senegalese-born
-            master percussionist, cultural educator, and teacher whose life has
-            been dedicated to sharing the rhythms, traditions, and spirit of
-            West Africa.
-          </p>
+    <div className="founder-content">
+      <p className="eyebrow">THE STORY BEHIND THE FOUNDATION</p>
 
-          <p>
-            His journey from Senegal to the United States became more than a
-            personal story. It became a bridge between two worlds.
-          </p>
-        </div>
-      </section>
+      <h1>Brother Ghana</h1>
+
+      <p className="founder-title">
+        Master Percussionist & Cultural Educator
+      </p>
+
+      <div className="founder-divider"></div>
+
+      <p>
+        Known to many as “Brother Ghana,” Ghana Mbaye is a Senegalese-born
+        master percussionist, cultural educator, and teacher whose life has
+        been dedicated to sharing the rhythms, traditions, and spirit of
+        West Africa.
+      </p>
+
+      <p>
+        His journey from Senegal to the United States became more than a
+        personal story. It became a bridge between two worlds.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 
       {/* HIS JOURNEY */}
@@ -55,7 +63,7 @@ export default function Founder() {
         </p>
 
         <p>
-          Rather than leaving his heritage behind, Ghana found a way to carry
+          Rather than leaving his heritage behind, he found a way to carry
           it forward.
         </p>
 
@@ -80,7 +88,7 @@ export default function Founder() {
         <h2>A Life Dedicated to Teaching</h2>
 
         <p>
-          For decades, Ghana has dedicated himself to teaching African
+          For decades, Brother Ghana has dedicated himself to teaching African
           drumming and cultural traditions. His work has taken him into
           schools and communities where students are not simply watching a
           performance—they are becoming part of it.
@@ -100,7 +108,7 @@ export default function Founder() {
         </p>
 
         <p>
-          For Ghana, the drum is not simply an instrument. It is a language,
+          For Brother Ghana, the drum is not simply an instrument. It is a language,
           a teacher, and a connection to culture.
         </p>
       </section>
@@ -113,7 +121,7 @@ export default function Founder() {
         <h2>The Rhythm of West Africa</h2>
 
         <p>
-          Through his teaching, Ghana introduces people to traditional West
+          Through his teaching, Brother Ghana introduces people to traditional West
           African instruments and the cultural traditions surrounding them.
         </p>
 
@@ -179,7 +187,7 @@ export default function Founder() {
         <h2>More Than Music</h2>
 
         <p>
-          Ghana's connection to drumming is rooted in a cultural tradition that
+         Brother Ghana's connection to drumming is rooted in a cultural tradition that
           reaches far beyond entertainment.
         </p>
 
@@ -191,7 +199,7 @@ export default function Founder() {
         </p>
 
         <p>
-          These values influence the way Ghana approaches his work. His goal
+          These values influence the way Brother Ghana approaches his work. His goal
           is not simply to teach someone how to play a drum. It is to create
           an experience that encourages curiosity, respect, connection, and a
           deeper appreciation for African culture.
@@ -206,7 +214,7 @@ export default function Founder() {
         <h2>Bridging Two Worlds</h2>
 
         <p>
-          Ghana's life represents a bridge between Senegal and the United
+          Brother Ghana's life represents a bridge between Senegal and the United
           States.
         </p>
 
