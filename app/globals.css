@@ -1296,3 +1296,112 @@ section:not(.hero)::after {
   font-size: 1.08rem;
   line-height: 1.85;
 }
+/* =========================================
+   ABOUT — MISSION
+========================================= */
+
+.mission-section {
+  position: relative;
+  padding: 150px 8%;
+  background: var(--black-soft);
+  border-bottom: 1px solid rgba(185, 154, 97, 0.15);
+}
+
+.mission-layout {
+  max-width: 1300px;
+  margin: 80px auto 0;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.mission-heading h2 {
+  margin: 0;
+  color: var(--ivory);
+  font-size: clamp(4rem, 7vw, 7rem);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+}
+
+.mission-content {
+  max-width: 650px;
+  padding-top: 12px;
+}
+
+.mission-content p {
+  color: rgba(243, 238, 228, 0.68);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.mission-content .mission-statement {
+  margin-bottom: 30px;
+  color: var(--ivory);
+  font-size: 1.45rem;
+  line-height: 1.6;
+}
+
+.mission-values {
+  max-width: 1300px;
+  margin: 110px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(185, 154, 97, 0.3);
+}
+
+.mission-value {
+  position: relative;
+  min-height: 220px;
+  padding: 30px 28px;
+  border-right: 1px solid rgba(185, 154, 97, 0.18);
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+.mission-value:last-child {
+  border-right: none;
+}
+
+.mission-value span {
+  display: block;
+  margin-bottom: 45px;
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+}
+
+.mission-value h3 {
+  margin: 0;
+  color: var(--ivory);
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.mission-value p {
+  max-height: 0;
+  margin: 12px 0 0;
+  overflow: hidden;
+  color: rgba(243, 238, 228, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    max-height 0.5s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.mission-value:hover {
+  background: rgba(185, 154, 97, 0.06);
+  transform: translateY(-6px);
+}
+
+.mission-value:hover p {
+  max-height: 120px;
+  opacity: 1;
+  transform: translateY(0);
+}
