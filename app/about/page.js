@@ -290,7 +290,6 @@ export default function About() {
   </div>
 </section>
 
-{/* CLOSING */}
       {/* CLOSING */}
       <section className="about-closing">
 
