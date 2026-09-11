@@ -106,55 +106,38 @@ export default function About() {
 
   <div className="section-label">02 — CULTURAL HERITAGE</div>
 
-  <div className="culture-layout">
-
-    <div className="culture-heading">
-      <p className="eyebrow">CULTURAL HERITAGE</p>
-
-      <h2>
-        The Rhythm
-        <br />
-        of a People
-      </h2>
-    </div>
-
-    <div className="culture-content">
-
-      <p className="culture-lead">
-        West African culture lives through rhythm, movement, storytelling,
-        and community.
-      </p>
-
-      <p>
-        Through traditional drumming, dance, and cultural education, we create
-        experiences that connect people to the history, spirit, and traditions
-        of West Africa.
-      </p>
-
-      <p>
-        From the heartbeat of the djembe to the traditions passed from one
-        generation to the next, our work keeps culture alive while creating
-        meaningful connections between generations and across borders.
-      </p>
-
-    </div>
-
-          <div className="culture-image-wrap">
-  <img
-    src="/images/culture-community.jpg"
-    alt="Community members experiencing West African drumming and culture"
-    className="culture-image"
-  />
-</div>
-      
+ <div className="culture-layout">
+  <div className="culture-heading">
+    <p className="eyebrow">CULTURAL HERITAGE</p>
+    <h2>The Rhythm<br />of a People</h2>
   </div>
 
-      <div className="heritage-image-wrap">
-  <img
-    src="/images/cultural-heritage.jpg"
-    alt="Brother Ghana performing traditional West African drumming"
-    className="heritage-image"
-  />
+  <div className="culture-content">
+    <p className="culture-lead">
+      West African culture lives through rhythm, movement, storytelling,
+      and community.
+    </p>
+
+    <p>
+      Through traditional drumming, dance, and cultural education, we create
+      experiences that connect people to the history, spirit, and traditions
+      of West Africa.
+    </p>
+
+    <p>
+      From the heartbeat of the djembe to the traditions passed from one
+      generation to the next, our work keeps culture alive while creating
+      meaningful connections between generations and across borders.
+    </p>
+
+    <div className="heritage-image-wrap">
+      <img
+        src="/images/cultural-heritage.jpg"
+        alt="Brother Ghana performing traditional West African drumming"
+        className="heritage-image"
+      />
+    </div>
+  </div>
 </div>
 
   <div className="culture-pillars">
