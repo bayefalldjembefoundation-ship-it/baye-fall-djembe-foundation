@@ -129,16 +129,26 @@ export default function About() {
       generation to the next, our work keeps culture alive while creating
       meaningful connections between generations and across borders.
     </p>
-
-    <div className="heritage-image-wrap">
-      <img
-        src="/images/cultural-heritage.jpg"
-        alt="Brother Ghana performing traditional West African drumming"
-        className="heritage-image"
-      />
-    </div>
   </div>
 </div>
+
+<div className="culture-image-wrap">
+  <img
+    src="/images/culture-community.jpg"
+    alt="Community members experiencing West African drumming and culture"
+    className="culture-image"
+  />
+</div>
+
+<div className="heritage-image-wrap">
+  <img
+    src="/images/cultural-heritage.jpg"
+    alt="Brother Ghana performing traditional West African drumming"
+    className="heritage-image"
+  />
+</div>
+
+<div className="culture-pillars">
 
   <div className="culture-pillars">
 
