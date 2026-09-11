@@ -211,7 +211,11 @@ export default function Founder() {
       <section className="founder-section drums-section">
         <div className="section-label">04 — THE DRUMS</div>
 
-        <h2>The Rhythm of West Africa</h2>
+                    <h2>
+              The Rhythm
+              <br />
+              of West Africa
+            </h2>
 
         <p>
           Through his teaching, Brother Ghana introduces people to traditional West
