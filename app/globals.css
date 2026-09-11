@@ -574,40 +574,6 @@ section {
 
 
 /* =========================================
-   CULTURAL HERITAGE
-========================================= */
-
-.culture-section {
-  min-height: 85vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  background: #000000;
-
-  border-top: 1px solid var(--line);
-}
-
-.culture-section h2 {
-  max-width: 1000px;
-
-  margin-bottom: 55px;
-
-  color: var(--ivory);
-
-  font-size: clamp(4rem, 8vw, 8rem);
-
-  line-height: 0.86;
-  letter-spacing: -0.035em;
-}
-
-.culture-section p {
-  max-width: 760px;
-}
-
-
-/* =========================================
    GET INVOLVED
 ========================================= */
 
