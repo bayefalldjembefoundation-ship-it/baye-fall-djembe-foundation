@@ -148,10 +148,10 @@ export default function Founder() {
 
   <div className="teaching-image-wrap">
     <img
-      src="/images/teaching.png"
-      alt="Brother Ghana teaching African drumming to students"
-      className="teaching-image"
-    />
+  src="/images/teaching.png"
+  alt="Brother Ghana teaching African drumming to students"
+  className="teaching-image"
+/>
     <div className="teaching-image-accent"></div>
   </div>
 
