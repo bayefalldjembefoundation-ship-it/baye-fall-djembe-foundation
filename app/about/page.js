@@ -135,22 +135,23 @@ export default function About() {
     </div>
   </div>
 
-  <div className="culture-image-wrap">
-    <img
-      src="/images/culture-community.jpg"
-      alt="Community members experiencing West African drumming and culture"
-      className="culture-image"
-    />
-  </div>
+   <div className="culture-media">
+    <div className="culture-image-wrap">
+      <img
+        src="/images/culture-community.jpg"
+        alt="Community members experiencing traditional West African drumming"
+        className="culture-image"
+      />
+    </div>
 
-  <div className="heritage-image-wrap">
-    <img
-      src="/images/cultural-heritage.jpg"
-      alt="Brother Ghana performing traditional West African drumming"
-      className="heritage-image"
-    />
+    <div className="heritage-image-wrap">
+      <img
+        src="/images/cultural-heritage.jpg"
+        alt="Traditional West African drumming performance"
+        className="heritage-image"
+      />
+    </div>
   </div>
-
   <div className="culture-pillars">
     <div className="culture-pillar">
       <span>01</span>
