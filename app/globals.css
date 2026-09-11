@@ -500,7 +500,125 @@ section {
 
   font-size: 1.08rem;
 }
+/* =========================================
+   CULTURAL HERITAGE
+========================================= */
 
+.culture-section {
+  position: relative;
+  padding: 160px 8% 150px;
+  background: var(--black-soft);
+  overflow: hidden;
+  border-top: 1px solid rgba(185, 154, 97, 0.18);
+  border-bottom: 1px solid rgba(185, 154, 97, 0.18);
+}
+
+.culture-layout {
+  max-width: 1300px;
+  margin: 85px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 110px;
+  align-items: end;
+}
+
+.culture-heading h2 {
+  margin: 0;
+  color: var(--ivory);
+  font-size: clamp(4rem, 7vw, 7rem);
+  line-height: 0.86;
+  letter-spacing: -0.04em;
+}
+
+.culture-content {
+  max-width: 570px;
+}
+
+.culture-content p {
+  max-width: none;
+  margin: 0 0 28px;
+  color: rgba(243, 238, 228, 0.65);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.culture-content .culture-lead {
+  color: var(--ivory);
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+
+/* CULTURAL PILLARS */
+
+.culture-pillars {
+  max-width: 1300px;
+  margin: 120px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(185, 154, 97, 0.3);
+}
+
+.culture-pillar {
+  position: relative;
+  min-height: 210px;
+  padding: 30px 28px;
+  border-right: 1px solid rgba(185, 154, 97, 0.18);
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+.culture-pillar:last-child {
+  border-right: none;
+}
+
+.culture-pillar span {
+  display: block;
+  margin-bottom: 42px;
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+}
+
+.culture-pillar h3 {
+  margin: 0;
+  color: var(--ivory);
+  font-size: 1.3rem;
+  font-weight: 400;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.culture-pillar p {
+  max-width: 220px;
+  margin: 12px 0 0;
+  color: rgba(243, 238, 228, 0.55);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.culture-pillar:hover {
+  background: rgba(185, 154, 97, 0.05);
+  transform: translateY(-6px);
+}
+
+.culture-pillar:hover h3 {
+  color: var(--gold);
+  transform: translateX(5px);
+}
+
+.culture-pillar:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* =========================================
    PROGRAMS
