@@ -1558,19 +1558,89 @@ section:not(.hero)::after {
 
 /* HOVER */
 
+/* =========================================
+   EXPERIENCE — INTERACTIVE SEQUENCE
+========================================= */
+
+.experience-list {
+  max-width: 1300px;
+  margin: 90px auto 0;
+  border-top: 1px solid rgba(185, 154, 97, 0.3);
+}
+
+.experience-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  min-height: 135px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(243, 238, 228, 0.1);
+  cursor: default;
+  transition:
+    padding-left 0.5s ease,
+    border-color 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.experience-number {
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.experience-word {
+  display: flex;
+  align-items: baseline;
+  gap: 22px;
+  overflow: hidden;
+}
+
+.experience-word h3 {
+  margin: 0;
+  color: rgba(243, 238, 228, 0.68);
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.055em;
+  transition:
+    color 0.5s ease,
+    transform 0.5s ease,
+    letter-spacing 0.5s ease;
+}
+
+.experience-word p {
+  margin: 0;
+  color: rgba(243, 238, 228, 0.3);
+  font-size: 1rem;
+  line-height: 1;
+  transition:
+    color 0.5s ease,
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+/* =========================================
+   ACTIVE EXPERIENCE
+========================================= */
+
 .experience-item:hover {
-  padding-left: 18px;
-  border-color: rgba(185, 154, 97, 0.45);
+  padding-left: 20px;
+  border-color: rgba(185, 154, 97, 0.5);
 }
 
 .experience-item:hover .experience-number {
   color: var(--ivory);
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 .experience-item:hover .experience-word h3 {
   color: var(--gold);
-  transform: translateX(10px);
+  transform: translateX(12px);
   letter-spacing: -0.02em;
 }
 
@@ -1579,10 +1649,16 @@ section:not(.hero)::after {
   transform: translateX(8px);
 }
 
-/* QUIET THE OTHER ITEMS WHEN ONE IS ACTIVE */
+/* =========================================
+   QUIET THE OTHER EXPERIENCES
+========================================= */
 
 .experience-list:hover .experience-item:not(:hover) {
-  opacity: 0.35;
+  opacity: 0.28;
+}
+
+.experience-list:hover .experience-item:not(:hover) .experience-number {
+  color: rgba(185, 154, 97, 0.45);
 }
 
 .experience-list:hover .experience-item:not(:hover) .experience-word h3 {
@@ -1590,9 +1666,8 @@ section:not(.hero)::after {
 }
 
 .experience-list:hover .experience-item:not(:hover) .experience-word p {
-  opacity: 0.45;
+  opacity: 0.35;
 }
-
 
 /* EXPERIENCE LIST */
 
