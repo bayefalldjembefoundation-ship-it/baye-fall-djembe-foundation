@@ -49,7 +49,7 @@ export default function About() {
       </p>
 
       <p>
-        We empower youth to discover their roots, celebrate their heritage,
+        We empower youth to discover different cultures, celebrate diversity,
         and create lasting connections across different generations,
         cultures, and borders.
       </p>
