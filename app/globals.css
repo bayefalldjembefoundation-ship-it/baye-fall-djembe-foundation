@@ -2428,8 +2428,7 @@ section:not(.hero)::after {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 2048 / 1536;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.8s ease, filter 0.8s ease;
 }
 
