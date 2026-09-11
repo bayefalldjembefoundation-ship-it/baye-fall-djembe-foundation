@@ -172,36 +172,78 @@ export default function About() {
 
 </section>
 
-      {/* EXPERIENCE */}
-      <section className="experience-section">
+      {/* THE EXPERIENCE */}
+<section className="experience-section">
 
-        <div className="section-label">04 — THE EXPERIENCE</div>
+  <div className="section-label">03 — THE EXPERIENCE</div>
 
-        <p className="eyebrow">MORE THAN OBSERVATION</p>
+  <div className="experience-layout">
 
-        <h2>
-          Don't Just
-          <br />
-          Learn About
-          <br />
-          Culture.
-        </h2>
+    <div className="experience-heading">
+      <p className="eyebrow">MORE THAN OBSERVATION</p>
 
-        <div className="experience-statement">
-          <p>Experience it.</p>
-        </div>
+      <h2>
+        Don't Just
+        <br />
+        Learn About
+        <br />
+        Culture.
+      </h2>
+    </div>
 
-        <div className="experience-list">
+    <div className="experience-content">
 
-          <p>Hear the music.</p>
-          <p>Feel the rhythm.</p>
-          <p>Learn the stories.</p>
-          <p>Share the traditions.</p>
-          <p>Connect with community.</p>
+      <p className="experience-lead">
+        Culture is not something that should only be observed from a
+        distance.
+      </p>
 
-        </div>
+      <p>
+        We believe people should have the opportunity to participate,
+        connect, listen, move, learn, and experience culture for themselves.
+      </p>
 
-      </section>
+    </div>
+
+  </div>
+
+
+  <div className="experience-statement">
+    <span>EXPERIENCE</span>
+    <p>it.</p>
+  </div>
+
+
+  <div className="experience-list">
+
+    <div className="experience-item">
+      <span>01</span>
+      <p>Hear the music.</p>
+    </div>
+
+    <div className="experience-item">
+      <span>02</span>
+      <p>Feel the rhythm.</p>
+    </div>
+
+    <div className="experience-item">
+      <span>03</span>
+      <p>Learn the stories.</p>
+    </div>
+
+    <div className="experience-item">
+      <span>04</span>
+      <p>Share the traditions.</p>
+    </div>
+
+    <div className="experience-item">
+      <span>05</span>
+      <p>Connect with community.</p>
+    </div>
+
+  </div>
+
+</section>
 
 
       {/* CLOSING */}
