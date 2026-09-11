@@ -332,7 +332,7 @@ export default function Founder() {
           reaches far beyond entertainment.
         </p>
 
-        <p>
+        <p className="roots-lead">
           His music is inspired in part by the spiritual songs and rhythms of
           the Baye Fall tradition, a distinctive Senegalese tradition
           associated with devotion, hard work, education, community, and
