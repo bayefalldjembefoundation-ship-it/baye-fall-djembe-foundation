@@ -321,7 +321,11 @@ export default function Founder() {
       <section className="founder-section">
         <div className="section-label">05 — CULTURAL ROOTS</div>
 
-        <h2>More Than Music</h2>
+                  <h2>
+            More Than
+            <br />
+            Music
+          </h2>
 
         <p>
          Brother Ghana's connection to drumming is rooted in a cultural tradition that
