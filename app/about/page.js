@@ -102,37 +102,75 @@ export default function About() {
 </section>
 
     {/* CULTURAL HERITAGE */}
-      <section id="culture" className="culture-section">
+<section id="culture" className="culture-section">
 
-        <div className="section-label">03 — CULTURAL HERITAGE</div>
+  <div className="section-label">02 — CULTURAL HERITAGE</div>
 
-        <p className="eyebrow">CULTURAL HERITAGE</p>
+  <div className="culture-layout">
 
-        <h2>
-          The Rhythm
-          <br />
-          of a People
-        </h2>
+    <div className="culture-heading">
+      <p className="eyebrow">CULTURAL HERITAGE</p>
 
-        <div className="culture-content">
+      <h2>
+        The Rhythm
+        <br />
+        of a People
+      </h2>
+    </div>
 
-          <p>
-            West African culture lives through rhythm, movement, storytelling,
-            and community. Through traditional drumming, dance, and cultural
-            education, we create experiences that connect people to the
-            history, spirit, and traditions of West Africa.
-          </p>
+    <div className="culture-content">
 
-          <p>
-            From the heartbeat of the djembe to the traditions passed from one
-            generation to the next, our work keeps culture alive while creating
-            meaningful connections between generations and across borders.
-          </p>
+      <p className="culture-lead">
+        West African culture lives through rhythm, movement, storytelling,
+        and community.
+      </p>
 
-        </div>
+      <p>
+        Through traditional drumming, dance, and cultural education, we create
+        experiences that connect people to the history, spirit, and traditions
+        of West Africa.
+      </p>
 
-      </section>
+      <p>
+        From the heartbeat of the djembe to the traditions passed from one
+        generation to the next, our work keeps culture alive while creating
+        meaningful connections between generations and across borders.
+      </p>
 
+    </div>
+
+  </div>
+
+
+  <div className="culture-pillars">
+
+    <div className="culture-pillar">
+      <span>01</span>
+      <h3>Rhythm</h3>
+      <p>The heartbeat that brings people together.</p>
+    </div>
+
+    <div className="culture-pillar">
+      <span>02</span>
+      <h3>Movement</h3>
+      <p>Culture expressed through the body and spirit.</p>
+    </div>
+
+    <div className="culture-pillar">
+      <span>03</span>
+      <h3>Storytelling</h3>
+      <p>Knowledge carried from one generation to another.</p>
+    </div>
+
+    <div className="culture-pillar">
+      <span>04</span>
+      <h3>Community</h3>
+      <p>Connection that crosses generations and borders.</p>
+    </div>
+
+  </div>
+
+</section>
 
       {/* EXPERIENCE */}
       <section className="experience-section">
