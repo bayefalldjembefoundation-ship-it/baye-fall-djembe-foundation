@@ -176,12 +176,7 @@ export default function About() {
     </div>
   </div>
 </section>
-
-{/* THE EXPERIENCE */}
-          
-  </div>
-</section>
-      {/* THE EXPERIENCE */}
+  
 {/* THE EXPERIENCE */}
 <section className="experience-section">
   <div className="section-label">03 — THE EXPERIENCE</div>
