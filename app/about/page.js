@@ -149,6 +149,13 @@ export default function About() {
       
   </div>
 
+      <div className="heritage-image-wrap">
+  <img
+    src="/images/cultural-heritage.jpg"
+    alt="Brother Ghana performing traditional West African drumming"
+    className="heritage-image"
+  />
+</div>
 
   <div className="culture-pillars">
 
