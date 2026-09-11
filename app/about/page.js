@@ -286,12 +286,11 @@ export default function About() {
       <div className="experience-word">
         <h3>CONNECT</h3>
         <p>with community.</p>
-      </div>
-    </div>
-
+         </div>
   </div>
 </section>
 
+{/* CLOSING */}
       {/* CLOSING */}
       <section className="about-closing">
 
