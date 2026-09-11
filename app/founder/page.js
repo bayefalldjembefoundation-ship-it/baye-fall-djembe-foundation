@@ -112,37 +112,86 @@ export default function Founder() {
 
 
       {/* A LIFE OF TEACHING */}
-      <section className="founder-section">
-        <div className="section-label">03 — A LIFE OF TEACHING</div>
+<section className="founder-teaching">
 
-        <h2>A Life Dedicated to Teaching</h2>
+  <div className="section-label">03 — A LIFE OF TEACHING</div>
 
-        <p>
-          For decades, Brother Ghana has dedicated himself to teaching African
-          drumming and cultural traditions. His work has taken him into
-          schools and communities where students are not simply watching a
-          performance—they are becoming part of it.
-        </p>
+  <div className="teaching-intro">
+    <div className="teaching-heading">
+      <p className="eyebrow">28 YEARS OF EXPERIENCE</p>
 
-        <p>
-          His teaching is hands-on, energetic, and deeply personal. A typical
-          experience can begin with an introduction to the history and
-          significance of the drum before students learn rhythm through
-          clapping, movement, body percussion, and eventually the drums
-          themselves.
-        </p>
+      <h2>
+        A Life
+        <br />
+        Dedicated
+        <br />
+        to Teaching
+      </h2>
+    </div>
 
-        <p>
-          Students learn to listen to one another, find their rhythm, work
-          together, and experience the power of creating something collectively.
-        </p>
+    <div className="teaching-lead">
+      <span className="teaching-number">28</span>
+      <span className="teaching-years">YEARS OF TEACHING</span>
 
-        <p>
-          For Brother Ghana, the drum is not simply an instrument. It is a language,
-          a teacher, and a connection to culture.
-        </p>
-      </section>
+      <p>
+        Since 1998, Brother Ghana has dedicated his life to teaching
+        African drumming, cultural traditions, and the spirit of
+        community to generations of students.
+      </p>
+    </div>
+  </div>
 
+  <div className="teaching-story">
+
+    <div className="teaching-story-line"></div>
+
+    <div className="teaching-story-content">
+
+      <p>
+        When Brother Ghana came to the United States in 2000, he brought with
+        him a deep knowledge of African drumming, cultural traditions, and a
+        passion for teaching. Over the years, that passion has taken him into
+        schools and communities across the country, where he has continued to
+        teach, inspire, and create meaningful cultural experiences for
+        generations of students.
+      </p>
+
+      <p>
+        For almost three decades in the United States, he has entered
+        classrooms, schools, community spaces, and cultural programs
+        where students have had the opportunity to experience African
+        drumming firsthand.
+      </p>
+
+      <p className="teaching-highlight">
+        What began in Senegal in 1998 has grown into nearly three
+        decades of teaching, connection, and cultural exchange.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div className="teaching-bottom">
+
+    <div className="teaching-bottom-item">
+      <span>1998</span>
+      <p>Teaching begins in Senegal</p>
+    </div>
+
+    <div className="teaching-bottom-item">
+      <span>2000</span>
+      <p>Brings his teaching to the United States</p>
+    </div>
+
+    <div className="teaching-bottom-item">
+      <span>28+</span>
+      <p>Years of teaching and cultural education</p>
+    </div>
+
+  </div>
+
+</section>
 
       {/* THE DRUMS */}
       <section className="founder-section drums-section">
