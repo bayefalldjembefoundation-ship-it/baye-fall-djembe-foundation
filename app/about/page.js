@@ -287,6 +287,8 @@ export default function About() {
         <h3>CONNECT</h3>
         <p>with community.</p>
          </div>
+        </div>
+        
   </div>
 </section>
 
