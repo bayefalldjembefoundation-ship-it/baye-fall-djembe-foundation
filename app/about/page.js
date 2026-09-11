@@ -143,39 +143,42 @@ export default function About() {
         className="culture-image"
       />
     </div>
+          
+  </div>
+    <div className="culture-pillars">
+    ...
+  </div>
+</section>
 
-    <div className="heritage-image-wrap">
+{/* HERITAGE FEATURE */}
+<section className="heritage-feature">
+  <div className="section-label">THE HERITAGE</div>
+
+  <div className="heritage-feature-layout">
+    <div className="heritage-feature-heading">
+      <p className="eyebrow">TRADITION IN PRACTICE</p>
+
+      <h2>
+        Culture
+        <br />
+        Lives
+        <br />
+        Through Us.
+      </h2>
+    </div>
+
+    <div className="heritage-feature-image-wrap">
       <img
         src="/images/cultural-heritage.jpg"
         alt="Traditional West African drumming performance"
-        className="heritage-image"
+        className="heritage-feature-image"
       />
     </div>
   </div>
-  <div className="culture-pillars">
-    <div className="culture-pillar">
-      <span>01</span>
-      <h3>Rhythm</h3>
-      <p>The heartbeat that brings people together.</p>
-    </div>
+</section>
 
-    <div className="culture-pillar">
-      <span>02</span>
-      <h3>Movement</h3>
-      <p>Culture expressed through the body and spirit.</p>
-    </div>
-
-    <div className="culture-pillar">
-      <span>03</span>
-      <h3>Storytelling</h3>
-      <p>Knowledge carried from one generation to another.</p>
-    </div>
-
-    <div className="culture-pillar">
-      <span>04</span>
-      <h3>Community</h3>
-      <p>Connection that crosses generations and borders.</p>
-    </div>
+{/* THE EXPERIENCE */}
+          
   </div>
 </section>
       {/* THE EXPERIENCE */}
