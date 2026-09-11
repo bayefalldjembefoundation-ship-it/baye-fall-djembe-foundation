@@ -45,40 +45,70 @@ export default function Founder() {
 </section>
 
 
-      {/* HIS JOURNEY */}
-      <section className="founder-section">
-        <div className="section-label">02 — HIS JOURNEY</div>
+     {/* HIS JOURNEY */}
+<section className="founder-journey">
 
-        <h2>From Senegal to the United States</h2>
+  <div className="section-label">02 — HIS JOURNEY</div>
 
-        <p>
-          Brother Ghana was born in Dakar, Senegal, West Africa, where rhythm,
-          community, and tradition are woven into everyday life. In 1998,
-          before ever moving to the United States, Brother Ghana began teaching
-          traditional Senegalese drumming to study-abroad students from
-          American universities through ACI (Africa Consultants International)
-          and the Baobab Center in Senegal. In 2000, he moved to the United
-          States, bringing with him the culture, knowledge, and passion for
-          music that had shaped his life.
-        </p>
+  <div className="journey-layout">
 
-        <p>
-          Rather than leaving his heritage behind, he found a way to carry
-          it forward.
-        </p>
+    <div className="journey-image-wrap">
+      <img
+        src="/images/journey.jpg"
+        alt="Brother Ghana in Senegal"
+        className="journey-image"
+      />
 
-        <p>
-          Through African drumming and cultural education, he began sharing
-          experiences from his homeland with students, families, schools, and
-          communities throughout the United States.
-        </p>
+      <div className="journey-image-accent"></div>
+    </div>
 
-        <p>
-          What began with music became something much greater: an opportunity
-          for people to experience another culture through participation,
-          connection, rhythm, and community.
-        </p>
-      </section>
+    <div className="journey-content">
+
+      <p className="eyebrow">FROM SENEGAL TO THE UNITED STATES</p>
+
+      <h2>
+        From Senegal
+        <br />
+        to the
+        <br />
+        United States
+      </h2>
+
+      <div className="journey-divider"></div>
+
+      <p>
+        Brother Ghana was born in Dakar, Senegal, West Africa, where rhythm,
+        community, and tradition are woven into everyday life. In 1998,
+        before ever moving to the United States, Brother Ghana began teaching
+        traditional Senegalese drumming to study-abroad students from
+        American universities through ACI (Africa Consultants International)
+        and the Baobab Center in Senegal. In 2000, he moved to the United
+        States, bringing with him the culture, knowledge, and passion for
+        music that had shaped his life.
+      </p>
+
+      <p className="journey-highlight">
+        Rather than leaving his heritage behind, he found a way to carry
+        it forward.
+      </p>
+
+      <p>
+        Through African drumming and cultural education, he began sharing
+        experiences from his homeland with students, families, schools, and
+        communities throughout the United States.
+      </p>
+
+      <p>
+        What began with music became something much greater: an opportunity
+        for people to experience another culture through participation,
+        connection, rhythm, and community.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
 
       {/* A LIFE OF TEACHING */}
