@@ -2171,71 +2171,87 @@ section:not(.hero)::after {
   transform: translateY(0);
 }
 /* =========================================
-   ABOUT — THE EXPERIENCE
+   ABOUT — EXPERIENCE
 ========================================= */
 
-/* EXPERIENCE INTERACTIVE LIST */
-
-.experience-list {
-  max-width: 1300px;
-  margin: 90px auto 0;
+.about-page .experience-list {
+  max-width: 1100px;
+  margin: 110px auto 0;
   border-top: 1px solid rgba(185, 154, 97, 0.3);
 }
 
-.experience-item {
+.about-page .experience-item {
   position: relative;
   display: grid;
   grid-template-columns: 80px 1fr;
   align-items: center;
-  min-height: 125px;
-  padding: 18px 0;
+  min-height: 105px;
+  padding: 28px 0;
   border-bottom: 1px solid rgba(243, 238, 228, 0.1);
-  cursor: default;
   transition:
-    padding-left 0.5s ease,
-    border-color 0.5s ease,
-    opacity 0.5s ease;
+    padding-left 0.45s ease,
+    border-color 0.45s ease,
+    opacity 0.45s ease;
 }
 
-.experience-number {
+.about-page .experience-number {
   color: var(--gold);
   font-family: "Cinzel", Georgia, serif;
   font-size: 0.6rem;
   letter-spacing: 0.2em;
-  transition:
-    color 0.4s ease,
-    transform 0.4s ease;
 }
 
-.experience-word {
+.about-page .experience-word {
   display: flex;
   align-items: baseline;
-  gap: 18px;
+  gap: 24px;
 }
 
-.experience-word h3 {
+.about-page .experience-word h3 {
   margin: 0;
-  color: rgba(243, 238, 228, 0.72);
-  font-size: clamp(3rem, 6vw, 6rem);
+  color: rgba(243, 238, 228, 0.55);
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
   font-weight: 400;
   line-height: 0.9;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
   transition:
-    color 0.5s ease,
-    transform 0.5s ease,
-    letter-spacing 0.5s ease;
+    color 0.45s ease,
+    transform 0.45s ease;
 }
 
-.experience-word p {
+.about-page .experience-word p {
   margin: 0;
-  color: rgba(243, 238, 228, 0.35);
-  font-size: 1rem;
-  line-height: 1;
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateX(-15px);
   transition:
-    color 0.5s ease,
-    transform 0.5s ease,
-    opacity 0.5s ease;
+    opacity 0.45s ease,
+    transform 0.45s ease;
 }
+
+.about-page .experience-item:hover {
+  padding-left: 18px;
+  border-color: rgba(185, 154, 97, 0.45);
+}
+
+.about-page .experience-item:hover .experience-word h3 {
+  color: var(--ivory);
+  transform: translateX(5px);
+}
+
+.about-page .experience-item:hover .experience-word p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-page .experience-list:hover .experience-item:not(:hover) {
+  opacity: 0.3;
+}
+
 /* =========================================
    EXPERIENCE — BIG STATEMENT
 ========================================= */
@@ -2347,181 +2363,9 @@ section:not(.hero)::after {
   filter: saturate(1.05);
 }
 
-/* HOVER */
-
 /* =========================================
-   EXPERIENCE — REVEAL LIST
+   ABOUT — CULTURAL PILLARS
 ========================================= */
-
-.experience-list {
-  max-width: 1100px;
-  margin: 110px auto 0;
-  border-top: 1px solid rgba(185, 154, 97, 0.3);
-}
-
-.experience-item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 105px;
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(243, 238, 228, 0.1);
-  transition:
-    padding-left 0.45s ease,
-    border-color 0.45s ease,
-    opacity 0.45s ease;
-  cursor: default;
-}
-
-/* Hide the numbers */
-
-.experience-number {
-  display: none;
-}
-
-
-/* WORD + REVEAL TEXT */
-
-.experience-word {
-  display: flex;
-  align-items: baseline;
-  gap: 24px;
-}
-
-.experience-word h3 {
-  margin: 0;
-  color: rgba(243, 238, 228, 0.55);
-  font-size: clamp(1.8rem, 3vw, 3.2rem);
-  font-weight: 400;
-  line-height: 0.9;
-  letter-spacing: -0.045em;
-
-  transition:
-    color 0.45s ease,
-    transform 0.45s ease;
-}
-
-.experience-word p {
-  margin: 0;
-
-  color: var(--gold);
-
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-
-  opacity: 0;
-  transform: translateX(-15px);
-
-  transition:
-    opacity 0.45s ease,
-    transform 0.45s ease;
-}
-
-
-/* =========================================
-   HOVER REVEAL
-========================================= */
-
-.experience-item:hover {
-  padding-left: 18px;
-  border-color: rgba(185, 154, 97, 0.45);
-}
-
-.experience-item:hover .experience-word h3 {
-  color: var(--ivory);
-  transform: translateX(5px);
-}
-
-.experience-item:hover .experience-word p {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-/* =========================================
-   QUIET THE OTHER WORDS
-========================================= */
-
-.experience-list:hover .experience-item:not(:hover) {
-  opacity: 0.3;
-}
-
-.experience-list:hover .experience-item:not(:hover) .experience-word h3 {
-  transform: translateX(0);
-}
-
-.experience-item {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  align-items: center;
-  padding: 28px 0;
-  border-bottom: 1px solid rgba(243, 238, 228, 0.1);
-  transition:
-    padding-left 0.4s ease,
-    border-color 0.4s ease;
-}
-
-.experience-item span {
-  color: var(--gold);
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-}
-
-.experience-item p {
-  margin: 0;
-  color: rgba(243, 238, 228, 0.72);
-  font-size: clamp(1.4
-/* =========================================
-   ABOUT — CULTURAL HERITAGE
-========================================= */
-
-.culture-section {
-  position: relative;
-  padding: 160px 8% 150px;
-  background: var(--black-soft);
-  overflow: hidden;
-  border-bottom: 1px solid rgba(185, 154, 97, 0.18);
-}
-
-.culture-layout {
-  max-width: 1300px;
-  margin: 85px auto 0;
-  display: grid;
-  grid-template-columns: 1fr 0.9fr;
-  gap: 110px;
-  align-items: end;
-}
-
-.culture-heading h2 {
-  margin: 0;
-  color: var(--ivory);
-  font-size: clamp(4rem, 7vw, 7rem);
-  line-height: 0.86;
-  letter-spacing: -0.04em;
-}
-
-.culture-content {
-  max-width: 570px;
-}
-
-.culture-content p {
-  margin-bottom: 28px;
-  color: rgba(243, 238, 228, 0.65);
-  font-size: 1rem;
-  line-height: 1.9;
-}
-
-.culture-content .culture-lead {
-  color: var(--ivory);
-  font-size: 1.4rem;
-  line-height: 1.6;
-}
-
-
-/* CULTURAL PILLARS */
 
 .culture-pillars {
   max-width: 1300px;
@@ -2597,17 +2441,17 @@ section:not(.hero)::after {
 ========================================= */
 
 .founder-teaching {
-  background: red !important;
   position: relative;
   padding: 160px 8% 140px;
+  background: var(--black);
+  border-bottom: 1px solid rgba(185, 154, 97, 0.18);
+  overflow: hidden;
 }
 
 .founder-teaching .section-label {
   max-width: 1300px;
   margin: 0 auto;
 }
-
-/* INTRO */
 
 .teaching-intro {
   max-width: 1300px;
@@ -2629,14 +2473,15 @@ section:not(.hero)::after {
 .teaching-heading h2 {
   margin: 0;
   color: var(--ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 500;
   line-height: 0.88;
   letter-spacing: -0.04em;
 }
 
 .teaching-lead {
   max-width: 500px;
-  padding-bottom: 5px;
 }
 
 .teaching-number {
@@ -2662,11 +2507,10 @@ section:not(.hero)::after {
 .teaching-lead p {
   margin: 30px 0 0;
   color: rgba(243, 238, 228, 0.68);
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1rem;
   line-height: 1.9;
 }
-
-/* IMAGE */
 
 .teaching-image-wrap {
   position: relative;
@@ -2674,13 +2518,14 @@ section:not(.hero)::after {
   max-width: 1300px;
   margin: 100px auto 0;
   padding: 10px;
-  box-sizing: border-box;
   border: 1px solid rgba(185, 154, 97, 0.5);
   background: #050505;
   box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.6),
     0 0 0 1px rgba(243, 228, 194, 0.04);
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.6s ease;
 }
 
 .teaching-image-wrap::before {
@@ -2697,7 +2542,8 @@ section:not(.hero)::after {
   width: 100%;
   height: auto;
   max-height: 720px;
-  object-fit: cover;
+  object-fit: contain;
+  transition: transform 0.8s ease;
 }
 
 .teaching-image-accent {
@@ -2708,6 +2554,9 @@ section:not(.hero)::after {
   bottom: -20px;
   border: 1px solid rgba(185, 154, 97, 0.28);
   z-index: -1;
+  transition:
+    transform 0.6s ease,
+    border-color 0.6s ease;
 }
 
 .teaching-image-wrap:hover {
@@ -2721,7 +2570,10 @@ section:not(.hero)::after {
   transform: scale(1.01);
 }
 
-/* STORY */
+.teaching-image-wrap:hover .teaching-image-accent {
+  transform: translate(8px, 8px);
+  border-color: rgba(185, 154, 97, 0.55);
+}
 
 .teaching-story {
   max-width: 1000px;
@@ -2744,6 +2596,7 @@ section:not(.hero)::after {
 .teaching-story-content p {
   margin: 0;
   color: rgba(243, 238, 228, 0.66);
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1rem;
   line-height: 1.9;
 }
@@ -2758,16 +2611,14 @@ section:not(.hero)::after {
   line-height: 1.65;
 }
 
-/* TIMELINE */
-
 .teaching-bottom {
   max-width: 1300px;
   margin: 100px auto 0;
   padding-top: 40px;
-  border-top: 1px solid rgba(185, 154, 97, 0.25);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
+  border-top: 1px solid rgba(185, 154, 97, 0.25);
 }
 
 .teaching-bottom-item span {
@@ -2782,6 +2633,248 @@ section:not(.hero)::after {
 .teaching-bottom-item p {
   margin: 12px 0 0;
   color: rgba(243, 238, 228, 0.58);
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 0.85rem;
   line-height: 1.6;
+}
+
+/* =========================================
+   ABOUT + FOUNDER RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .about-intro {
+    min-height: auto;
+    padding: 150px 7% 100px;
+  }
+
+  .about-intro .section-label {
+    position: static;
+    margin-bottom: 55px;
+  }
+
+  .about-intro h1 {
+    font-size: clamp(3.5rem, 12vw, 6rem);
+  }
+
+  .mission-layout {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .mission-values,
+  .culture-pillars {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mission-value:nth-child(2),
+  .culture-pillar:nth-child(2) {
+    border-right: none;
+  }
+
+  .experience-statement {
+    margin-top: 100px;
+  }
+
+  .teaching-intro {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .teaching-heading h2 {
+    font-size: clamp(3.5rem, 12vw, 6rem);
+  }
+
+  .teaching-image-wrap {
+    margin-top: 70px;
+  }
+
+  .teaching-story {
+    margin-top: 70px;
+  }
+
+  .teaching-bottom {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-intro {
+    padding: 130px 6% 80px;
+  }
+
+  .about-intro::before,
+  .about-intro::after {
+    display: none;
+  }
+
+  .about-intro h1 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+
+  .mission-section {
+    padding: 120px 6% 90px;
+  }
+
+  .mission-layout {
+    margin-top: 55px;
+  }
+
+  .mission-heading h2,
+  .culture-heading h2 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+
+  .mission-values,
+  .culture-pillars {
+    grid-template-columns: 1fr;
+    margin-top: 75px;
+  }
+
+  .mission-value,
+  .culture-pillar {
+    min-height: auto;
+    padding: 28px 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(185, 154, 97, 0.18);
+  }
+
+  .mission-value:last-child,
+  .culture-pillar:last-child {
+    border-bottom: none;
+  }
+
+  .mission-value span,
+  .culture-pillar span {
+    margin-bottom: 25px;
+  }
+
+  .mission-value p,
+  .culture-pillar p {
+    max-height: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .about-page .experience-list {
+    margin-top: 65px;
+  }
+
+  .about-page .experience-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    min-height: auto;
+    padding: 24px 0;
+  }
+
+  .about-page .experience-number {
+    display: none;
+  }
+
+  .about-page .experience-word {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .about-page .experience-word h3 {
+    font-size: 2rem;
+  }
+
+  .about-page .experience-word p {
+    opacity: 1;
+    transform: none;
+    font-size: 0.62rem;
+  }
+
+  .experience-statement {
+    margin-top: 80px;
+    padding: 55px 0 60px;
+    gap: 15px;
+  }
+
+  .experience-statement p {
+    font-size: clamp(5rem, 23vw, 8rem);
+  }
+
+  .experience-video-wrap {
+    margin-top: 60px;
+    padding: 7px;
+  }
+
+  .experience-video-wrap::before {
+    inset: 5px;
+  }
+
+  .experience-video {
+    aspect-ratio: 1180 / 642;
+  }
+
+  .founder-teaching {
+    padding: 120px 6% 80px;
+  }
+
+  .teaching-intro {
+    margin-top: 55px;
+    gap: 45px;
+  }
+
+  .teaching-heading h2 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+
+  .teaching-number {
+    font-size: 5rem;
+  }
+
+  .teaching-image-wrap {
+    margin-top: 55px;
+    padding: 7px;
+  }
+
+  .teaching-image-wrap::before {
+    inset: 5px;
+  }
+
+  .teaching-image-accent {
+    right: -10px;
+    bottom: -10px;
+  }
+
+  .teaching-story {
+    margin-top: 60px;
+    grid-template-columns: 1px 1fr;
+    gap: 22px;
+  }
+
+  .teaching-story-content p {
+    font-size: 1rem;
+  }
+
+  .teaching-story-content .teaching-highlight {
+    font-size: 1.2rem;
+  }
+
+  .teaching-bottom {
+    margin-top: 70px;
+    padding-top: 30px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY + MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
