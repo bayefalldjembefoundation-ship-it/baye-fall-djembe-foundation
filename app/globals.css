@@ -548,6 +548,50 @@ section {
   line-height: 1.6;
 }
 
+.culture-image-wrap {
+  position: relative;
+  max-width: 900px;
+  margin: 95px auto 0;
+  padding: 10px;
+  border: 1px solid rgba(185, 154, 97, 0.45);
+  background: #050505;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.culture-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(243, 228, 194, 0.2);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.culture-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  filter: saturate(0.95);
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.culture-image-wrap:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.6);
+}
+
+.culture-image-wrap:hover .culture-image {
+  transform: scale(1.025);
+  filter: saturate(1.08);
+}
 
 /* CULTURAL PILLARS */
 
