@@ -139,6 +139,14 @@ export default function About() {
 
     </div>
 
+          <div className="culture-image-wrap">
+  <img
+    src="/images/culture-community.jpg"
+    alt="Community members experiencing West African drumming and culture"
+    className="culture-image"
+  />
+</div>
+      
   </div>
 
 
