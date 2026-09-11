@@ -593,6 +593,54 @@ section {
   filter: saturate(1.08);
 }
 
+/* =========================================
+   CULTURAL HERITAGE — IMAGE
+========================================= */
+
+.heritage-image-wrap {
+  position: relative;
+  width: min(100%, 760px);
+  margin: 100px 0 0 auto;
+  padding: 10px;
+  border: 1px solid rgba(185, 154, 97, 0.45);
+  background: #050505;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.heritage-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(243, 228, 194, 0.2);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.heritage-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.heritage-image-wrap:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.6);
+}
+
+.heritage-image-wrap:hover .heritage-image {
+  transform: scale(1.025);
+  filter: saturate(1.05);
+}
+
 /* CULTURAL PILLARS */
 
 .culture-pillars {
