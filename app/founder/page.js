@@ -224,56 +224,96 @@ export default function Founder() {
 
         <div className="drum-grid">
 
-          <div className="drum-item">
-            <span className="program-number">01</span>
+  <div className="drum-item">
+    <img
+      src="/images/djembe.png"
+      alt="West African djembe drum"
+      className="drum-image"
+    />
 
-            <h3>Djembe</h3>
+    <div className="drum-overlay"></div>
 
-            <p>
-              The djembe is one of the most recognizable West African drums.
-              Its powerful voice can communicate celebration, emotion,
-              community, and tradition.
-            </p>
-          </div>
+    <div className="drum-content">
+      <span className="program-number">01</span>
 
+      <h3>Djembe</h3>
 
-          <div className="drum-item">
-            <span className="program-number">02</span>
-
-            <h3>Dun Dun</h3>
-
-            <p>
-              The dun dun provides the deep foundation of many traditional
-              rhythms and demonstrates how individual sounds come together to
-              create something larger.
-            </p>
-          </div>
+      <p>
+        The djembe is one of the most recognizable West African drums.
+        Its powerful voice can communicate celebration, emotion,
+        community, and tradition.
+      </p>
+    </div>
+  </div>
 
 
-          <div className="drum-item">
-            <span className="program-number">03</span>
+  <div className="drum-item">
+    <img
+      src="/images/dundun.jpeg"
+      alt="West African dun dun drum"
+      className="drum-image"
+    />
 
-            <h3>Sangba</h3>
+    <div className="drum-overlay"></div>
 
-            <p>
-              The sangba adds another layer to the rhythm and helps demonstrate
-              the relationship between different drums within an ensemble.
-            </p>
-          </div>
+    <div className="drum-content">
+      <span className="program-number">02</span>
+
+      <h3>Dun Dun</h3>
+
+      <p>
+        The dun dun provides the deep foundation of many traditional
+        rhythms and demonstrates how individual sounds come together
+        to create something larger.
+      </p>
+    </div>
+  </div>
 
 
-          <div className="drum-item">
-            <span className="program-number">04</span>
+  <div className="drum-item">
+    <img
+      src="/images/sangba.jpeg"
+      alt="West African sangba drum"
+      className="drum-image"
+    />
 
-            <h3>Kenkeni</h3>
+    <div className="drum-overlay"></div>
 
-            <p>
-              The kenkeni contributes a higher rhythmic voice and helps
-              complete the musical conversation between the drums.
-            </p>
-          </div>
+    <div className="drum-content">
+      <span className="program-number">03</span>
 
-        </div>
+      <h3>Sangba</h3>
+
+      <p>
+        The sangba adds another layer to the rhythm and helps demonstrate
+        the relationship between different drums within an ensemble.
+      </p>
+    </div>
+  </div>
+
+
+  <div className="drum-item">
+    <img
+      src="/images/kenkeni.jpeg"
+      alt="West African kenkeni drum"
+      className="drum-image"
+    />
+
+    <div className="drum-overlay"></div>
+
+    <div className="drum-content">
+      <span className="program-number">04</span>
+
+      <h3>Kenkeni</h3>
+
+      <p>
+        The kenkeni contributes a higher rhythmic voice and helps
+        complete the musical conversation between the drums.
+      </p>
+    </div>
+  </div>
+
+</div>
       </section>
 
 
