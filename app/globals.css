@@ -1399,6 +1399,18 @@ section:not(.hero)::after {
     right: -10px;
     bottom: -10px;
   }
+    .experience-video-wrap {
+    margin-top: 60px;
+    padding: 7px;
+  }
+
+  .experience-video-wrap::before {
+    inset: 5px;
+  }
+
+  .experience-video {
+    aspect-ratio: 1180 / 642;
+  }
 }
 /* =========================================
    ABOUT PAGE
