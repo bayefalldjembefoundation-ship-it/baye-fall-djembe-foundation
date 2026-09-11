@@ -2336,7 +2336,7 @@ section:not(.hero)::after {
 
 .founder-teaching {
   position: relative;
-  padding: 170px 8% 160px;
+  padding: 160px 8% 140px;
   background: var(--black);
   overflow: hidden;
   border-bottom: 1px solid rgba(185, 154, 97, 0.18);
@@ -2347,13 +2347,19 @@ section:not(.hero)::after {
   margin: 0 auto;
 }
 
+/* INTRO */
+
 .teaching-intro {
   max-width: 1300px;
-  margin: 85px auto 0;
+  margin: 80px auto 0;
   display: grid;
-  grid-template-columns: 1fr 0.85fr;
-  gap: 110px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 100px;
   align-items: end;
+}
+
+.teaching-heading {
+  max-width: 700px;
 }
 
 .teaching-heading .eyebrow {
@@ -2364,27 +2370,28 @@ section:not(.hero)::after {
   margin: 0;
   color: var(--ivory);
   font-size: clamp(4rem, 7vw, 7rem);
-  line-height: 0.86;
+  line-height: 0.88;
   letter-spacing: -0.04em;
 }
 
 .teaching-lead {
-  padding-bottom: 10px;
-  max-width: 520px;
+  max-width: 500px;
+  padding-bottom: 5px;
 }
 
 .teaching-number {
   display: block;
+  margin: 0;
   color: var(--ivory);
   font-family: "Cinzel", Georgia, serif;
-  font-size: clamp(5rem, 9vw, 9rem);
+  font-size: clamp(5rem, 8vw, 8rem);
   line-height: 0.8;
   letter-spacing: -0.05em;
 }
 
 .teaching-years {
   display: block;
-  margin-top: 18px;
+  margin-top: 20px;
   color: var(--gold);
   font-family: "Cinzel", Georgia, serif;
   font-size: 0.7rem;
@@ -2393,87 +2400,80 @@ section:not(.hero)::after {
 }
 
 .teaching-lead p {
-  margin-top: 30px;
-  color: rgba(243, 238, 228, 0.65);
-  font-size: 1.05rem;
+  margin: 30px 0 0;
+  color: rgba(243, 238, 228, 0.68);
+  font-size: 1rem;
   line-height: 1.9;
 }
 
-/* TEACHING IMAGE */
+/* IMAGE */
 
 .teaching-image-wrap {
   position: relative;
+  width: 100%;
   max-width: 1300px;
   margin: 100px auto 0;
-  padding: 11px;
-  border: 1px solid rgba(185, 154, 97, 0.55);
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgba(185, 154, 97, 0.5);
   background: #050505;
   box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.6),
     0 0 0 1px rgba(243, 228, 194, 0.04);
-  z-index: 2;
   transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
 
 .teaching-image-wrap::before {
   content: "";
   position: absolute;
-  inset: 7px;
-  border: 1px solid rgba(243, 228, 194, 0.22);
+  inset: 6px;
+  border: 1px solid rgba(243, 228, 194, 0.2);
   pointer-events: none;
-  z-index: 3;
+  z-index: 2;
 }
 
 .teaching-image {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
-  transition: transform 0.8s ease, filter 0.8s ease;
+  max-height: 720px;
+  object-fit: cover;
 }
 
 .teaching-image-accent {
   position: absolute;
-  width: 42%;
-  height: 70%;
-  right: -22px;
-  bottom: -22px;
+  width: 38%;
+  height: 65%;
+  right: -20px;
+  bottom: -20px;
   border: 1px solid rgba(185, 154, 97, 0.28);
   z-index: -1;
-  transition: transform 0.6s ease, border-color 0.6s ease;
 }
 
 .teaching-image-wrap:hover {
-  transform: translateY(-8px);
+  transform: translateY(-7px);
   box-shadow:
     0 40px 95px rgba(0, 0, 0, 0.7),
-    0 0 40px rgba(185, 154, 97, 0.08);
+    0 0 35px rgba(185, 154, 97, 0.08);
 }
 
 .teaching-image-wrap:hover .teaching-image {
-  transform: scale(1.015);
-  filter: saturate(1.04);
+  transform: scale(1.01);
 }
 
-.teaching-image-wrap:hover .teaching-image-accent {
-  transform: translate(7px, 7px);
-  border-color: rgba(185, 154, 97, 0.55);
-}
-
-/* TEACHING STORY */
+/* STORY */
 
 .teaching-story {
   max-width: 1000px;
-  margin: 110px auto 0;
+  margin: 100px auto 0;
   display: grid;
-  grid-template-columns: 3px 1fr;
-  gap: 40px;
+  grid-template-columns: 2px 1fr;
+  gap: 38px;
 }
 
 .teaching-story-line {
   width: 1px;
-  height: 100%;
-  min-height: 430px;
+  min-height: 100%;
   background: rgba(185, 154, 97, 0.5);
 }
 
@@ -2482,7 +2482,8 @@ section:not(.hero)::after {
 }
 
 .teaching-story-content p {
-  color: rgba(243, 238, 228, 0.65);
+  margin: 0;
+  color: rgba(243, 238, 228, 0.66);
   font-size: 1rem;
   line-height: 1.9;
 }
@@ -2493,16 +2494,16 @@ section:not(.hero)::after {
 
 .teaching-story-content .teaching-highlight {
   color: var(--ivory);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   line-height: 1.65;
 }
 
-/* TEACHING TIMELINE */
+/* TIMELINE */
 
 .teaching-bottom {
   max-width: 1300px;
-  margin: 110px auto 0;
-  padding-top: 45px;
+  margin: 100px auto 0;
+  padding-top: 40px;
   border-top: 1px solid rgba(185, 154, 97, 0.25);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2511,6 +2512,7 @@ section:not(.hero)::after {
 
 .teaching-bottom-item span {
   display: block;
+  margin: 0;
   color: var(--gold);
   font-family: "Cinzel", Georgia, serif;
   font-size: 2.5rem;
@@ -2518,8 +2520,8 @@ section:not(.hero)::after {
 }
 
 .teaching-bottom-item p {
-  margin-top: 12px;
-  color: rgba(243, 238, 228, 0.55);
+  margin: 12px 0 0;
+  color: rgba(243, 238, 228, 0.58);
   font-size: 0.85rem;
   line-height: 1.6;
 }
