@@ -2973,3 +2973,14 @@ section:not(.hero)::after {
     opacity: 0.55;
   }
 }
+/* Cultural Roots — lead statement */
+
+.roots-lead {
+  max-width: 760px;
+  margin-top: 45px;
+  color: var(--ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
