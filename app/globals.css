@@ -1555,7 +1555,63 @@ section:not(.hero)::after {
     transform 0.5s ease,
     opacity 0.5s ease;
 }
+/* =========================================
+   EXPERIENCE — BIG STATEMENT
+========================================= */
 
+.experience-statement {
+  position: relative;
+  max-width: 1300px;
+  margin: 150px auto 0;
+  padding: 70px 0 75px;
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+  border-top: 1px solid rgba(185, 154, 97, 0.35);
+  border-bottom: 1px solid rgba(185, 154, 97, 0.35);
+  overflow: hidden;
+}
+
+.experience-statement::after {
+  content: "EXPERIENCE";
+  position: absolute;
+  right: -20px;
+  bottom: -55px;
+  color: rgba(185, 154, 97, 0.035);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(7rem, 17vw, 17rem);
+  letter-spacing: -0.05em;
+  line-height: 0.8;
+  pointer-events: none;
+}
+
+.experience-statement span {
+  position: relative;
+  z-index: 2;
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(0.8rem, 1.2vw, 1.15rem);
+  letter-spacing: 0.3em;
+}
+
+.experience-statement p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: var(--ivory);
+  font-size: clamp(7rem, 15vw, 15rem);
+  font-weight: 400;
+  line-height: 0.65;
+  letter-spacing: -0.08em;
+  transition:
+    color 0.5s ease,
+    transform 0.5s ease;
+}
+
+.experience-statement:hover p {
+  color: var(--gold);
+  transform: translateX(18px);
+}
 /* HOVER */
 
 /* =========================================
@@ -1600,7 +1656,7 @@ section:not(.hero)::after {
 .experience-word h3 {
   margin: 0;
   color: rgba(243, 238, 228, 0.55);
-  font-size: clamp(2.8rem, 5vw, 5.5rem);
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
   font-weight: 400;
   line-height: 0.9;
   letter-spacing: -0.045em;
