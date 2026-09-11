@@ -1149,6 +1149,151 @@ section:not(.hero)::after {
   color: rgba(243, 238, 228, 0.55);
 }
 
+/* =========================================
+   FOUNDER — HIS JOURNEY
+========================================= */
+
+.founder-journey {
+  position: relative;
+  padding: 170px 8% 160px;
+  background: var(--black-soft);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(185, 154, 97, 0.18);
+}
+
+.founder-journey .section-label {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.journey-layout {
+  max-width: 1300px;
+  margin: 85px auto 0;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.journey-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.journey-image-wrap {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* JOURNEY IMAGE */
+
+.journey-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  padding: 11px;
+  border: 1px solid rgba(185, 154, 97, 0.55);
+  background: #050505;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(243, 228, 194, 0.04);
+  z-index: 2;
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.journey-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(243, 228, 194, 0.22);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.journey-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  filter: sepia(0.08) saturate(0.85);
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.journey-image-accent {
+  position: absolute;
+  width: 82%;
+  height: 82%;
+  left: -20px;
+  bottom: -20px;
+  border: 1px solid rgba(185, 154, 97, 0.3);
+  z-index: -1;
+  transition:
+    transform 0.6s ease,
+    border-color 0.6s ease;
+}
+
+.journey-image-wrap:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 35px 85px rgba(0, 0, 0, 0.65),
+    0 0 35px rgba(185, 154, 97, 0.08);
+}
+
+.journey-image-wrap:hover .journey-image {
+  transform: scale(1.02);
+  filter: sepia(0.04) saturate(1);
+}
+
+.journey-image-wrap:hover .journey-image-accent {
+  transform: translate(-7px, 7px);
+  border-color: rgba(185, 154, 97, 0.55);
+}
+
+/* JOURNEY CONTENT */
+
+.journey-content {
+  max-width: 650px;
+}
+
+.journey-content .eyebrow {
+  margin-bottom: 25px;
+}
+
+.journey-content h2 {
+  margin: 0;
+  color: var(--ivory);
+  font-size: clamp(3.8rem, 6vw, 6.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+}
+
+.journey-divider {
+  width: 90px;
+  height: 1px;
+  margin: 38px 0;
+  background: rgba(185, 154, 97, 0.55);
+}
+
+.journey-content > p {
+  color: rgba(243, 238, 228, 0.65);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.journey-content > p + p {
+  margin-top: 25px;
+}
+
+.journey-content .journey-highlight {
+  color: var(--ivory);
+  font-size: 1.35rem;
+  line-height: 1.6;
+}
 
 /* FOUNDER SECTIONS */
 
