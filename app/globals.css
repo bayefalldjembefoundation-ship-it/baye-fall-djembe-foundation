@@ -599,8 +599,8 @@ section {
 
 .heritage-image-wrap {
   position: relative;
-  width: min(100%, 760px);
-  margin: 100px 0 0 auto;
+  width: min(100%, 620px);
+  margin: 80px 0 80px auto;
   padding: 10px;
   border: 1px solid rgba(185, 154, 97, 0.45);
   background: #050505;
@@ -640,78 +640,6 @@ section {
   transform: scale(1.025);
   filter: saturate(1.05);
 }
-
-/* CULTURAL PILLARS */
-
-.culture-pillars {
-  max-width: 1300px;
-  margin: 120px auto 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid rgba(185, 154, 97, 0.3);
-}
-
-.culture-pillar {
-  position: relative;
-  min-height: 210px;
-  padding: 30px 28px;
-  border-right: 1px solid rgba(185, 154, 97, 0.18);
-  transition:
-    background 0.4s ease,
-    transform 0.4s ease;
-}
-
-.culture-pillar:last-child {
-  border-right: none;
-}
-
-.culture-pillar span {
-  display: block;
-  margin-bottom: 42px;
-  color: var(--gold);
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-}
-
-.culture-pillar h3 {
-  margin: 0;
-  color: var(--ivory);
-  font-size: 1.3rem;
-  font-weight: 400;
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.culture-pillar p {
-  max-width: 220px;
-  margin: 12px 0 0;
-  color: rgba(243, 238, 228, 0.55);
-  font-size: 0.85rem;
-  line-height: 1.7;
-  opacity: 0;
-  transform: translateY(10px);
-  transition:
-    opacity 0.4s ease,
-    transform 0.4s ease;
-}
-
-.culture-pillar:hover {
-  background: rgba(185, 154, 97, 0.05);
-  transform: translateY(-6px);
-}
-
-.culture-pillar:hover h3 {
-  color: var(--gold);
-  transform: translateX(5px);
-}
-
-.culture-pillar:hover p {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* =========================================
    PROGRAMS
 ========================================= */
