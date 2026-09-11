@@ -206,6 +206,7 @@ export default function About() {
   <div className="experience-layout">
     <div className="experience-heading">
       <p className="eyebrow">MORE THAN OBSERVATION</p>
+
       <h2>
         Don't Just
         <br />
@@ -232,44 +233,22 @@ export default function About() {
     <p>it.</p>
   </div>
 
-    <div className="culture-image-wrap">
-    <img
-      src="/images/culture-community.jpg"
-      alt="Community members experiencing traditional West African drumming"
-      className="culture-image"
-    />
+  <div className="experience-video-wrap">
+    <video
+      className="experience-video"
+      autoPlay
+      muted
+      loop
+      playsInline
+      controls
+    >
+      <source src="/images/thexpr.mov" type="video/quicktime" />
+      Your browser does not support the video tag.
+    </video>
   </div>
 
-  <div className="culture-pillars">
-
-    <div className="culture-pillar">
-      <span>01</span>
-      <h3>Rhythm</h3>
-      <p>The heartbeat that brings people together.</p>
-    </div>
-
-    <div className="culture-pillar">
-      <span>02</span>
-      <h3>Movement</h3>
-      <p>Culture expressed through the body and spirit.</p>
-    </div>
-
-    <div className="culture-pillar">
-      <span>03</span>
-      <h3>Storytelling</h3>
-      <p>Knowledge carried from one generation to another.</p>
-    </div>
-
-    <div className="culture-pillar">
-      <span>04</span>
-      <h3>Community</h3>
-      <p>Connection that crosses generations and borders.</p>
-    </div>
-
-  </div>
-</section>
-        
   <div className="experience-list">
+
     <div className="experience-item">
       <span className="experience-number">01</span>
       <div className="experience-word">
@@ -309,6 +288,7 @@ export default function About() {
         <p>with community.</p>
       </div>
     </div>
+
   </div>
 </section>
 
