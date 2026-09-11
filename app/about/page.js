@@ -214,32 +214,49 @@ export default function About() {
   </div>
 
 
-  <div className="experience-list">
+ <div className="experience-list">
 
-    <div className="experience-item">
-      <span>01</span>
-      <p>Hear the music.</p>
+  <div className="experience-item">
+    <span className="experience-number">01</span>
+    <div className="experience-word">
+      <h3>HEAR</h3>
+      <p>the music.</p>
     </div>
+  </div>
 
-    <div className="experience-item">
-      <span>02</span>
-      <p>Feel the rhythm.</p>
+  <div className="experience-item">
+    <span className="experience-number">02</span>
+    <div className="experience-word">
+      <h3>FEEL</h3>
+      <p>the rhythm.</p>
     </div>
+  </div>
 
-    <div className="experience-item">
-      <span>03</span>
-      <p>Learn the stories.</p>
+  <div className="experience-item">
+    <span className="experience-number">03</span>
+    <div className="experience-word">
+      <h3>LEARN</h3>
+      <p>the stories.</p>
     </div>
+  </div>
 
-    <div className="experience-item">
-      <span>04</span>
-      <p>Share the traditions.</p>
+  <div className="experience-item">
+    <span className="experience-number">04</span>
+    <div className="experience-word">
+      <h3>SHARE</h3>
+      <p>the traditions.</p>
     </div>
+  </div>
 
-    <div className="experience-item">
-      <span>05</span>
-      <p>Connect with community.</p>
+  <div className="experience-item">
+    <span className="experience-number">05</span>
+    <div className="experience-word">
+      <h3>CONNECT</h3>
+      <p>with community.</p>
     </div>
+  </div>
+
+</div>
 
   </div>
 
