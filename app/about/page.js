@@ -242,7 +242,7 @@ export default function About() {
       playsInline
       controls
     >
-      <source src="/images/thexpr.mov" type="video/quicktime" />
+      <source src="/images/thexpr.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
