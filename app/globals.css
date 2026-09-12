@@ -3277,7 +3277,7 @@ section:not(.hero)::after {
 .africa-map::after {
   content: "";
   position: absolute;
-  inset: 3px;
+  inset: 5px;
   z-index: 2;
   background: var(--black);
 
@@ -3293,7 +3293,7 @@ section:not(.hero)::after {
 
 .africa-map-image {
   position: absolute;
-  inset: 6px;
+  inset: 7px;
   z-index: 3;
   width: calc(100% - 12px);
   height: calc(100% - 12px);
