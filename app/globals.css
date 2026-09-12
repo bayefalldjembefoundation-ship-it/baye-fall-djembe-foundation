@@ -3301,22 +3301,24 @@ section:not(.hero)::after {
 
   -webkit-mask-image: url("/images/africa-map.png");
   mask-image: url("/images/africa-map.png");
-
   -webkit-mask-size: contain;
   mask-size: contain;
-
   -webkit-mask-position: center;
   mask-position: center;
-
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 
   opacity: 1;
+  filter: contrast(1.04);
+}
 
-  filter:
-    contrast(1.04)
-    drop-shadow(0 0 1px var(--gold))
-    drop-shadow(0 0 1px var(--gold));
+/* GOLD BORDER AROUND THE PHOTO */
+.africa-map-image::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border: 2px solid var(--gold);
+  pointer-events: none;
 }
 
 .america-map {
