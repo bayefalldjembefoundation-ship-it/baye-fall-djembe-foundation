@@ -524,7 +524,8 @@ export default function Founder() {
     <div className="exchange-line"></div>
 
   </div>
-
+</section>
+  
 
   {/* CLOSING */}
 
