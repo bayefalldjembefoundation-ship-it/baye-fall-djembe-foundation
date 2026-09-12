@@ -325,7 +325,112 @@ export default function ProgramsPage() {
     </section>
 
   </section>
+{/* FOOTER */}
+<footer className="site-footer">
 
+  <div className="footer-top">
+
+    <div className="footer-brand">
+
+      <p className="footer-eyebrow">
+        BAYE FALL DJEMBE FOUNDATION
+      </p>
+
+      <h2>
+        Culture
+        <br />
+        Moves.
+      </h2>
+
+      <p className="footer-description">
+        Preserving West African heritage through music, education,
+        cultural exchange, and community.
+      </p>
+
+    </div>
+
+
+    <div className="footer-links">
+
+      <div className="footer-column">
+
+        <span>
+          EXPLORE
+        </span>
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/about">
+          About
+        </a>
+
+        <a href="/founder">
+          Founder
+        </a>
+
+        <a href="/programs">
+          Programs
+        </a>
+
+      </div>
+
+
+      <div className="footer-column">
+
+        <span>
+          CONNECT
+        </span>
+
+        <a href="/get-involved">
+          Get Involved
+        </a>
+
+        <a href="/contact">
+          Contact
+        </a>
+
+        <a href="/media">
+          Media
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div className="footer-statement">
+
+    <span>
+      AFRICA
+    </span>
+
+    <div className="footer-statement-line"></div>
+
+    <span>
+      AMERICA
+    </span>
+
+  </div>
+
+
+  <div className="footer-bottom">
+
+    <p>
+      © 2026 Baye Fall Djembe Foundation. All rights reserved.
+    </p>
+
+    <p>
+      Built through culture, connection, and community.
+    </p>
+
+  </div>
+
+</footer>
+  
 </main>
   );
 }
