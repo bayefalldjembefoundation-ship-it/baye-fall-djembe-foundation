@@ -5094,3 +5094,469 @@ section:not(.hero)::after {
   }
 
 }
+
+/* =========================================================
+   BRIDGING TWO WORLDS — SENEGAL EXPERIENCE
+   ========================================================= */
+
+.bridging-experience {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 20px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.bridging-hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.bridging-hero::before {
+  content: "SENEGAL";
+  position: absolute;
+  left: -25px;
+  bottom: -45px;
+  color: rgba(185, 154, 97, 0.045);
+  font-family: Georgia, serif;
+  font-size: clamp(9rem, 25vw, 25rem);
+  line-height: 0.7;
+  letter-spacing: -0.08em;
+  white-space: nowrap;
+  pointer-events: none;
+  transition:
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    color 1s ease;
+}
+
+.bridging-program.is-open:hover .bridging-hero::before {
+  transform: translateX(30px);
+  color: rgba(185, 154, 97, 0.075);
+}
+
+.bridging-hero-label {
+  position: relative;
+  z-index: 2;
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  margin-bottom: 35px;
+}
+
+.bridging-hero h2 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: clamp(5rem, 11vw, 11rem);
+  font-weight: 400;
+  line-height: 0.78;
+  letter-spacing: -0.065em;
+}
+
+.bridging-hero h2 span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.bridging-hero-intro {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  margin: 50px 0 0;
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   JOURNEY
+   ========================================================= */
+
+.bridging-journey {
+  position: relative;
+  padding: 110px 0 130px;
+}
+
+.bridging-journey-line {
+  position: absolute;
+  left: 35px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--gold-soft) 10%,
+    var(--gold-soft) 90%,
+    transparent
+  );
+}
+
+.bridging-journey-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 45px;
+  max-width: 850px;
+  margin-bottom: 95px;
+}
+
+.bridging-journey-step:last-child {
+  margin-bottom: 0;
+}
+
+.bridging-step-number {
+  position: relative;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  transition:
+    transform 0.6s ease,
+    background 0.6s ease,
+    color 0.6s ease;
+}
+
+.bridging-journey-step:hover .bridging-step-number {
+  transform: scale(1.12);
+  background: var(--gold);
+  color: var(--black);
+}
+
+.bridging-step-label {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+}
+
+.bridging-journey-step h3 {
+  margin: 0 0 18px;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.5s ease;
+}
+
+.bridging-journey-step:hover h3 {
+  transform: translateX(10px);
+}
+
+.bridging-journey-step p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   EXPERIENCE GRID
+   ========================================================= */
+
+.bridging-experiences {
+  padding: 100px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.bridging-experiences-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 70px;
+}
+
+.bridging-experiences-heading > span {
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+}
+
+.bridging-experiences-heading h3 {
+  margin: 0;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+}
+
+.bridging-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.bridging-experience-item {
+  position: relative;
+  min-height: 280px;
+  padding: 25px;
+  border-left: 1px solid var(--line);
+  overflow: hidden;
+  transition:
+    background 0.5s ease,
+    transform 0.5s ease;
+}
+
+.bridging-experience-item:last-child {
+  border-right: 1px solid var(--line);
+}
+
+.bridging-experience-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: var(--gold);
+  transition: width 0.6s ease;
+}
+
+.bridging-experience-item:hover {
+  background: rgba(185, 154, 97, 0.045);
+  transform: translateY(-7px);
+}
+
+.bridging-experience-item:hover::before {
+  width: 100%;
+}
+
+.bridging-experience-item > span {
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+}
+
+.bridging-experience-item h4 {
+  margin: 55px 0 18px;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  transition:
+    transform 0.5s ease,
+    color 0.5s ease;
+}
+
+.bridging-experience-item:hover h4 {
+  transform: translateX(8px);
+  color: var(--gold);
+}
+
+.bridging-experience-item p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL INVITATION
+   ========================================================= */
+
+.bridging-invitation {
+  position: relative;
+  padding: 150px 0 120px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bridging-invitation::before {
+  content: "AFRICA";
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+  color: rgba(185, 154, 97, 0.035);
+  font-family: Georgia, serif;
+  font-size: clamp(8rem, 20vw, 20rem);
+  line-height: 0.7;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.bridging-invitation-label {
+  position: relative;
+  z-index: 2;
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+}
+
+.bridging-invitation h3 {
+  position: relative;
+  z-index: 2;
+  margin: 30px auto;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+}
+
+.bridging-invitation p {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+  margin: 0 auto 45px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.bridging-button {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  padding: 18px 30px;
+  border: 1px solid var(--gold);
+  color: var(--ivory);
+  text-decoration: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease,
+    gap 0.4s ease;
+}
+
+.bridging-button span {
+  font-size: 1.2rem;
+  transition: transform 0.4s ease;
+}
+
+.bridging-button:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-6px);
+  gap: 35px;
+}
+
+.bridging-button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .bridging-hero {
+    min-height: 520px;
+    padding: 70px 0;
+  }
+
+  .bridging-hero h2 {
+    font-size: 5.2rem;
+  }
+
+  .bridging-hero-intro {
+    font-size: 1rem;
+    margin-top: 40px;
+  }
+
+  .bridging-journey {
+    padding: 80px 0 90px;
+  }
+
+  .bridging-journey-line {
+    left: 25px;
+  }
+
+  .bridging-journey-step {
+    grid-template-columns: 55px 1fr;
+    gap: 25px;
+    margin-bottom: 70px;
+  }
+
+  .bridging-step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 0.8rem;
+  }
+
+  .bridging-journey-step h3 {
+    font-size: 2rem;
+  }
+
+  .bridging-experiences {
+    padding: 80px 0;
+  }
+
+  .bridging-experiences-heading {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .bridging-experiences-heading > span {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .bridging-experiences-heading h3 {
+    font-size: 4.5rem;
+  }
+
+  .bridging-experience-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bridging-experience-item {
+    min-height: 240px;
+    padding: 20px;
+  }
+
+  .bridging-experience-item:nth-child(2) {
+    border-right: 1px solid var(--line);
+  }
+
+  .bridging-experience-item:nth-child(3),
+  .bridging-experience-item:nth-child(4) {
+    border-top: 1px solid var(--line);
+  }
+
+  .bridging-experience-item h4 {
+    margin-top: 40px;
+    font-size: 2rem;
+  }
+
+  .bridging-invitation {
+    padding: 110px 0 90px;
+  }
+
+  .bridging-invitation h3 {
+    font-size: 4rem;
+  }
+
+}
