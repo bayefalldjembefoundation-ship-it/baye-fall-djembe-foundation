@@ -4206,3 +4206,362 @@ section:not(.hero)::after {
     line-height: 1.5;
   }
 }
+
+
+/* =========================================================
+   PROGRAMS — ACCORDION
+   ========================================================= */
+
+.program-item,
+.program-audience-section {
+  border-top: 1px solid var(--line);
+}
+
+.program-toggle {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80px 1fr 40px;
+  align-items: center;
+  gap: 20px;
+  padding: 32px 0;
+  background: transparent;
+  border: 0;
+  color: var(--ivory);
+  text-align: left;
+  cursor: pointer;
+  transition: padding 0.4s ease;
+}
+
+.program-toggle:hover {
+  padding-left: 10px;
+}
+
+.program-number {
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+}
+
+.program-toggle-title {
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 3.5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.program-toggle-icon {
+  color: var(--gold);
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: right;
+}
+
+.program-expand {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.6s ease;
+}
+
+.program-expand > * {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.program-item.is-open .program-expand,
+.program-audience-section.is-open .program-expand {
+  grid-template-rows: 1fr;
+}
+
+.program-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  padding: 20px 0 80px;
+  align-items: center;
+}
+
+.program-image-wrap {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--black-soft);
+}
+
+.program-image,
+.program-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.program-video {
+  min-height: 420px;
+}
+
+.program-text {
+  max-width: 560px;
+}
+
+.program-text h2 {
+  margin: 18px 0 30px;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.program-text p {
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.program-text .eyebrow {
+  color: var(--gold);
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DRUM PHILOSOPHY
+   ========================================================= */
+
+.drum-philosophy-content {
+  padding: 20px 0 80px;
+}
+
+.drum-philosophy-content h2 {
+  margin: 20px 0 45px;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 400;
+  line-height: 0.85;
+}
+
+.drum-motto {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 40px;
+}
+
+.drum-motto > div {
+  padding: 30px 20px;
+  border-right: 1px solid var(--line);
+}
+
+.drum-motto > div:last-child {
+  border-right: 0;
+}
+
+.drum-motto span {
+  display: block;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.drum-motto p {
+  margin: 0;
+  color: var(--ivory);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.drum-philosophy-text {
+  max-width: 700px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   WHO WE SERVE
+   ========================================================= */
+
+.program-audience-content {
+  padding: 20px 0 80px;
+}
+
+.program-audience-header {
+  max-width: 800px;
+  margin-bottom: 70px;
+}
+
+.program-audience-header h2 {
+  margin: 18px 0 25px;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.program-audience-header > p:last-child {
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+.program-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+}
+
+.program-audience-item {
+  padding: 40px 30px 45px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.program-audience-item:nth-child(odd) {
+  padding-right: 50px;
+  border-right: 1px solid var(--line);
+}
+
+.program-audience-item:nth-child(even) {
+  padding-left: 50px;
+}
+
+.program-audience-item span {
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+}
+
+.program-audience-item h3 {
+  margin: 15px 0;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.program-audience-item p {
+  max-width: 500px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PROGRAMS CLOSING CTA
+   ========================================================= */
+
+.programs-closing {
+  padding: 150px 0;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+.programs-closing h2 {
+  margin: 20px auto 30px;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.programs-closing > p:not(.eyebrow) {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.programs-closing-button {
+  display: inline-block;
+  padding: 15px 28px;
+  border: 1px solid var(--gold);
+  color: var(--ivory);
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.programs-closing-button:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .program-toggle {
+    grid-template-columns: 45px 1fr 30px;
+    gap: 12px;
+    padding: 25px 0;
+  }
+
+  .program-toggle-title {
+    font-size: 1.7rem;
+  }
+
+  .program-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 60px;
+  }
+
+  .program-image-wrap {
+    min-height: 260px;
+  }
+
+  .program-video {
+    min-height: 260px;
+  }
+
+  .program-text h2 {
+    font-size: 3.2rem;
+  }
+
+  .drum-motto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .drum-motto > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .drum-motto > div:nth-child(3),
+  .drum-motto > div:nth-child(4) {
+    border-top: 1px solid var(--line);
+  }
+
+  .program-audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-audience-item:nth-child(odd) {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .program-audience-item:nth-child(even) {
+    padding-left: 0;
+  }
+
+  .programs-closing {
+    padding: 100px 0;
+  }
+
+}
