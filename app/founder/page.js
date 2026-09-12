@@ -534,7 +534,16 @@ export default function Founder() {
         </p>
 
       </section>
+      {/* CLOSING */}
 
+      <section className="founder-closing">
+        ...
+      </section>
+
+      <footer className="site-footer">
+        ...
+      </footer>
+        
     </main>
   );
 }
