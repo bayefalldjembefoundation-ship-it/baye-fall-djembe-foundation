@@ -3174,7 +3174,6 @@ section:not(.hero)::after {
   font-weight: 500;
   line-height: 0.84;
   letter-spacing: -0.045em;
-
   transition:
     transform 0.5s ease,
     color 0.5s ease;
@@ -3188,14 +3187,11 @@ section:not(.hero)::after {
 .bridging-subtitle {
   max-width: 620px;
   margin: 35px auto 0;
-
   color: var(--text);
-
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.08rem;
   line-height: 1.8;
 }
-
 
 /* =========================================================
    BRIDGE
@@ -3203,10 +3199,8 @@ section:not(.hero)::after {
 
 .world-bridge {
   position: relative;
-
   max-width: 1250px;
   min-height: 430px;
-
   margin: 0 auto;
 
   display: grid;
@@ -3214,17 +3208,14 @@ section:not(.hero)::after {
   align-items: center;
 }
 
-
 /* Main bridge line */
 
 .world-bridge::before {
   content: "";
-
   position: absolute;
   left: 3%;
   right: 3%;
   top: 50%;
-
   height: 1px;
 
   background:
@@ -3244,17 +3235,14 @@ section:not(.hero)::after {
   pointer-events: none;
 }
 
-
-/* Subtle second bridge line */
+/* Secondary bridge line */
 
 .world-bridge::after {
   content: "";
-
   position: absolute;
   left: 12%;
   right: 12%;
   top: calc(50% + 8px);
-
   height: 1px;
 
   background: rgba(185, 154, 97, 0.14);
@@ -3262,14 +3250,12 @@ section:not(.hero)::after {
   pointer-events: none;
 }
 
-
 /* =========================================================
    WORLD COLUMNS
    ========================================================= */
 
 .world {
   position: relative;
-
   height: 430px;
 
   display: flex;
@@ -3292,7 +3278,6 @@ section:not(.hero)::after {
   text-align: left;
 }
 
-
 /* =========================================================
    WORLD CONTENT
    ========================================================= */
@@ -3306,7 +3291,7 @@ section:not(.hero)::after {
 
   padding: 30px;
 
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(0, 0, 0, 0.78);
 
   border-top: 1px solid rgba(185, 154, 97, 0.55);
   border-bottom: 1px solid rgba(185, 154, 97, 0.18);
@@ -3328,11 +3313,10 @@ section:not(.hero)::after {
 .world:hover .world-content {
   transform: translateY(-6px);
 
-  background: rgba(0, 0, 0, 0.94);
+  background: rgba(0, 0, 0, 0.38);
 
   border-top-color: var(--gold);
 }
-
 
 /* =========================================================
    WORLD TEXT
@@ -3340,7 +3324,6 @@ section:not(.hero)::after {
 
 .world-number {
   display: block;
-
   margin-bottom: 12px;
 
   color: var(--gold);
@@ -3373,8 +3356,13 @@ section:not(.hero)::after {
   font-size: 1rem;
 
   line-height: 1.8;
+
+  transition: color 0.5s ease;
 }
 
+.world:hover .world-content p:last-child {
+  color: rgba(243, 228, 194, 0.92);
+}
 
 /* =========================================================
    HOVER PHOTOS
@@ -3384,9 +3372,10 @@ section:not(.hero)::after {
   position: absolute;
 
   top: 50%;
+  left: 50%;
 
-  width: 330px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
 
   overflow: hidden;
 
@@ -3402,16 +3391,17 @@ section:not(.hero)::after {
 
   pointer-events: none;
 
-  transform: translateY(-50%) scale(0.94);
+  transform:
+    translate(-50%, -50%)
+    scale(0.96);
 
   transition:
-    opacity 0.55s ease,
+    opacity 0.6s ease,
     transform 0.7s ease,
     box-shadow 0.55s ease;
 
-  z-index: 2;
+  z-index: 1;
 }
-
 
 /* Inner frame */
 
@@ -3428,7 +3418,6 @@ section:not(.hero)::after {
   z-index: 3;
 }
 
-
 /* Image */
 
 .world-photo img {
@@ -3440,36 +3429,21 @@ section:not(.hero)::after {
   object-fit: cover;
 
   filter:
-    saturate(0.78)
-    brightness(0.7);
+    saturate(0.75)
+    brightness(0.58);
 
   transition:
-    transform 0.8s ease,
-    filter 0.6s ease;
+    transform 0.9s ease,
+    filter 0.7s ease;
 }
 
-
-/* Africa photo */
-
-.world-africa .world-photo {
-  right: 15px;
-}
-
-
-/* America photo */
-
-.world-america .world-photo {
-  left: 15px;
-}
-
-
-/* Hover */
+/* Hover image */
 
 .world:hover .world-photo {
   opacity: 1;
 
   transform:
-    translateY(-50%)
+    translate(-50%, -50%)
     scale(1);
 
   box-shadow:
@@ -3482,9 +3456,8 @@ section:not(.hero)::after {
 
   filter:
     saturate(0.95)
-    brightness(0.82);
+    brightness(0.72);
 }
-
 
 /* =========================================================
    CENTER CONNECTION
@@ -3502,7 +3475,6 @@ section:not(.hero)::after {
 
   pointer-events: none;
 }
-
 
 /* Center diamond */
 
@@ -3529,8 +3501,7 @@ section:not(.hero)::after {
     0 0 20px rgba(185, 154, 97, 0.12);
 }
 
-
-/* Horizontal center lines */
+/* Center line */
 
 .bridge-center::after {
   content: "";
@@ -3547,7 +3518,6 @@ section:not(.hero)::after {
 
   opacity: 0.7;
 }
-
 
 /* =========================================================
    MISSION CENTER
@@ -3608,7 +3578,6 @@ section:not(.hero)::after {
     0 0 40px rgba(185, 154, 97, 0.1);
 }
 
-
 /* =========================================================
    CULTURAL EXCHANGE
    ========================================================= */
@@ -3665,7 +3634,6 @@ section:not(.hero)::after {
   font-size: 0.78rem;
 }
 
-
 /* =========================================================
    SECTION 06 CLOSING
    ========================================================= */
@@ -3702,9 +3670,8 @@ section:not(.hero)::after {
   font-weight: 500;
 }
 
-
 /* =========================================================
-   SECTION 06 — RESPONSIVE
+   TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
@@ -3725,16 +3692,10 @@ section:not(.hero)::after {
     padding: 25px 22px;
   }
 
-  .world-photo {
-    width: 270px;
-    height: 220px;
-  }
-
   .cultural-exchange {
     gap: 18px;
   }
 }
-
 
 /* =========================================================
    MOBILE
@@ -3756,7 +3717,6 @@ section:not(.hero)::after {
   .bridging-subtitle {
     font-size: 1rem;
   }
-
 
   /* Vertical bridge */
 
@@ -3794,7 +3754,6 @@ section:not(.hero)::after {
     display: none;
   }
 
-
   /* World cards */
 
   .world {
@@ -3818,6 +3777,8 @@ section:not(.hero)::after {
     max-width: 340px;
 
     padding: 25px 22px;
+
+    background: rgba(0, 0, 0, 0.76);
   }
 
   .world-africa .world-content,
@@ -3825,12 +3786,11 @@ section:not(.hero)::after {
     margin: 0 auto;
   }
 
-
   /* Mobile photos */
 
   .world-photo {
-    width: min(88vw, 330px);
-    height: 235px;
+    width: 100%;
+    height: 100%;
   }
 
   .world-africa .world-photo,
@@ -3840,7 +3800,7 @@ section:not(.hero)::after {
 
     transform:
       translate(-50%, -50%)
-      scale(0.94);
+      scale(0.96);
   }
 
   .world:hover .world-photo {
@@ -3848,7 +3808,6 @@ section:not(.hero)::after {
       translate(-50%, -50%)
       scale(1);
   }
-
 
   /* Center */
 
@@ -3883,7 +3842,6 @@ section:not(.hero)::after {
     width: 150px;
   }
 
-
   /* Exchange */
 
   .cultural-exchange {
@@ -3898,7 +3856,6 @@ section:not(.hero)::after {
     display: none;
   }
 
-
   /* Closing */
 
   .bridging-closing {
@@ -3907,6 +3864,9 @@ section:not(.hero)::after {
   }
 }
 
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
 
 @media (max-width: 500px) {
   .world {
@@ -3915,11 +3875,17 @@ section:not(.hero)::after {
 
   .world-content {
     width: calc(100% - 18px);
+    padding: 22px 18px;
   }
 
   .world-photo {
     width: calc(100vw - 40px);
-    height: 220px;
+    height: 300px;
+  }
+
+  .world-content p:last-child {
+    font-size: 0.92rem;
+    line-height: 1.7;
   }
 
   .exchange-item span {
@@ -3930,4 +3896,3 @@ section:not(.hero)::after {
     font-size: 0.72rem;
   }
 }
-
