@@ -3150,6 +3150,10 @@ section:not(.hero)::after {
   border-top: 1px solid var(--line);
 }
 
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 .bridging-header {
   position: relative;
   z-index: 10;
@@ -3165,10 +3169,15 @@ section:not(.hero)::after {
 .bridging-header h2 {
   margin: 0;
   color: var(--ivory);
-  font-size: clamp(64px, 8vw, 120px);
-  line-height: 0.86;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  font-weight: 500;
+  line-height: 0.84;
   letter-spacing: -0.045em;
-  transition: transform 0.6s ease, color 0.6s ease;
+
+  transition:
+    transform 0.5s ease,
+    color 0.5s ease;
 }
 
 .bridging-header:hover h2 {
@@ -3179,161 +3188,129 @@ section:not(.hero)::after {
 .bridging-subtitle {
   max-width: 620px;
   margin: 35px auto 0;
+
   color: var(--text);
-  font-size: 17px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.08rem;
   line-height: 1.8;
 }
 
+
 /* =========================================================
-   INTERACTIVE BRIDGE
+   BRIDGE
    ========================================================= */
 
 .world-bridge {
   position: relative;
-  max-width: 1300px;
+
+  max-width: 1250px;
   min-height: 430px;
+
   margin: 0 auto;
+
   display: grid;
   grid-template-columns: 1fr 180px 1fr;
   align-items: center;
-  gap: 0;
 }
 
-/* One elegant bridge line running through the entire section */
+
+/* Main bridge line */
 
 .world-bridge::before {
   content: "";
-  position: absolute;
-  left: 4%;
-  right: 4%;
-  top: 50%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--gold-soft) 10%,
-    var(--gold) 38%,
-    var(--gold) 62%,
-    var(--gold-soft) 90%,
-    transparent 100%
-  );
-  box-shadow: 0 0 18px rgba(185, 154, 97, 0.08);
-}
 
-.world-bridge::after {
-  content: "";
   position: absolute;
-  left: 11%;
-  right: 11%;
-  top: calc(50% - 11px);
-  height: 22px;
-  border-top: 1px solid rgba(185, 154, 97, 0.16);
-  border-radius: 50%;
+  left: 3%;
+  right: 3%;
+  top: 50%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold-soft) 12%,
+      var(--gold) 35%,
+      var(--gold) 65%,
+      var(--gold-soft) 88%,
+      transparent
+    );
+
+  box-shadow:
+    0 0 20px rgba(185, 154, 97, 0.08);
+
   pointer-events: none;
 }
 
+
+/* Subtle second bridge line */
+
+.world-bridge::after {
+  content: "";
+
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: calc(50% + 8px);
+
+  height: 1px;
+
+  background: rgba(185, 154, 97, 0.14);
+
+  pointer-events: none;
+}
+
+
 /* =========================================================
-   WORLD SIDES
+   WORLD COLUMNS
    ========================================================= */
 
 .world {
   position: relative;
-  min-width: 0;
+
   height: 430px;
+
   display: flex;
   align-items: center;
+
+  min-width: 0;
+
   isolation: isolate;
 }
 
 .world-africa {
   justify-content: flex-end;
-  text-align: right;
   padding-right: 35px;
+  text-align: right;
 }
 
 .world-america {
   justify-content: flex-start;
-  text-align: left;
   padding-left: 35px;
+  text-align: left;
 }
+
 
 /* =========================================================
-   HIDDEN HOVER PHOTOS
-   ========================================================= */
-
-.world-photo {
-  position: absolute;
-  top: 50%;
-  width: 310px;
-  height: 250px;
-  transform: translateY(-50%) scale(0.94);
-  opacity: 0;
-  overflow: hidden;
-  border: 1px solid rgba(185, 154, 97, 0.65);
-  background: #050505;
-  box-shadow:
-    0 25px 65px rgba(0, 0, 0, 0.65),
-    0 0 35px rgba(185, 154, 97, 0.08);
-  pointer-events: none;
-  transition:
-    opacity 0.55s ease,
-    transform 0.7s ease,
-    box-shadow 0.55s ease;
-  z-index: 1;
-}
-
-.world-photo::after {
-  content: "";
-  position: absolute;
-  inset: 7px;
-  border: 1px solid rgba(243, 228, 194, 0.22);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.world-photo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(0.82) brightness(0.68);
-  transition: filter 0.6s ease, transform 0.8s ease;
-}
-
-.world-africa .world-photo {
-  right: 18px;
-}
-
-.world-america .world-photo {
-  left: 18px;
-}
-
-.world:hover .world-photo {
-  opacity: 1;
-  transform: translateY(-50%) scale(1);
-  box-shadow:
-    0 35px 85px rgba(0, 0, 0, 0.75),
-    0 0 40px rgba(185, 154, 97, 0.12);
-}
-
-.world:hover .world-photo img {
-  filter: saturate(0.95) brightness(0.82);
-  transform: scale(1.025);
-}
-
-/* =========================================================
-   WORLD CONTENT — SITS ABOVE THE BRIDGE
+   WORLD CONTENT
    ========================================================= */
 
 .world-content {
   position: relative;
   z-index: 5;
-  max-width: 330px;
-  padding: 28px 30px;
-  background: rgba(0, 0, 0, 0.76);
-  border-top: 1px solid rgba(185, 154, 97, 0.45);
+
+  width: 100%;
+  max-width: 340px;
+
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  border-top: 1px solid rgba(185, 154, 97, 0.55);
   border-bottom: 1px solid rgba(185, 154, 97, 0.18);
-  backdrop-filter: blur(5px);
+
   transition:
     transform 0.5s ease,
     background 0.5s ease,
@@ -3349,35 +3326,165 @@ section:not(.hero)::after {
 }
 
 .world:hover .world-content {
-  background: rgba(0, 0, 0, 0.88);
+  transform: translateY(-6px);
+
+  background: rgba(0, 0, 0, 0.94);
+
   border-top-color: var(--gold);
-  transform: translateY(-5px);
 }
+
+
+/* =========================================================
+   WORLD TEXT
+   ========================================================= */
 
 .world-number {
   display: block;
-  margin-bottom: 10px;
+
+  margin-bottom: 12px;
+
   color: var(--gold);
+
   font-family: "Cinzel", Georgia, serif;
-  font-size: 11px;
-  letter-spacing: 0.22em;
+  font-size: 0.62rem;
+
+  letter-spacing: 0.25em;
 }
 
 .world-label {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
+
   color: var(--ivory);
+
   font-family: "Cinzel", Georgia, serif;
-  font-size: 11px;
-  letter-spacing: 0.22em;
+  font-size: 0.66rem;
   font-weight: 600;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
 .world-content p:last-child {
   margin: 0;
+
   color: var(--text);
-  font-size: 15px;
-  line-height: 1.75;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1rem;
+
+  line-height: 1.8;
 }
+
+
+/* =========================================================
+   HOVER PHOTOS
+   ========================================================= */
+
+.world-photo {
+  position: absolute;
+
+  top: 50%;
+
+  width: 330px;
+  height: 250px;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  background: #050505;
+
+  border: 1px solid rgba(185, 154, 97, 0.65);
+
+  box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.65),
+    0 0 30px rgba(185, 154, 97, 0.07);
+
+  pointer-events: none;
+
+  transform: translateY(-50%) scale(0.94);
+
+  transition:
+    opacity 0.55s ease,
+    transform 0.7s ease,
+    box-shadow 0.55s ease;
+
+  z-index: 2;
+}
+
+
+/* Inner frame */
+
+.world-photo::after {
+  content: "";
+
+  position: absolute;
+  inset: 7px;
+
+  border: 1px solid rgba(243, 228, 194, 0.22);
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+
+/* Image */
+
+.world-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter:
+    saturate(0.78)
+    brightness(0.7);
+
+  transition:
+    transform 0.8s ease,
+    filter 0.6s ease;
+}
+
+
+/* Africa photo */
+
+.world-africa .world-photo {
+  right: 15px;
+}
+
+
+/* America photo */
+
+.world-america .world-photo {
+  left: 15px;
+}
+
+
+/* Hover */
+
+.world:hover .world-photo {
+  opacity: 1;
+
+  transform:
+    translateY(-50%)
+    scale(1);
+
+  box-shadow:
+    0 35px 85px rgba(0, 0, 0, 0.75),
+    0 0 40px rgba(185, 154, 97, 0.12);
+}
+
+.world:hover .world-photo img {
+  transform: scale(1.025);
+
+  filter:
+    saturate(0.95)
+    brightness(0.82);
+}
+
 
 /* =========================================================
    CENTER CONNECTION
@@ -3386,90 +3493,121 @@ section:not(.hero)::after {
 .bridge-center {
   position: relative;
   z-index: 8;
+
   height: 430px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   pointer-events: none;
 }
 
-.bridge-center::before,
-.bridge-center::after {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  border: 1px solid var(--gold);
-  background: var(--black);
-  border-radius: 50%;
-  box-shadow: 0 0 18px rgba(185, 154, 97, 0.12);
-}
+
+/* Center diamond */
 
 .bridge-center::before {
-  top: calc(50% - 5px);
-  left: -4px;
+  content: "";
+
+  position: absolute;
+
+  width: 14px;
+  height: 14px;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid var(--gold);
+
+  background: var(--black);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
+
+  box-shadow:
+    0 0 20px rgba(185, 154, 97, 0.12);
 }
 
+
+/* Horizontal center lines */
+
 .bridge-center::after {
-  top: calc(50% - 5px);
-  right: -4px;
+  content: "";
+
+  position: absolute;
+
+  left: -70px;
+  right: -70px;
+  top: 50%;
+
+  height: 1px;
+
+  background: var(--gold-soft);
+
+  opacity: 0.7;
 }
+
+
+/* =========================================================
+   MISSION CENTER
+   ========================================================= */
 
 .bridge-mission {
   position: relative;
-  width: 155px;
-  padding: 18px 12px;
+  z-index: 10;
+
+  width: 150px;
+
+  padding: 18px 14px;
+
   text-align: center;
+
   background: var(--black);
+
   border: 1px solid rgba(185, 154, 97, 0.65);
+
   box-shadow:
-    0 0 0 8px rgba(185, 154, 97, 0.025),
-    0 0 30px rgba(185, 154, 97, 0.07);
+    0 0 0 7px rgba(185, 154, 97, 0.025),
+    0 0 30px rgba(185, 154, 97, 0.06);
+
   transition:
     transform 0.5s ease,
     box-shadow 0.5s ease;
 }
 
-.bridge-mission::before,
-.bridge-mission::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 28px;
-  height: 1px;
-  background: var(--gold-soft);
-}
-
-.bridge-mission::before {
-  right: 100%;
-}
-
-.bridge-mission::after {
-  left: 100%;
-}
-
-.bridge-mission-label {
+.bridge-mission span {
   display: block;
+
   margin-bottom: 8px;
+
   color: var(--gold);
+
   font-family: "Cinzel", Georgia, serif;
-  font-size: 8px;
-  letter-spacing: 0.25em;
+  font-size: 0.5rem;
+
+  letter-spacing: 0.24em;
 }
 
 .bridge-mission p {
   margin: 0;
+
   color: var(--ivory-muted);
-  font-size: 11px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 0.78rem;
+
   line-height: 1.55;
 }
 
 .world-bridge:hover .bridge-mission {
   transform: translateY(-5px);
+
   box-shadow:
-    0 0 0 8px rgba(185, 154, 97, 0.035),
+    0 0 0 7px rgba(185, 154, 97, 0.04),
     0 0 40px rgba(185, 154, 97, 0.1);
 }
+
 
 /* =========================================================
    CULTURAL EXCHANGE
@@ -3477,13 +3615,18 @@ section:not(.hero)::after {
 
 .cultural-exchange {
   max-width: 1100px;
+
   margin: 95px auto 0;
   padding-top: 35px;
-  border-top: 1px solid var(--line);
+
   display: grid;
   grid-template-columns: 1fr repeat(4, auto) 1fr;
+
   align-items: center;
+
   gap: 28px;
+
+  border-top: 1px solid var(--line);
 }
 
 .exchange-line {
@@ -3493,6 +3636,7 @@ section:not(.hero)::after {
 
 .exchange-item {
   text-align: center;
+
   transition: transform 0.4s ease;
 }
 
@@ -3502,18 +3646,25 @@ section:not(.hero)::after {
 
 .exchange-item span {
   display: block;
+
   margin-bottom: 5px;
+
   color: var(--gold);
+
   font-family: "Cinzel", Georgia, serif;
-  font-size: 9px;
+  font-size: 0.56rem;
+
   letter-spacing: 0.2em;
 }
 
 .exchange-item p {
   margin: 0;
+
   color: var(--text);
-  font-size: 12px;
+
+  font-size: 0.78rem;
 }
+
 
 /* =========================================================
    SECTION 06 CLOSING
@@ -3521,51 +3672,61 @@ section:not(.hero)::after {
 
 .bridging-closing {
   max-width: 700px;
+
   margin: 105px auto 0;
   padding-top: 65px;
-  border-top: 1px solid var(--line);
+
   text-align: center;
+
+  border-top: 1px solid var(--line);
 }
 
 .bridging-closing p {
   margin: 0 0 22px;
+
   color: var(--text);
-  font-size: 16px;
+
+  font-size: 1rem;
   font-style: italic;
 }
 
 .bridging-closing strong {
   color: var(--ivory);
-  font-size: clamp(28px, 4vw, 52px);
+
+  font-size: clamp(2rem, 4vw, 3.3rem);
+
   line-height: 1.1;
+
   letter-spacing: -0.025em;
+
   font-weight: 500;
 }
 
+
 /* =========================================================
-   SECTION 06 RESPONSIVE
+   SECTION 06 — RESPONSIVE
    ========================================================= */
 
 @media (max-width: 1000px) {
   .world-bridge {
-    grid-template-columns: 1fr 130px 1fr;
+    grid-template-columns: 1fr 140px 1fr;
   }
 
   .world-africa {
-    padding-right: 18px;
+    padding-right: 20px;
   }
 
   .world-america {
-    padding-left: 18px;
+    padding-left: 20px;
   }
 
   .world-content {
-    max-width: 290px;
-    padding: 24px 22px;
+    max-width: 300px;
+    padding: 25px 22px;
   }
 
   .world-photo {
-    width: 260px;
+    width: 270px;
     height: 220px;
   }
 
@@ -3574,9 +3735,14 @@ section:not(.hero)::after {
   }
 }
 
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 700px) {
   .bridging-section {
-    padding: 105px 6vw 90px;
+    padding: 110px 6vw 90px;
   }
 
   .bridging-header {
@@ -3584,52 +3750,73 @@ section:not(.hero)::after {
   }
 
   .bridging-header h2 {
-    font-size: clamp(52px, 15vw, 82px);
+    font-size: clamp(3.3rem, 15vw, 5.5rem);
   }
 
   .bridging-subtitle {
-    font-size: 15px;
+    font-size: 1rem;
   }
+
+
+  /* Vertical bridge */
 
   .world-bridge {
     min-height: auto;
+
     display: flex;
     flex-direction: column;
+
     gap: 28px;
   }
 
   .world-bridge::before {
     left: 50%;
     right: auto;
-    top: 12%;
-    bottom: 12%;
+
+    top: 7%;
+    bottom: 7%;
+
     width: 1px;
     height: auto;
-    background: linear-gradient(
-      180deg,
-      transparent,
-      var(--gold-soft) 18%,
-      var(--gold) 50%,
-      var(--gold-soft) 82%,
-      transparent
-    );
+
+    background:
+      linear-gradient(
+        180deg,
+        transparent,
+        var(--gold-soft) 15%,
+        var(--gold) 50%,
+        var(--gold-soft) 85%,
+        transparent
+      );
   }
 
   .world-bridge::after {
     display: none;
   }
 
+
+  /* World cards */
+
   .world {
     width: 100%;
-    height: 360px;
+    height: 350px;
+
     justify-content: center;
+
+    padding: 0;
+
     text-align: center;
+  }
+
+  .world-africa,
+  .world-america {
     padding: 0;
   }
 
   .world-content {
     width: min(100%, 340px);
     max-width: 340px;
+
     padding: 25px 22px;
   }
 
@@ -3638,25 +3825,37 @@ section:not(.hero)::after {
     margin: 0 auto;
   }
 
+
+  /* Mobile photos */
+
   .world-photo {
-    width: min(86vw, 330px);
-    height: 245px;
+    width: min(88vw, 330px);
+    height: 235px;
   }
 
   .world-africa .world-photo,
   .world-america .world-photo {
     left: 50%;
     right: auto;
-    transform: translate(-50%, -50%) scale(0.94);
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.94);
   }
 
   .world:hover .world-photo {
-    transform: translate(-50%, -50%) scale(1);
+    transform:
+      translate(-50%, -50%)
+      scale(1);
   }
+
+
+  /* Center */
 
   .bridge-center {
     width: 100%;
     height: 110px;
+
     order: 2;
   }
 
@@ -3668,23 +3867,30 @@ section:not(.hero)::after {
     order: 3;
   }
 
-  .bridge-center::before,
+  .bridge-center::before {
+    width: 12px;
+    height: 12px;
+  }
+
   .bridge-center::after {
-    display: none;
+    left: 50%;
+    right: auto;
+
+    width: 100%;
   }
 
   .bridge-mission {
     width: 150px;
   }
 
-  .bridge-mission::before,
-  .bridge-mission::after {
-    width: 35px;
-  }
+
+  /* Exchange */
 
   .cultural-exchange {
-    margin-top: 80px;
+    margin-top: 75px;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 30px 18px;
   }
 
@@ -3692,15 +3898,19 @@ section:not(.hero)::after {
     display: none;
   }
 
+
+  /* Closing */
+
   .bridging-closing {
     margin-top: 75px;
     padding-top: 50px;
   }
 }
 
+
 @media (max-width: 500px) {
   .world {
-    height: 340px;
+    height: 330px;
   }
 
   .world-content {
@@ -3709,15 +3919,15 @@ section:not(.hero)::after {
 
   .world-photo {
     width: calc(100vw - 40px);
-    height: 225px;
+    height: 220px;
   }
 
   .exchange-item span {
-    font-size: 8px;
+    font-size: 0.5rem;
   }
 
   .exchange-item p {
-    font-size: 11px;
+    font-size: 0.72rem;
   }
 }
 
