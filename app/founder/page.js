@@ -385,11 +385,9 @@ export default function Founder() {
               <div className="world-map-glow"></div>
 
               <div className="africa-map">
-                <img
-                  src="/images/cult-roots.png"
-                  alt="Brother Ghana"
-                  className="africa-map-image"
-                />
+                <div className="africa-photo-border">
+  <img src="/images/cult-roots.png" alt="Brother Ghana" className="africa-map-image" />
+</div>
 
                 <span className="map-label">AFRICA</span>
               </div>
