@@ -1,3 +1,5 @@
+"use client";
+
 export default function ContactPage() {
   return (
     <main>
@@ -80,13 +82,7 @@ export default function ContactPage() {
                 your school, organization, or community?
               </p>
 
-              <a
-                href="mailto:bayefalldjembefoundation@gmail.com"
-                className="contact-link"
-              >
-                Ask About Programs
-                <span>→</span>
-              </a>
+              <a href="#send-message" className="contact-link">Ask About Programs<span>→</span></a>
 
             </div>
 
@@ -113,13 +109,7 @@ export default function ContactPage() {
                 leaders who share our commitment to connection.
               </p>
 
-              <a
-                href="mailto:bayefalldjembefoundation@gmail.com"
-                className="contact-link"
-              >
-                Discuss a Partnership
-                <span>→</span>
-              </a>
+             <a href="#send-message" className="contact-link">Discuss a Partnership<span>→</span></a>
 
             </div>
 
@@ -146,13 +136,7 @@ export default function ContactPage() {
                 start the conversation.
               </p>
 
-              <a
-                href="mailto:bayefalldjembefoundation@gmail.com"
-                className="contact-link"
-              >
-                Send Us a Message
-                <span>→</span>
-              </a>
+              <a href="#send-message" className="contact-link">Discuss a Partnership<span>→</span></a>
 
             </div>
 
@@ -160,6 +144,106 @@ export default function ContactPage() {
 
         </section>
 
+{/* =========================================================
+    MESSAGE FORM
+    ========================================================= */}
+
+<section id="send-message" className="contact-form-section">
+
+  <div className="section-label">
+    03 — SEND A MESSAGE
+  </div>
+
+  <div className="contact-form-layout">
+
+    <div className="contact-form-heading">
+
+      <p className="eyebrow">
+        GET IN TOUCH
+      </p>
+
+      <h2>
+        Let's Start
+        <br />
+        the Conversation.
+      </h2>
+
+      <p>
+        Tell us a little about what you are looking for,
+        and we'll get back to you.
+      </p>
+
+    </div>
+
+    <form
+      className="contact-form"
+      onSubmit={async (event) => {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.get("name"),
+            email: formData.get("email"),
+            message: formData.get("message"),
+          }),
+        });
+
+        if (response.ok) {
+          form.reset();
+          alert("Your message has been sent. Thank you for reaching out.");
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      }}
+    >
+
+      <label>
+        NAME
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+      </label>
+
+      <label>
+        EMAIL
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email address"
+          required
+        />
+      </label>
+
+      <label>
+        MESSAGE
+        <textarea
+          name="message"
+          placeholder="How can we help?"
+          rows="7"
+          required
+        ></textarea>
+      </label>
+
+      <button type="submit" className="contact-form-button">
+        Send Message
+        <span>→</span>
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
 
         {/* =========================================================
             DIRECT CONTACT
@@ -192,16 +276,11 @@ export default function ContactPage() {
             <div className="contact-direct-content">
 
               <div className="contact-detail">
-
-                <span>
-                  EMAIL
-                </span>
-
-                <a href="mailto:bayefalldjembefoundation@gmail.com">
-                  bayefalldjembefoundation@gmail.com
-                </a>
-
-              </div>
+  <span>EMAIL</span>
+  <a href="mailto:bayefalldjembefoundation@gmail.com">
+    bayefalldjembefoundation@gmail.com
+  </a>
+</div>
 
               <div className="contact-detail">
 
@@ -258,127 +337,14 @@ export default function ContactPage() {
             that lasts for generations.
           </p>
 
-          <a
-            href="mailto:bayefalldjembefoundation@gmail.com"
-            className="contact-closing-button"
-          >
-            Send a Message
-          </a>
+         <a href="#send-message" className="contact-link">Send Us a Message<span>→</span></a>
 
         </section>
 
       </section>
 
 
-      {/* =========================================================
-          FOOTER
-          ========================================================= */}
-
-      <footer className="site-footer">
-
-        <div className="footer-top">
-
-          <div className="footer-brand">
-
-            <p className="footer-eyebrow">
-              BAYE FALL DJEMBE FOUNDATION
-            </p>
-
-            <h2>
-              Culture
-              <br />
-              Moves.
-            </h2>
-
-            <p className="footer-description">
-              Preserving West African heritage through music,
-              education, cultural exchange, and community.
-            </p>
-
-          </div>
-
-
-          <div className="footer-links">
-
-            <div className="footer-column">
-
-              <span>
-                EXPLORE
-              </span>
-
-              <a href="/">
-                Home
-              </a>
-
-              <a href="/about">
-                About
-              </a>
-
-              <a href="/founder">
-                Founder
-              </a>
-
-              <a href="/programs">
-                Programs
-              </a>
-
-            </div>
-
-
-            <div className="footer-column">
-
-              <span>
-                CONNECT
-              </span>
-
-              <a href="/get-involved">
-                Get Involved
-              </a>
-
-              <a href="/contact">
-                Contact
-              </a>
-
-              <a href="/media">
-                Media
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div className="footer-statement">
-
-          <span>
-            AFRICA
-          </span>
-
-          <div className="footer-statement-line"></div>
-
-          <span>
-            AMERICA
-          </span>
-
-        </div>
-
-
-        <div className="footer-bottom">
-
-          <p>
-            © 2026 Baye Fall Djembe Foundation. All rights reserved.
-          </p>
-
-          <p>
-            Built through culture, connection, and community.
-          </p>
-
-        </div>
-
-      </footer>
-
+     
     </main>
   );
 }
