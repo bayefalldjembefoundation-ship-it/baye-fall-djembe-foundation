@@ -184,7 +184,7 @@ export default function ProgramsPage() {
               
                 {openProgram === 2 && (
                   <img
-                    src="/images/drum-making.jpg"
+                    src="/images/drum-making.png"
                     alt="Traditional drum making process"
                     className="program-image"
                   />
