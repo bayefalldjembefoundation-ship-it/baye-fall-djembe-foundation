@@ -3254,11 +3254,11 @@ section:not(.hero)::after {
 }
 
 .africa-map {
-  background-image: url("/images/africa map.png");
+  background-image: url("/images/africa-map.png");
 }
 
 .america-map {
-  background-image: url("/images/america map.png");
+  background-image: url("/images/america-map.png");
 }
 
 
