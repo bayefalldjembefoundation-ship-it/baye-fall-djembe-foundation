@@ -529,6 +529,8 @@ export default function Founder() {
 
 {/* CLOSING */}
 
+{/* CLOSING */}
+
 <section className="founder-closing">
   <p className="eyebrow">THE LEGACY CONTINUES</p>
 
@@ -542,11 +544,6 @@ export default function Founder() {
     America to Africa.
   </strong>
 </section>
-
-      {/* CLOSING */}
-      <section className="founder-closing">
-        <p className="eyebrow">THE LEGACY CONTINUES</p>
-
         <h2>
           From One
           <br />
