@@ -3143,14 +3143,18 @@ section:not(.hero)::after {
 
 .bridging-section {
   position: relative;
+  min-height: 100vh;
   padding: 150px 6vw 140px;
   background: var(--black);
   overflow: hidden;
+  border-top: 1px solid var(--line);
 }
 
 .bridging-header {
+  position: relative;
+  z-index: 10;
   max-width: 900px;
-  margin: 0 auto 100px;
+  margin: 0 auto 95px;
   text-align: center;
 }
 
@@ -3162,8 +3166,14 @@ section:not(.hero)::after {
   margin: 0;
   color: var(--ivory);
   font-size: clamp(64px, 8vw, 120px);
-  line-height: 0.88;
+  line-height: 0.86;
   letter-spacing: -0.045em;
+  transition: transform 0.6s ease, color 0.6s ease;
+}
+
+.bridging-header:hover h2 {
+  color: #f8ecd3;
+  transform: translateY(-4px);
 }
 
 .bridging-subtitle {
@@ -3174,21 +3184,53 @@ section:not(.hero)::after {
   line-height: 1.8;
 }
 
-
 /* =========================================================
-   WORLD BRIDGE
+   INTERACTIVE BRIDGE
    ========================================================= */
 
 .world-bridge {
   position: relative;
-  max-width: 1400px;
+  max-width: 1300px;
+  min-height: 430px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 180px 1fr;
   align-items: center;
-  gap: 30px;
+  gap: 0;
 }
 
+/* One elegant bridge line running through the entire section */
+
+.world-bridge::before {
+  content: "";
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gold-soft) 10%,
+    var(--gold) 38%,
+    var(--gold) 62%,
+    var(--gold-soft) 90%,
+    transparent 100%
+  );
+  box-shadow: 0 0 18px rgba(185, 154, 97, 0.08);
+}
+
+.world-bridge::after {
+  content: "";
+  position: absolute;
+  left: 11%;
+  right: 11%;
+  top: calc(50% - 11px);
+  height: 22px;
+  border-top: 1px solid rgba(185, 154, 97, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
 
 /* =========================================================
    WORLD SIDES
@@ -3197,249 +3239,135 @@ section:not(.hero)::after {
 .world {
   position: relative;
   min-width: 0;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
 }
 
 .world-africa {
+  justify-content: flex-end;
   text-align: right;
+  padding-right: 35px;
 }
 
 .world-america {
+  justify-content: flex-start;
   text-align: left;
+  padding-left: 35px;
 }
-
 
 /* =========================================================
-   MAP AREA
+   HIDDEN HOVER PHOTOS
    ========================================================= */
 
-.world-map {
-  position: relative;
-  width: 100%;
-  height: 440px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.world-map-glow {
+.world-photo {
   position: absolute;
-  width: 75%;
-  height: 75%;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(185, 154, 97, 0.10) 0%,
-    rgba(185, 154, 97, 0.04) 35%,
-    transparent 70%
-  );
-  filter: blur(25px);
-}
-
-
-/* =========================================================
-   AFRICA SILHOUETTE
-   ========================================================= */
-
-.africa-map,
-.america-map {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.africa-map {
-  background-image: none;
-}
-
-.africa-map::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: var(--gold);
-
-  -webkit-mask-image: url("/images/africa-map.png");
-  mask-image: url("/images/africa-map.png");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
-
-.africa-map::after {
-  content: "";
-  position: absolute;
-  inset: 4px;
+  top: 50%;
+  width: 310px;
+  height: 250px;
+  transform: translateY(-50%) scale(0.94);
+  opacity: 0;
+  overflow: hidden;
+  border: 1px solid rgba(185, 154, 97, 0.65);
+  background: #050505;
+  box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.65),
+    0 0 35px rgba(185, 154, 97, 0.08);
+  pointer-events: none;
+  transition:
+    opacity 0.55s ease,
+    transform 0.7s ease,
+    box-shadow 0.55s ease;
   z-index: 1;
-  background: var(--black);
-
-  -webkit-mask-image: url("/images/africa-map.png");
-  mask-image: url("/images/africa-map.png");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
 }
 
-.africa-map-image {
+.world-photo::after {
+  content: "";
   position: absolute;
   inset: 7px;
-  z-index: 3;
-  width: calc(100% - 14px);
-  height: calc(100% - 14px);
-  object-fit: cover;
-
-  -webkit-mask-image: url("/images/africa-map.png");
-  mask-image: url("/images/africa-map.png");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-
-  opacity: 1;
-  filter: contrast(1.04);
-}
-
-/* GOLD BORDER AROUND THE PHOTO */
-.africa-map-image::after {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  border: 2px solid var(--gold);
+  border: 1px solid rgba(243, 228, 194, 0.22);
   pointer-events: none;
-}
-
-.africa-photo-border {
-  position: absolute;
-  inset: 4px;
   z-index: 2;
-  border: 2px solid var(--gold);
-  pointer-events: none;
 }
 
-.america-map {
-  background-image: url("/images/america-map.png");
-}
-
-
-/* =========================================================
-   IMAGE INSIDE SILHOUETTE
-   ========================================================= */
-
-.africa-map-image {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+.world-photo img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: saturate(0.82) brightness(0.68);
+  transition: filter 0.6s ease, transform 0.8s ease;
+}
+
+.world-africa .world-photo {
+  right: 18px;
+}
+
+.world-america .world-photo {
+  left: 18px;
+}
+
+.world:hover .world-photo {
   opacity: 1;
-  filter: contrast(1.04);
-  -webkit-mask-image: url("/images/africa-map.png");
-  mask-image: url("/images/africa-map.png");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  transition:
-    transform 0.6s ease,
-    opacity 0.6s ease,
-    filter 0.6s ease;
+  transform: translateY(-50%) scale(1);
+  box-shadow:
+    0 35px 85px rgba(0, 0, 0, 0.75),
+    0 0 40px rgba(185, 154, 97, 0.12);
 }
 
-
-.america-map-image {
-  position: relative;
-  z-index: 2;
-  display: block;
-  width: 68%;
-  height: 68%;
-  object-fit: contain;
-  opacity: 0.96;
-  filter: contrast(1.04);
-  transition:
-    transform 0.6s ease,
-    opacity 0.6s ease,
-    filter 0.6s ease;
+.world:hover .world-photo img {
+  filter: saturate(0.95) brightness(0.82);
+  transform: scale(1.025);
 }
-
-.america-map-image {
-  width: 68%;
-  height: 68%;
-}
-
-.world:hover .africa-map-image,
-.world:hover .america-map-image {
-  transform: scale(1.035);
-  opacity: 1;
-}
-
 
 /* =========================================================
-   MAP LABEL
-   ========================================================= */
-
-.map-label {
-  position: absolute;
-  bottom: 18px;
-  z-index: 4;
-  font-size: 10px;
-  letter-spacing: 0.28em;
-  color: var(--gold);
-  font-weight: 600;
-}
-
-.world-africa .map-label {
-  right: 12%;
-}
-
-.world-america .map-label {
-  left: 12%;
-}
-
-
-/* =========================================================
-   WORLD CONTENT
+   WORLD CONTENT — SITS ABOVE THE BRIDGE
    ========================================================= */
 
 .world-content {
-  margin-top: 20px;
+  position: relative;
+  z-index: 5;
+  max-width: 330px;
+  padding: 28px 30px;
+  background: rgba(0, 0, 0, 0.76);
+  border-top: 1px solid rgba(185, 154, 97, 0.45);
+  border-bottom: 1px solid rgba(185, 154, 97, 0.18);
+  backdrop-filter: blur(5px);
+  transition:
+    transform 0.5s ease,
+    background 0.5s ease,
+    border-color 0.5s ease;
 }
 
 .world-africa .world-content {
-  padding-left: 15%;
+  margin-left: auto;
 }
 
 .world-america .world-content {
-  padding-right: 15%;
+  margin-right: auto;
+}
+
+.world:hover .world-content {
+  background: rgba(0, 0, 0, 0.88);
+  border-top-color: var(--gold);
+  transform: translateY(-5px);
 }
 
 .world-number {
   display: block;
   margin-bottom: 10px;
   color: var(--gold);
-  font-size: 12px;
-  letter-spacing: 0.2em;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
 }
 
 .world-label {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: var(--ivory);
-  font-size: 12px;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 11px;
   letter-spacing: 0.22em;
   font-weight: 600;
 }
@@ -3448,149 +3376,84 @@ section:not(.hero)::after {
   margin: 0;
   color: var(--text);
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
-
 /* =========================================================
-   CENTER BRIDGE
+   CENTER CONNECTION
    ========================================================= */
 
 .bridge-center {
   position: relative;
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* vertical bridge structure */
-
-.bridge-structure {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1px;
-  height: 270px;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--gold-soft),
-    transparent
-  );
-}
-
-.bridge-structure span {
-  position: absolute;
-  left: 50%;
-  width: 7px;
-  height: 7px;
-  border: 1px solid var(--gold);
-  background: var(--black);
-  transform: translateX(-50%) rotate(45deg);
-}
-
-.bridge-structure span:nth-child(1) {
-  top: 15%;
-}
-
-.bridge-structure span:nth-child(2) {
-  top: 50%;
-}
-
-.bridge-structure span:nth-child(3) {
-  top: 85%;
-}
-
-
-/* =========================================================
-   DJEMBE CENTER SYMBOL
-   ========================================================= */
-
-.bridge-symbol {
-  position: relative;
-  z-index: 3;
-  width: 76px;
-  height: 76px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
+  z-index: 8;
+  height: 430px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--black);
-  box-shadow:
-    0 0 0 8px rgba(185, 154, 97, 0.035),
-    0 0 30px rgba(185, 154, 97, 0.08);
+  pointer-events: none;
 }
 
-.bridge-symbol span {
-  color: var(--gold);
-  font-size: 8px;
-  letter-spacing: 0.18em;
-}
-
-
-/* =========================================================
-   ARROWS
-   ========================================================= */
-
-.bridge-arrow {
+.bridge-center::before,
+.bridge-center::after {
+  content: "";
   position: absolute;
-  z-index: 4;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(185, 154, 97, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--black);
-}
-
-.bridge-arrow span {
   width: 9px;
   height: 9px;
-  border-top: 1px solid var(--gold);
-  border-right: 1px solid var(--gold);
+  border: 1px solid var(--gold);
+  background: var(--black);
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(185, 154, 97, 0.12);
 }
 
-.bridge-arrow-forward {
-  top: 18%;
-  transform: rotate(45deg);
+.bridge-center::before {
+  top: calc(50% - 5px);
+  left: -4px;
 }
 
-.bridge-arrow-forward span {
-  transform: rotate(0deg);
+.bridge-center::after {
+  top: calc(50% - 5px);
+  right: -4px;
 }
-
-.bridge-arrow-return {
-  bottom: 18%;
-  transform: rotate(225deg);
-}
-
-.bridge-arrow-return span {
-  transform: rotate(0deg);
-}
-
-
-/* =========================================================
-   MISSION
-   ========================================================= */
 
 .bridge-mission {
-  position: absolute;
-  bottom: -5px;
-  width: 220px;
+  position: relative;
+  width: 155px;
+  padding: 18px 12px;
   text-align: center;
+  background: var(--black);
+  border: 1px solid rgba(185, 154, 97, 0.65);
+  box-shadow:
+    0 0 0 8px rgba(185, 154, 97, 0.025),
+    0 0 30px rgba(185, 154, 97, 0.07);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.bridge-mission::before,
+.bridge-mission::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 28px;
+  height: 1px;
+  background: var(--gold-soft);
+}
+
+.bridge-mission::before {
+  right: 100%;
+}
+
+.bridge-mission::after {
+  left: 100%;
 }
 
 .bridge-mission-label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: var(--gold);
-  font-size: 9px;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 8px;
   letter-spacing: 0.25em;
 }
 
@@ -3598,21 +3461,29 @@ section:not(.hero)::after {
   margin: 0;
   color: var(--ivory-muted);
   font-size: 11px;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
+.world-bridge:hover .bridge-mission {
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 0 8px rgba(185, 154, 97, 0.035),
+    0 0 40px rgba(185, 154, 97, 0.1);
+}
 
 /* =========================================================
    CULTURAL EXCHANGE
    ========================================================= */
 
 .cultural-exchange {
-  max-width: 1200px;
-  margin: 110px auto 0;
+  max-width: 1100px;
+  margin: 95px auto 0;
+  padding-top: 35px;
+  border-top: 1px solid var(--line);
   display: grid;
   grid-template-columns: 1fr repeat(4, auto) 1fr;
   align-items: center;
-  gap: 35px;
+  gap: 28px;
 }
 
 .exchange-line {
@@ -3622,13 +3493,19 @@ section:not(.hero)::after {
 
 .exchange-item {
   text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.exchange-item:hover {
+  transform: translateY(-4px);
 }
 
 .exchange-item span {
   display: block;
   margin-bottom: 5px;
   color: var(--gold);
-  font-size: 10px;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 9px;
   letter-spacing: 0.2em;
 }
 
@@ -3638,15 +3515,14 @@ section:not(.hero)::after {
   font-size: 12px;
 }
 
-
 /* =========================================================
-   CLOSING
+   SECTION 06 CLOSING
    ========================================================= */
 
 .bridging-closing {
   max-width: 700px;
-  margin: 110px auto 0;
-  padding-top: 70px;
+  margin: 105px auto 0;
+  padding-top: 65px;
   border-top: 1px solid var(--line);
   text-align: center;
 }
@@ -3666,45 +3542,41 @@ section:not(.hero)::after {
   font-weight: 500;
 }
 
-
 /* =========================================================
-   TABLET
+   SECTION 06 RESPONSIVE
    ========================================================= */
 
 @media (max-width: 1000px) {
-
   .world-bridge {
-    grid-template-columns: 1fr 120px 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr 130px 1fr;
   }
 
-  .world-map {
-    height: 350px;
+  .world-africa {
+    padding-right: 18px;
   }
 
-  .world-africa .world-content {
-    padding-left: 5%;
+  .world-america {
+    padding-left: 18px;
   }
 
-  .world-america .world-content {
-    padding-right: 5%;
+  .world-content {
+    max-width: 290px;
+    padding: 24px 22px;
+  }
+
+  .world-photo {
+    width: 260px;
+    height: 220px;
   }
 
   .cultural-exchange {
-    gap: 20px;
+    gap: 18px;
   }
-
 }
 
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media (max-width: 700px) {
-
   .bridging-section {
-    padding: 100px 6vw 90px;
+    padding: 105px 6vw 90px;
   }
 
   .bridging-header {
@@ -3720,100 +3592,100 @@ section:not(.hero)::after {
   }
 
   .world-bridge {
+    min-height: auto;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 28px;
   }
 
-  .world-africa,
-  .world-america {
-    width: 100%;
-    text-align: center;
-  }
-
-  .world-map {
-    height: 330px;
-  }
-
-  .world-africa .world-content,
-  .world-america .world-content {
-    padding: 0 10%;
-  }
-
-  .map-label {
-    bottom: 8px;
-  }
-
-  .world-africa .map-label,
-  .world-america .map-label {
+  .world-bridge::before {
     left: 50%;
     right: auto;
-    transform: translateX(-50%);
-  }
-
-  .bridge-center {
-    width: 100%;
-    min-height: 230px;
-  }
-
-  .bridge-structure {
-    width: 220px;
-    height: 1px;
+    top: 12%;
+    bottom: 12%;
+    width: 1px;
+    height: auto;
     background: linear-gradient(
-      to right,
+      180deg,
       transparent,
-      var(--gold-soft),
+      var(--gold-soft) 18%,
+      var(--gold) 50%,
+      var(--gold-soft) 82%,
       transparent
     );
   }
 
-  .bridge-structure span {
-    top: 50%;
-    left: auto;
-    transform: translateY(-50%) rotate(45deg);
+  .world-bridge::after {
+    display: none;
   }
 
-  .bridge-structure span:nth-child(1) {
-    left: 15%;
-    top: 50%;
+  .world {
+    width: 100%;
+    height: 360px;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
   }
 
-  .bridge-structure span:nth-child(2) {
+  .world-content {
+    width: min(100%, 340px);
+    max-width: 340px;
+    padding: 25px 22px;
+  }
+
+  .world-africa .world-content,
+  .world-america .world-content {
+    margin: 0 auto;
+  }
+
+  .world-photo {
+    width: min(86vw, 330px);
+    height: 245px;
+  }
+
+  .world-africa .world-photo,
+  .world-america .world-photo {
     left: 50%;
-    top: 50%;
+    right: auto;
+    transform: translate(-50%, -50%) scale(0.94);
   }
 
-  .bridge-structure span:nth-child(3) {
-    left: 85%;
-    top: 50%;
+  .world:hover .world-photo {
+    transform: translate(-50%, -50%) scale(1);
   }
 
-  .bridge-symbol {
-    width: 68px;
-    height: 68px;
+  .bridge-center {
+    width: 100%;
+    height: 110px;
+    order: 2;
   }
 
-  .bridge-arrow-forward {
-    top: auto;
-    left: 12%;
-    transform: rotate(45deg);
+  .world-africa {
+    order: 1;
   }
 
-  .bridge-arrow-return {
-    bottom: auto;
-    right: 12%;
-    transform: rotate(225deg);
+  .world-america {
+    order: 3;
+  }
+
+  .bridge-center::before,
+  .bridge-center::after {
+    display: none;
   }
 
   .bridge-mission {
-    bottom: -55px;
+    width: 150px;
+  }
+
+  .bridge-mission::before,
+  .bridge-mission::after {
+    width: 35px;
   }
 
   .cultural-exchange {
-    margin-top: 130px;
-    display: grid;
+    margin-top: 80px;
     grid-template-columns: 1fr 1fr;
-    gap: 35px 20px;
+    gap: 30px 18px;
   }
 
   .cultural-exchange .exchange-line {
@@ -3821,8 +3693,31 @@ section:not(.hero)::after {
   }
 
   .bridging-closing {
-    margin-top: 80px;
+    margin-top: 75px;
     padding-top: 50px;
   }
-
 }
+
+@media (max-width: 500px) {
+  .world {
+    height: 340px;
+  }
+
+  .world-content {
+    width: calc(100% - 18px);
+  }
+
+  .world-photo {
+    width: calc(100vw - 40px);
+    height: 225px;
+  }
+
+  .exchange-item span {
+    font-size: 8px;
+  }
+
+  .exchange-item p {
+    font-size: 11px;
+  }
+}
+
