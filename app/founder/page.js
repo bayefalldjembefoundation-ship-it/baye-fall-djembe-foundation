@@ -543,8 +543,6 @@ export default function Founder() {
 
   </div>
 
-</section>
-
 
       {/* CLOSING */}
       <section className="founder-closing">
