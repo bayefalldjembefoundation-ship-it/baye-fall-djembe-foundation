@@ -3235,38 +3235,57 @@ section:not(.hero)::after {
 .africa-map {
   position: absolute;
   inset: 12px;
+  overflow: hidden;
+
   background:
     linear-gradient(
       135deg,
-      rgba(120, 35, 38, 0.96),
-      rgba(185, 154, 97, 0.34)
-    );
+      rgba(0, 0, 0, 0.18),
+      rgba(120, 35, 38, 0.18)
+    ),
+    url("/images/cultural-roots.png");
+
+  background-size: cover;
+  background-position: center 28%;
+  background-repeat: no-repeat;
+
   clip-path: polygon(
-    46% 2%,
-    61% 8%,
-    70% 18%,
-    78% 25%,
-    76% 35%,
-    84% 44%,
-    78% 53%,
-    80% 65%,
-    71% 74%,
-    68% 88%,
+    47% 1%,
+    57% 6%,
+    64% 12%,
+    71% 19%,
+    75% 28%,
+    82% 34%,
+    80% 43%,
+    85% 49%,
+    79% 57%,
+    76% 65%,
+    72% 74%,
+    67% 82%,
+    64% 91%,
     57% 98%,
-    48% 87%,
-    38% 83%,
-    31% 70%,
-    22% 64%,
-    17% 51%,
-    8% 42%,
-    15% 31%,
-    20% 20%,
-    32% 13%
+    50% 91%,
+    44% 84%,
+    37% 82%,
+    33% 75%,
+    27% 69%,
+    22% 61%,
+    17% 57%,
+    15% 49%,
+    10% 43%,
+    15% 35%,
+    18% 28%,
+    25% 22%,
+    31% 15%,
+    39% 11%
   );
+
   border: 2px solid var(--gold);
+
   box-shadow:
     0 0 35px rgba(185, 154, 97, 0.18),
     inset 0 0 40px rgba(0, 0, 0, 0.35);
+
   transition:
     transform 0.7s ease,
     filter 0.7s ease;
@@ -3276,17 +3295,15 @@ section:not(.hero)::after {
   content: "";
   position: absolute;
   inset: 0;
+
   background:
-    radial-gradient(
-      circle at 35% 35%,
-      rgba(243, 228, 194, 0.18),
-      transparent 28%
-    ),
     linear-gradient(
       135deg,
-      transparent 40%,
-      rgba(0, 0, 0, 0.35)
+      rgba(120, 35, 38, 0.25),
+      rgba(0, 0, 0, 0.42)
     );
+
+  pointer-events: none;
 }
 
 .africa-map:hover {
@@ -3294,49 +3311,62 @@ section:not(.hero)::after {
   filter: brightness(1.12);
 }
 
-
 /* USA SILHOUETTE */
 
 .america-map {
   position: absolute;
   inset: 12px;
+  overflow: hidden;
+
   background:
     linear-gradient(
       135deg,
-      rgba(185, 154, 97, 0.42),
+      rgba(185, 154, 97, 0.28),
       rgba(22, 58, 72, 0.96)
     );
+
   clip-path: polygon(
-    4% 24%,
-    12% 18%,
-    22% 20%,
-    30% 16%,
-    40% 20%,
-    48% 17%,
-    58% 22%,
-    67% 17%,
-    78% 22%,
-    87% 20%,
-    96% 28%,
-    91% 37%,
-    84% 42%,
-    78% 49%,
-    71% 48%,
-    65% 54%,
-    57% 52%,
-    51% 58%,
-    43% 54%,
-    36% 60%,
-    28% 55%,
-    21% 58%,
-    14% 51%,
-    8% 48%,
-    2% 38%
+    3% 22%,
+    10% 18%,
+    18% 19%,
+    25% 15%,
+    33% 18%,
+    40% 16%,
+    48% 20%,
+    56% 17%,
+    64% 21%,
+    72% 18%,
+    81% 22%,
+    89% 21%,
+    97% 27%,
+    93% 34%,
+    88% 39%,
+    83% 43%,
+    79% 49%,
+    74% 52%,
+    70% 58%,
+    65% 56%,
+    61% 62%,
+    55% 59%,
+    50% 65%,
+    45% 61%,
+    40% 67%,
+    34% 63%,
+    28% 66%,
+    23% 60%,
+    17% 62%,
+    12% 55%,
+    7% 52%,
+    4% 45%,
+    1% 36%
   );
+
   border: 2px solid var(--gold);
+
   box-shadow:
     0 0 35px rgba(185, 154, 97, 0.18),
     inset 0 0 40px rgba(0, 0, 0, 0.35);
+
   transition:
     transform 0.7s ease,
     filter 0.7s ease;
@@ -3346,6 +3376,7 @@ section:not(.hero)::after {
   content: "";
   position: absolute;
   inset: 0;
+
   background:
     radial-gradient(
       circle at 65% 42%,
@@ -3357,6 +3388,8 @@ section:not(.hero)::after {
       rgba(0, 0, 0, 0.28),
       transparent
     );
+
+  pointer-events: none;
 }
 
 .america-map:hover {
@@ -3372,13 +3405,20 @@ section:not(.hero)::after {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
   font-family: "Cinzel", serif;
   font-size: 0.8rem;
+  font-weight: 600;
   letter-spacing: 0.35em;
-  color: var(--ivory);
-  opacity: 0.85;
-}
 
+  color: var(--ivory);
+
+  text-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.8);
+
+  opacity: 0.9;
+  z-index: 3;
+}
 
 /* WORLD CONTENT */
 
