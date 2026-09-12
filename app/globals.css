@@ -5641,7 +5641,7 @@ section:not(.hero)::after {
   margin: 25px 0 0;
   color: var(--ivory);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(6rem, 12vw, 13rem);
+  font-size: clamp(4.5rem, 8vw, 9rem);
   font-weight: 400;
   line-height: 0.78;
   letter-spacing: -0.07em;
