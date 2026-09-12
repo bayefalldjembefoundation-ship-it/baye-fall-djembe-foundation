@@ -402,73 +402,301 @@ export default function ProgramsPage() {
         </div>
 
 
-        {/* =========================================================
-            PROGRAM 05 — BRIDGING TWO WORLDS
-            ========================================================= */}
-        <div
-          className={`program-item ${
-            openProgram === 5 ? "is-open" : ""
-          }`}
-        >
+       {/* =========================================================
+    PROGRAM 05 — BRIDGING TWO WORLDS
+    ========================================================= */}
+<div
+  className={`program-item bridging-program ${
+    openProgram === 5 ? "is-open" : ""
+  }`}
+>
 
-          <button
-            className="program-toggle"
-            onClick={() => toggleProgram(5)}
-            aria-expanded={openProgram === 5}
-          >
+  <button
+    className="program-toggle bridging-toggle"
+    onClick={() => toggleProgram(5)}
+    aria-expanded={openProgram === 5}
+  >
 
-            <span className="program-number">
-              05
+    <span className="program-number">
+      05
+    </span>
+
+    <span className="program-toggle-title">
+      Bridging Two Worlds
+    </span>
+
+    <span className="program-toggle-icon">
+      {openProgram === 5 ? "−" : "+"}
+    </span>
+
+  </button>
+
+
+  <div className="program-expand">
+
+    <div className="bridging-experience">
+
+      {/* HERO MOMENT */}
+
+      <div className="bridging-hero">
+
+        <div className="bridging-hero-label">
+          SENEGAL • WEST AFRICA
+        </div>
+
+        <h2>
+          Experience
+          <br />
+          <span>Senegal.</span>
+        </h2>
+
+        <p className="bridging-hero-intro">
+          More than a destination. A journey into rhythm,
+          tradition, community, and connection.
+        </p>
+
+      </div>
+
+
+      {/* JOURNEY */}
+
+      <div className="bridging-journey">
+
+        <div className="bridging-journey-line"></div>
+
+
+        <div className="bridging-journey-step">
+
+          <span className="bridging-step-number">
+            01
+          </span>
+
+          <div>
+
+            <span className="bridging-step-label">
+              ARRIVE
             </span>
 
-            <span className="program-toggle-title">
-              Bridging Two Worlds
-            </span>
+            <h3>
+              Leave the familiar behind.
+            </h3>
 
-            <span className="program-toggle-icon">
-              {openProgram === 5 ? "−" : "+"}
-            </span>
-
-          </button>
-
-
-          <div className="program-expand">
-
-            <div className="program-content program-content-text-only">
-
-              <div className="program-text">
-
-                <p className="eyebrow">
-                  SENEGAL • CULTURE • CONNECTION
-                </p>
-
-                <h2>
-                  Bridging
-                  <br />
-                  Two Worlds
-                </h2>
-
-                <p>
-                  Experience Senegal through an unforgettable cultural
-                  journey designed to connect you with the heart of
-                  West Africa.
-                </p>
-
-                <p>
-                  From music, dance, food, and traditions to meaningful
-                  community experiences, the Baye Fall Djembe Foundation
-                  creates opportunities to explore, connect, and experience
-                  Senegal in a way that leaves a lasting impact.
-                </p>
-
-              </div>
-
-            </div>
+            <p>
+              Step into a culture shaped by rhythm, history,
+              community, and generations of tradition.
+            </p>
 
           </div>
 
         </div>
 
+
+        <div className="bridging-journey-step">
+
+          <span className="bridging-step-number">
+            02
+          </span>
+
+          <div>
+
+            <span className="bridging-step-label">
+              EXPERIENCE
+            </span>
+
+            <h3>
+              Feel the rhythm.
+            </h3>
+
+            <p>
+              Hear the drums, experience the movement,
+              share meals, meet people, and participate
+              in the traditions that bring communities together.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div className="bridging-journey-step">
+
+          <span className="bridging-step-number">
+            03
+          </span>
+
+          <div>
+
+            <span className="bridging-step-label">
+              CONNECT
+            </span>
+
+            <h3>
+              Become part of the story.
+            </h3>
+
+            <p>
+              Cultural exchange becomes meaningful when
+              people move beyond observation and create
+              genuine connections with one another.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div className="bridging-journey-step">
+
+          <span className="bridging-step-number">
+            04
+          </span>
+
+          <div>
+
+            <span className="bridging-step-label">
+              RETURN
+            </span>
+
+            <h3>
+              Bring something home.
+            </h3>
+
+            <p>
+              Return with memories, relationships, stories,
+              and a deeper understanding of the culture
+              you experienced.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* CULTURAL EXPERIENCES */}
+
+      <div className="bridging-experiences">
+
+        <div className="bridging-experiences-heading">
+
+          <span>
+            THE EXPERIENCE
+          </span>
+
+          <h3>
+            More Than
+            <br />
+            a Visit.
+          </h3>
+
+        </div>
+
+
+        <div className="bridging-experience-grid">
+
+          <div className="bridging-experience-item">
+
+            <span>01</span>
+
+            <h4>
+              Music
+            </h4>
+
+            <p>
+              Discover the rhythms that carry stories
+              from one generation to the next.
+            </p>
+
+          </div>
+
+
+          <div className="bridging-experience-item">
+
+            <span>02</span>
+
+            <h4>
+              Movement
+            </h4>
+
+            <p>
+              Experience dance and movement as expressions
+              of celebration, identity, and community.
+            </p>
+
+          </div>
+
+
+          <div className="bridging-experience-item">
+
+            <span>03</span>
+
+            <h4>
+              Food
+            </h4>
+
+            <p>
+              Share in the flavors and traditions that
+              bring people together around the table.
+            </p>
+
+          </div>
+
+
+          <div className="bridging-experience-item">
+
+            <span>04</span>
+
+            <h4>
+              Community
+            </h4>
+
+            <p>
+              Build relationships and experience Senegal
+              through the people who call it home.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* FINAL INVITATION */}
+
+      <div className="bridging-invitation">
+
+        <span className="bridging-invitation-label">
+          THE JOURNEY AWAITS
+        </span>
+
+        <h3>
+          Africa to America.
+          <br />
+          America to Africa.
+        </h3>
+
+        <p>
+          The bridge is built through people,
+          culture, music, education, and shared experience.
+        </p>
+
+        <a
+          href="/get-involved"
+          className="bridging-button"
+        >
+          Experience Senegal
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
         {/* =========================================================
             WHO WE SERVE
