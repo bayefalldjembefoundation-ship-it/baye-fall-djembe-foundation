@@ -3293,25 +3293,30 @@ section:not(.hero)::after {
 
 .africa-map-image {
   position: absolute;
-  inset: 8px;
+  inset: 7px;
   z-index: 3;
-  width: calc(100% - 16px);
-  height: calc(100% - 16px);
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
   object-fit: cover;
 
   -webkit-mask-image: url("/images/africa-map.png");
   mask-image: url("/images/africa-map.png");
+
   -webkit-mask-size: contain;
   mask-size: contain;
+
   -webkit-mask-position: center;
   mask-position: center;
+
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 
   opacity: 1;
+
   filter:
     contrast(1.04)
-    drop-shadow(0 0 0 var(--gold));
+    drop-shadow(0 0 1px var(--gold))
+    drop-shadow(0 0 1px var(--gold));
 }
 
 .america-map {
