@@ -527,22 +527,21 @@ export default function Founder() {
 </section>
   
 
-  {/* CLOSING */}
+{/* CLOSING */}
 
-  <div className="bridging-closing">
+<section className="founder-closing">
+  <p className="eyebrow">THE LEGACY CONTINUES</p>
 
-    <p>
-      Culture moves in both directions.
-    </p>
+  <p>
+    Culture moves in both directions.
+  </p>
 
-    <strong>
-      Africa to America.
-      <br />
-      America to Africa.
-    </strong>
-
-  </div>
-
+  <strong>
+    Africa to America.
+    <br />
+    America to Africa.
+  </strong>
+</section>
 
       {/* CLOSING */}
       <section className="founder-closing">
