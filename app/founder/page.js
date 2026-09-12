@@ -374,51 +374,159 @@ export default function Founder() {
 </section>
 
       {/* BRIDGING TWO WORLDS */}
-      <section className="founder-section bridging-section">
-        <div className="section-label">06 — THE VISION</div>
+<section className="founder-section bridging-section">
 
-        <h2>Bridging Two Worlds</h2>
+  <div className="section-label">06 — THE VISION</div>
 
-        <p>
-          Brother Ghana's life represents a bridge between Senegal and the United
-          States.
-        </p>
+  <div className="bridging-header">
+    <p className="eyebrow">THE VISION</p>
 
-        <p>
-          He knows what it means to grow up surrounded by one culture and then
-          build a life within another. That experience gives him a unique
-          understanding of how powerful cultural connection can be.
-        </p>
+    <h2>
+      Bridging
+      <br />
+      Two Worlds
+    </h2>
 
-        <p>
-          The Baye Fall Djembe Foundation was created to build upon that
-          connection.
-        </p>
+    <p className="bridging-subtitle">
+      Connecting Senegal and the United States through culture,
+      education, music, and community.
+    </p>
+  </div>
 
-        <p>
-          We believe people should not have to experience another culture only
-          through a classroom, a textbook, a screen, or a performance.
-        </p>
+  <div className="world-bridge">
 
-        <div className="bridge-statement">
-          <p>They should be able to experience it.</p>
+    {/* AFRICA */}
+    <div className="world world-africa">
+
+      <div className="world-map">
+        <div className="world-map-glow"></div>
+
+        <div className="africa-map">
+          <span className="map-label">AFRICA</span>
         </div>
+      </div>
 
-        <div className="experience-list">
-          <p>To hear the music.</p>
-          <p>To feel the rhythm.</p>
-          <p>To meet the people.</p>
-          <p>To share the food.</p>
-          <p>To walk the streets.</p>
-          <p>To learn the stories.</p>
-          <p>To experience Senegal.</p>
-        </div>
+      <div className="world-content">
+        <span className="world-number">01</span>
+
+        <p className="world-label">FROM AFRICA</p>
 
         <p>
-          And most importantly, to return home with a deeper understanding of
-          the world and a connection that lasts long after the journey ends.
+          Rooted in the rich traditions of the Baye Fall,
+          Brother Ghana carries forward a legacy of spirituality,
+          discipline, music, and community.
         </p>
-      </section>
+      </div>
+
+    </div>
+
+
+    {/* THE BRIDGE */}
+    <div className="bridge-center">
+
+      <div className="bridge-arrow bridge-arrow-forward">
+        <span></span>
+      </div>
+
+      <div className="bridge-symbol">
+        <span>DJEMBE</span>
+      </div>
+
+      <div className="bridge-structure">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div className="bridge-arrow bridge-arrow-return">
+        <span></span>
+      </div>
+
+      <div className="bridge-mission">
+        <span className="bridge-mission-label">ONE MISSION</span>
+
+        <p>
+          To build understanding, foster connection,
+          and create a more united world.
+        </p>
+      </div>
+
+    </div>
+
+
+    {/* UNITED STATES */}
+    <div className="world world-america">
+
+      <div className="world-map">
+        <div className="world-map-glow"></div>
+
+        <div className="america-map">
+          <span className="map-label">USA</span>
+        </div>
+      </div>
+
+      <div className="world-content">
+        <span className="world-number">02</span>
+
+        <p className="world-label">TO THE UNITED STATES</p>
+
+        <p>
+          He brings these traditions to new communities,
+          creating opportunities for people to experience,
+          learn from, and be inspired by African culture.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  {/* CULTURAL EXCHANGE */}
+  <div className="cultural-exchange">
+
+    <div className="exchange-line"></div>
+
+    <div className="exchange-item">
+      <span>SHARE</span>
+      <p>the music.</p>
+    </div>
+
+    <div className="exchange-item">
+      <span>LEARN</span>
+      <p>the traditions.</p>
+    </div>
+
+    <div className="exchange-item">
+      <span>CONNECT</span>
+      <p>the communities.</p>
+    </div>
+
+    <div className="exchange-item">
+      <span>RETURN</span>
+      <p>with understanding.</p>
+    </div>
+
+    <div className="exchange-line"></div>
+
+  </div>
+
+
+  <div className="bridging-closing">
+
+    <p>
+      Culture moves in both directions.
+    </p>
+
+    <strong>
+      Africa to America.
+      <br />
+      America to Africa.
+    </strong>
+
+  </div>
+
+</section>
 
 
       {/* CLOSING */}
