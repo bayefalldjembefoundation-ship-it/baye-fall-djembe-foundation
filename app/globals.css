@@ -5032,6 +5032,41 @@ section:not(.hero)::after {
     border-color 0.5s ease;
 }
 
+.programs-section .program-toggle:hover {
+  padding-left: 12px;
+  color: var(--gold);
+  border-color: var(--gold-soft);
+}
+
+.programs-section .program-toggle:hover .program-number {
+  color: var(--gold);
+  transform: translateX(4px);
+}
+
+.programs-section .program-toggle:hover .program-toggle-title {
+  transform: translateX(6px);
+}
+
+.programs-section .program-toggle:hover .program-toggle-icon {
+  transform: rotate(90deg);
+  color: var(--gold);
+}
+
+.programs-section .program-number,
+.programs-section .program-toggle-title,
+.programs-section .program-toggle-icon {
+  transition:
+    transform 0.45s ease,
+    color 0.45s ease;
+}
+
+.programs-section .program-toggle-icon {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1;
+  text-align: right;
+}
+
 .programs-section .program-expand {
   position: relative;
   z-index: 1;
@@ -5049,7 +5084,7 @@ section:not(.hero)::after {
 
 .programs-section .program-item.is-open .program-expand,
 .programs-section .program-audience-section.is-open .program-expand {
-  max-height: 1600px;
+  max-height: 3000px;
   opacity: 1;
   visibility: visible;
 }
