@@ -22,7 +22,7 @@ export default function Founder() {
             <h1>Brother Ghana</h1>
 
             <p className="founder-title">
-              Master Percussionist & Cultural Educator
+              Master Percussionist &amp; Cultural Educator
             </p>
 
             <div className="founder-divider"></div>
@@ -123,6 +123,7 @@ export default function Founder() {
 
           <div className="teaching-lead">
             <span className="teaching-number">28</span>
+
             <span className="teaching-years">
               YEARS OF TEACHING
             </span>
@@ -144,6 +145,7 @@ export default function Founder() {
             alt="Brother Ghana teaching African drumming to students"
             className="teaching-image"
           />
+
           <div className="teaching-image-accent"></div>
         </div>
 
@@ -322,7 +324,7 @@ export default function Founder() {
             <div className="cultural-roots-divider"></div>
 
             <p className="roots-lead">
-              Brother Ghana's connection to drumming is rooted in a cultural
+              Brother Ghana&apos;s connection to drumming is rooted in a cultural
               tradition that reaches far beyond entertainment.
             </p>
 
@@ -341,6 +343,7 @@ export default function Founder() {
             </p>
           </div>
 
+
           <div className="cultural-roots-image-wrap">
             <img
               src="/images/cultural-roots.png"
@@ -357,7 +360,6 @@ export default function Founder() {
 
       {/* BRIDGING TWO WORLDS */}
       <section className="founder-section bridging-section">
-
         <div className="section-label">06 — THE VISION</div>
 
         <div className="bridging-header">
@@ -381,62 +383,53 @@ export default function Founder() {
           {/* AFRICA */}
           <div className="world world-africa">
 
-            <div className="world-map">
-              <div className="world-map-glow"></div>
+            <div className="world-bridge-card">
+              <div className="world-bridge-line"></div>
 
-              <div className="africa-map">
-                <div className="africa-photo-border">
-  <img src="/images/cult-roots.png" alt="Brother Ghana" className="africa-map-image" />
-</div>
-
-                <span className="map-label">AFRICA</span>
+              <div className="world-photo">
+                <img
+                  src="/images/cult-roots.png"
+                  alt="Brother Ghana representing the cultural roots of West Africa"
+                />
               </div>
-            </div>
 
-            <div className="world-content">
-              <span className="world-number">01</span>
+              <div className="world-content">
+                <span className="world-number">01</span>
 
-              <p className="world-label">FROM AFRICA</p>
+                <p className="world-label">
+                  FROM AFRICA
+                </p>
 
-              <p>
-                Rooted in the rich traditions of the Baye Fall,
-                Brother Ghana carries forward a legacy of spirituality,
-                discipline, music, and community.
-              </p>
+                <p>
+                  Rooted in the rich traditions of the Baye Fall,
+                  Brother Ghana carries forward a legacy of spirituality,
+                  discipline, music, and community.
+                </p>
+              </div>
             </div>
 
           </div>
 
 
-          {/* THE BRIDGE */}
+          {/* BRIDGE */}
           <div className="bridge-center">
 
-            <div className="bridge-arrow bridge-arrow-forward">
-              <span></span>
-            </div>
+            <div className="bridge-line bridge-line-top"></div>
 
-            <div className="bridge-symbol">
-              <span>DJEMBE</span>
-            </div>
-
-            <div className="bridge-structure">
+            <div className="bridge-core">
               <span></span>
               <span></span>
               <span></span>
             </div>
 
-            <div className="bridge-arrow bridge-arrow-return">
-              <span></span>
-            </div>
+            <div className="bridge-line bridge-line-bottom"></div>
 
             <div className="bridge-mission">
-              <span className="bridge-mission-label">
-                ONE MISSION
-              </span>
+              <span>ONE MISSION</span>
 
               <p>
-                To build understanding, foster connection,
-                and create a more united world.
+                Building understanding through culture,
+                education, and community.
               </p>
             </div>
 
@@ -446,32 +439,29 @@ export default function Founder() {
           {/* UNITED STATES */}
           <div className="world world-america">
 
-            <div className="world-map">
-              <div className="world-map-glow"></div>
+            <div className="world-bridge-card">
+              <div className="world-bridge-line"></div>
 
-              <div className="america-map">
+              <div className="world-photo">
                 <img
                   src="/images/america-img.png"
                   alt="Community and cultural connection in the United States"
-                  className="america-map-image"
                 />
-
-                <span className="map-label">USA</span>
               </div>
-            </div>
 
-            <div className="world-content">
-              <span className="world-number">02</span>
+              <div className="world-content">
+                <span className="world-number">02</span>
 
-              <p className="world-label">
-                TO THE UNITED STATES
-              </p>
+                <p className="world-label">
+                  TO THE UNITED STATES
+                </p>
 
-              <p>
-                He brings these traditions to new communities,
-                creating opportunities for people to experience,
-                learn from, and be inspired by African culture.
-              </p>
+                <p>
+                  He brings these traditions to new communities,
+                  creating opportunities for people to experience,
+                  learn from, and be inspired by African culture.
+                </p>
+              </div>
             </div>
 
           </div>
@@ -514,7 +504,9 @@ export default function Founder() {
       {/* CLOSING */}
       <section className="founder-closing">
 
-        <p className="eyebrow">THE LEGACY CONTINUES</p>
+        <p className="eyebrow">
+          THE LEGACY CONTINUES
+        </p>
 
         <p>
           Culture moves in both directions.
