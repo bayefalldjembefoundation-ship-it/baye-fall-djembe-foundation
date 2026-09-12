@@ -318,12 +318,15 @@ export default function Founder() {
 
 
       {/* CULTURAL ROOTS */}
-      <section className="founder-section cultural-roots-section">
+<section className="founder-section cultural-roots-section">
+
   <div className="section-label">05 — CULTURAL ROOTS</div>
 
   <div className="cultural-roots-layout">
 
     <div className="cultural-roots-content">
+
+      <p className="eyebrow">ROOTED IN TRADITION</p>
 
       <h2>
         More Than
@@ -331,38 +334,44 @@ export default function Founder() {
         Music
       </h2>
 
-        <p>
-         Brother Ghana's connection to drumming is rooted in a cultural tradition that
-          reaches far beyond entertainment.
-        </p>
+      <div className="cultural-roots-divider"></div>
 
-        <p className="roots-lead">
-          His music is inspired in part by the spiritual songs and rhythms of
-          the Baye Fall tradition, a distinctive Senegalese tradition
-          associated with devotion, hard work, education, community, and
-          tranquility.
-        </p>
+      <p className="roots-lead">
+        Brother Ghana's connection to drumming is rooted in a cultural
+        tradition that reaches far beyond entertainment.
+      </p>
 
-        <p>
-          These values influence the way Brother Ghana approaches his work. His goal
-          is not simply to teach someone how to play a drum. It is to create
-          an experience that encourages curiosity, respect, connection, and a
-          deeper appreciation for African culture.
-        </p>
-            </div>
+      <p>
+        His music is inspired in part by the spiritual songs and rhythms of
+        the Baye Fall tradition, a distinctive Senegalese tradition
+        associated with devotion, hard work, education, community, and
+        tranquility.
+      </p>
 
-      <div className="cultural-roots-image-wrap">
-        <img
-          src="/images/cultural-roots.png"
-          alt="Brother Ghana in traditional West African attire"
-          className="cultural-roots-image"
-        />
-      </div>
+      <p>
+        These values influence the way Brother Ghana approaches his work.
+        His goal is not simply to teach someone how to play a drum. It is to
+        create an experience that encourages curiosity, respect, connection,
+        and a deeper appreciation for African culture.
+      </p>
 
     </div>
 
-  </section>
+    <div className="cultural-roots-image-wrap">
 
+      <img
+        src="/images/cultural-roots.png"
+        alt="Brother Ghana in traditional West African attire"
+        className="cultural-roots-image"
+      />
+
+      <div className="cultural-roots-image-accent"></div>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* BRIDGING TWO WORLDS */}
       <section className="founder-section bridging-section">
