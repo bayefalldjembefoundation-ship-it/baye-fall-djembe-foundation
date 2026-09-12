@@ -3271,8 +3271,8 @@ section:not(.hero)::after {
   position: relative;
   z-index: 2;
   display: block;
-  width: 58%;
-  height: 72%;
+  width: 72%;
+  height: 82%;
   object-fit: contain;
   opacity: 0.96;
   filter: contrast(1.04);
