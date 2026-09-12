@@ -3136,3 +3136,653 @@ section:not(.hero)::after {
     inset: 5px;
   }
 }
+
+/* =========================================================
+   SECTION 06 — BRIDGING TWO WORLDS
+   ========================================================= */
+
+.bridging-section {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 140px;
+}
+
+/* HEADER */
+
+.bridging-header {
+  position: relative;
+  text-align: center;
+  max-width: 1000px;
+  margin: 65px auto 0;
+  z-index: 5;
+}
+
+.bridging-header h2 {
+  margin: 18px 0 24px;
+  font-family: "Cinzel", serif;
+  font-size: clamp(4rem, 8vw, 8.5rem);
+  line-height: 0.88;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  color: var(--ivory);
+}
+
+.bridging-subtitle {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--ivory-soft);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+
+/* MAIN BRIDGE */
+
+.world-bridge {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1fr;
+  align-items: center;
+  gap: 20px;
+  max-width: 1500px;
+  min-height: 650px;
+  margin: 70px auto 0;
+}
+
+
+/* WORLD SIDES */
+
+.world {
+  position: relative;
+  z-index: 3;
+}
+
+.world-africa {
+  text-align: left;
+}
+
+.world-america {
+  text-align: right;
+}
+
+
+/* MAP AREA */
+
+.world-map {
+  position: relative;
+  width: min(100%, 390px);
+  height: 330px;
+  margin: 0 auto;
+}
+
+.world-map-glow {
+  position: absolute;
+  inset: 15%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(185, 154, 97, 0.2),
+    transparent 68%
+  );
+  filter: blur(25px);
+}
+
+
+/* AFRICA SILHOUETTE */
+
+.africa-map {
+  position: absolute;
+  inset: 12px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(120, 35, 38, 0.96),
+      rgba(185, 154, 97, 0.34)
+    );
+  clip-path: polygon(
+    46% 2%,
+    61% 8%,
+    70% 18%,
+    78% 25%,
+    76% 35%,
+    84% 44%,
+    78% 53%,
+    80% 65%,
+    71% 74%,
+    68% 88%,
+    57% 98%,
+    48% 87%,
+    38% 83%,
+    31% 70%,
+    22% 64%,
+    17% 51%,
+    8% 42%,
+    15% 31%,
+    20% 20%,
+    32% 13%
+  );
+  border: 2px solid var(--gold);
+  box-shadow:
+    0 0 35px rgba(185, 154, 97, 0.18),
+    inset 0 0 40px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.africa-map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      rgba(243, 228, 194, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 40%,
+      rgba(0, 0, 0, 0.35)
+    );
+}
+
+.africa-map:hover {
+  transform: scale(1.03);
+  filter: brightness(1.12);
+}
+
+
+/* USA SILHOUETTE */
+
+.america-map {
+  position: absolute;
+  inset: 12px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(185, 154, 97, 0.42),
+      rgba(22, 58, 72, 0.96)
+    );
+  clip-path: polygon(
+    4% 24%,
+    12% 18%,
+    22% 20%,
+    30% 16%,
+    40% 20%,
+    48% 17%,
+    58% 22%,
+    67% 17%,
+    78% 22%,
+    87% 20%,
+    96% 28%,
+    91% 37%,
+    84% 42%,
+    78% 49%,
+    71% 48%,
+    65% 54%,
+    57% 52%,
+    51% 58%,
+    43% 54%,
+    36% 60%,
+    28% 55%,
+    21% 58%,
+    14% 51%,
+    8% 48%,
+    2% 38%
+  );
+  border: 2px solid var(--gold);
+  box-shadow:
+    0 0 35px rgba(185, 154, 97, 0.18),
+    inset 0 0 40px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.america-map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 65% 42%,
+      rgba(243, 228, 194, 0.14),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.28),
+      transparent
+    );
+}
+
+.america-map:hover {
+  transform: scale(1.03);
+  filter: brightness(1.12);
+}
+
+
+/* MAP LABEL */
+
+.map-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Cinzel", serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.35em;
+  color: var(--ivory);
+  opacity: 0.85;
+}
+
+
+/* WORLD CONTENT */
+
+.world-content {
+  position: relative;
+  max-width: 340px;
+  margin: 25px auto 0;
+}
+
+.world-africa .world-content {
+  margin-left: 25px;
+}
+
+.world-america .world-content {
+  margin-right: 25px;
+}
+
+.world-number {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+}
+
+.world-label {
+  margin: 0 0 16px;
+  color: var(--gold);
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.24em;
+}
+
+.world-content > p:last-child {
+  margin: 0;
+  color: var(--text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+
+/* CENTRAL BRIDGE */
+
+.bridge-center {
+  position: relative;
+  align-self: center;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* BRIDGE ARC */
+
+.bridge-structure {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  margin-top: 15px;
+}
+
+.bridge-structure::before {
+  content: "";
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  top: 35px;
+  height: 105px;
+  border: 3px solid var(--gold);
+  border-bottom: 0;
+  border-radius: 50% 50% 0 0;
+  box-shadow:
+    0 0 20px rgba(185, 154, 97, 0.22),
+    0 0 45px rgba(185, 154, 97, 0.08);
+}
+
+.bridge-structure span {
+  position: absolute;
+  bottom: 0;
+  width: 2px;
+  height: 115px;
+  background: linear-gradient(
+    to bottom,
+    var(--gold),
+    transparent
+  );
+}
+
+.bridge-structure span:nth-child(1) {
+  left: 4%;
+}
+
+.bridge-structure span:nth-child(2) {
+  left: 50%;
+  height: 150px;
+}
+
+.bridge-structure span:nth-child(3) {
+  right: 4%;
+}
+
+
+/* DJEMBE CENTER */
+
+.bridge-symbol {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108px;
+  height: 108px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  background: #080808;
+  box-shadow:
+    0 0 0 8px rgba(185, 154, 97, 0.08),
+    0 0 35px rgba(185, 154, 97, 0.22);
+}
+
+.bridge-symbol::before {
+  content: "🥁";
+  position: absolute;
+  font-size: 2.8rem;
+  filter: grayscale(1) sepia(0.6);
+}
+
+.bridge-symbol span {
+  position: absolute;
+  bottom: -26px;
+  font-family: "Cinzel", serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+}
+
+
+/* TWO-WAY ARROWS */
+
+.bridge-arrow {
+  position: absolute;
+  width: 72%;
+  height: 55px;
+  z-index: 4;
+  border-top: 2px solid var(--gold);
+  border-radius: 50%;
+}
+
+.bridge-arrow-forward {
+  top: 45px;
+  transform: rotate(-5deg);
+}
+
+.bridge-arrow-return {
+  bottom: 105px;
+  transform: rotate(5deg);
+}
+
+.bridge-arrow::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-top: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+}
+
+.bridge-arrow-forward::after {
+  right: -3px;
+  top: -7px;
+  transform: rotate(45deg);
+}
+
+.bridge-arrow-return::after {
+  left: -3px;
+  top: -7px;
+  transform: rotate(-135deg);
+}
+
+
+/* ONE MISSION */
+
+.bridge-mission {
+  position: relative;
+  z-index: 6;
+  max-width: 360px;
+  margin-top: 75px;
+  text-align: center;
+}
+
+.bridge-mission-label {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+}
+
+.bridge-mission p {
+  margin: 0;
+  color: var(--ivory-soft);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+
+/* CULTURAL EXCHANGE */
+
+.cultural-exchange {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, auto) 1fr;
+  align-items: center;
+  gap: 35px;
+  max-width: 1250px;
+  margin: 50px auto 0;
+}
+
+.exchange-line {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--line)
+  );
+}
+
+.exchange-line:last-child {
+  background: linear-gradient(
+    to left,
+    transparent,
+    var(--line)
+  );
+}
+
+.exchange-item {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.exchange-item span {
+  display: block;
+  color: var(--gold);
+  font-family: "Cinzel", serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+}
+
+.exchange-item p {
+  margin: 7px 0 0;
+  color: var(--ivory-muted);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+}
+
+
+/* CLOSING */
+
+.bridging-closing {
+  margin: 100px auto 0;
+  text-align: center;
+}
+
+.bridging-closing p {
+  margin: 0 0 15px;
+  color: var(--ivory-muted);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.bridging-closing strong {
+  color: var(--ivory);
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .bridging-header h2 {
+    font-size: clamp(3.5rem, 11vw, 6rem);
+  }
+
+  .world-bridge {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 55px;
+  }
+
+  .world-map {
+    height: 280px;
+  }
+
+  .world-africa,
+  .world-america {
+    text-align: center;
+  }
+
+  .world-content,
+  .world-africa .world-content,
+  .world-america .world-content {
+    margin: 20px auto 0;
+    max-width: 500px;
+  }
+
+  .bridge-center {
+    min-height: 430px;
+    order: 2;
+  }
+
+  .world-africa {
+    order: 1;
+  }
+
+  .world-america {
+    order: 3;
+  }
+
+  .cultural-exchange {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+  }
+
+  .cultural-exchange .exchange-line {
+    display: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .bridging-section {
+    padding-bottom: 90px;
+  }
+
+  .bridging-header {
+    margin-top: 45px;
+  }
+
+  .bridging-header h2 {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .bridging-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .world-map {
+    height: 240px;
+  }
+
+  .bridge-center {
+    min-height: 390px;
+  }
+
+  .bridge-structure {
+    width: 90%;
+  }
+
+  .bridge-symbol {
+    width: 88px;
+    height: 88px;
+  }
+
+  .bridge-symbol::before {
+    font-size: 2.2rem;
+  }
+
+  .bridge-mission {
+    max-width: 300px;
+    margin-top: 55px;
+  }
+
+  .bridge-mission p {
+    font-size: 1.1rem;
+  }
+
+  .cultural-exchange {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .exchange-item span {
+    font-size: 0.62rem;
+  }
+
+  .exchange-item p {
+    font-size: 0.9rem;
+  }
+
+  .bridging-closing {
+    margin-top: 75px;
+  }
+}
