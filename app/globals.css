@@ -3254,10 +3254,27 @@ section:not(.hero)::after {
 }
 
 .africa-map {
-  background-image: url("/images/africa-map.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: none;
+}
+
+.africa-map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--gold);
+
+  -webkit-mask-image: url("/images/africa-map.png");
+  mask-image: url("/images/africa-map.png");
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .america-map {
@@ -3292,21 +3309,6 @@ section:not(.hero)::after {
     filter 0.6s ease;
 }
 
-.africa-map::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  pointer-events: none;
-
-  background-image: url("/images/africa-map.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  mix-blend-mode: screen;
-  opacity: 0.55;
-}
 
 .america-map-image {
   position: relative;
