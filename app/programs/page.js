@@ -220,14 +220,112 @@ export default function ProgramsPage() {
                 Senegal in a way that leaves a lasting impact.
               </p>
 
-            </div>
+                   </div>
 
-          </div>
+      </div>
+
+    </div>
+
+
+    {/* WHO WE SERVE */}
+    <section className="program-audience-section">
+
+      <div className="section-label">
+        03 — WHO WE SERVE
+      </div>
+
+      <div className="program-audience-header">
+
+        <p className="eyebrow">
+          CULTURE FOR EVERY COMMUNITY
+        </p>
+
+        <h2>
+          There Is a Place
+          <br />
+          for Everyone.
+        </h2>
+
+        <p>
+          Our programs are designed to meet people where they are,
+          creating meaningful opportunities to learn, participate,
+          and connect through West African culture.
+        </p>
+
+      </div>
+
+
+      <div className="program-audience-grid">
+
+        <div className="program-audience-item">
+
+          <span>01</span>
+
+          <h3>
+            Schools
+          </h3>
+
+          <p>
+            Bring hands-on African drumming, dance, storytelling,
+            and cultural education directly into the classroom.
+          </p>
 
         </div>
 
-      </section>
 
-    </main>
+        <div className="program-audience-item">
+
+          <span>02</span>
+
+          <h3>
+            Youth
+          </h3>
+
+          <p>
+            Give young people meaningful opportunities to build
+            confidence, creativity, cultural awareness, and community.
+          </p>
+
+        </div>
+
+
+        <div className="program-audience-item">
+
+          <span>03</span>
+
+          <h3>
+            Communities
+          </h3>
+
+          <p>
+            Create shared cultural experiences that bring people
+            together through rhythm, movement, learning, and connection.
+          </p>
+
+        </div>
+
+
+        <div className="program-audience-item">
+
+          <span>04</span>
+
+          <h3>
+            Organizations
+          </h3>
+
+          <p>
+            Partner with the foundation to create cultural programming
+            that supports education, understanding, and community connection.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+</main>
   );
 }
