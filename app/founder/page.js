@@ -529,9 +529,8 @@ export default function Founder() {
 
 {/* CLOSING */}
 
-{/* CLOSING */}
-
 <section className="founder-closing">
+
   <p className="eyebrow">THE LEGACY CONTINUES</p>
 
   <p>
@@ -543,22 +542,23 @@ export default function Founder() {
     <br />
     America to Africa.
   </strong>
-</section>
-        <h2>
-          From One
-          <br />
-          Generation
-          <br />
-          To The Next
-        </h2>
 
-        <p>
-          Through music, education, cultural exchange, and lived experience,
-          Brother Ghana continues to create opportunities for people to
-          discover the richness of West African culture and build connections
-          that cross generations and borders.
-        </p>
-      </section>
+  <h2>
+    From One
+    <br />
+    Generation
+    <br />
+    To The Next
+  </h2>
+
+  <p>
+    Through music, education, cultural exchange, and lived experience,
+    Brother Ghana continues to create opportunities for people to
+    discover the richness of West African culture and build connections
+    that cross generations and borders.
+  </p>
+
+</section>
 
     </main>
   );
