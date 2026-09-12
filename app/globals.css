@@ -5013,11 +5013,23 @@ section:not(.hero)::after {
   position: relative;
   z-index: 10;
   display: grid;
+  grid-template-columns: 80px 1fr 40px;
+  align-items: center;
   width: 100%;
   min-height: 120px;
   margin: 0;
   padding: 25px 0;
   box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--line);
+  color: var(--ivory);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    padding 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease;
 }
 
 .programs-section .program-expand {
