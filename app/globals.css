@@ -5626,7 +5626,7 @@ section:not(.hero)::after {
 
 .involved-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 0.75fr);
   gap: 100px;
   align-items: end;
   padding: 90px 0 150px;
@@ -5638,13 +5638,23 @@ section:not(.hero)::after {
 }
 
 .involved-heading h1 {
+  display: block;
+  width: 100%;
+  max-width: 100%;
   margin: 25px 0 0;
+  padding: 0;
+  box-sizing: border-box;
+
   color: var(--ivory);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(4.5rem, 8vw, 9rem);
+  font-size: clamp(4rem, 6.5vw, 7rem);
   font-weight: 400;
   line-height: 0.78;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.06em;
+
+  overflow-wrap: normal;
+  word-break: normal;
+
   transition:
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
     color 0.5s ease;
