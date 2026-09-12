@@ -5625,14 +5625,32 @@ section:not(.hero)::after {
    ========================================================= */
 
 .involved-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 0.75fr);
-  gap: 100px;
-  align-items: end;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
   padding: 90px 0 150px;
   border-bottom: 1px solid var(--line);
 }
 
+.involved-heading {
+  width: 100%;
+}
+
+.involved-heading h1 {
+  margin: 25px 0 0;
+  color: var(--ivory);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 11vw, 12rem);
+  font-weight: 400;
+  line-height: 0.78;
+  letter-spacing: -0.07em;
+}
+
+.involved-intro-text {
+  width: 100%;
+  max-width: 650px;
+  margin-left: auto;
+}
 .involved-heading {
   position: relative;
 }
