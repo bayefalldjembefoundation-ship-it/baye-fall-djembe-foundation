@@ -1,4 +1,14 @@
+"use client";
+
+import { useState } from "react";
+
 export default function ProgramsPage() {
+  const [openProgram, setOpenProgram] = useState(null);
+
+  const toggleProgram = (program) => {
+    setOpenProgram(openProgram === program ? null : program);
+  };
+  
   return (
     <main>
 
@@ -40,8 +50,28 @@ export default function ProgramsPage() {
             </div>
 
 
-    {/* DRUM PHILOSOPHY */}
-    <div className="drum-philosophy">
+   {/* DRUM PHILOSOPHY */}
+<div className={`drum-philosophy ${openProgram === "drum" ? "is-open" : ""}`}>
+
+  <button
+    className="program-toggle"
+    onClick={() => toggleProgram("drum")}
+    aria-expanded={openProgram === "drum"}
+  >
+    <span className="program-number">02</span>
+
+    <span className="program-toggle-title">
+      DRUM Philosophy
+    </span>
+
+    <span className="program-toggle-icon">
+      {openProgram === "drum" ? "−" : "+"}
+    </span>
+  </button>
+
+  <div className="program-expand">
+
+    <div className="drum-philosophy-content">
 
       <p className="eyebrow">
         THE FOUNDATION OF OUR TEACHING
@@ -84,155 +114,209 @@ export default function ProgramsPage() {
 
     </div>
 
+  </div>
+
+</div>
 
     {/* PROGRAM 01 */}
-    <div className="program-item">
-          <div className="program-number">
-            01
-          </div>
+<div className={`program-item ${openProgram === 1 ? "is-open" : ""}`}>
 
-          <div className="program-content">
+  <button
+    className="program-toggle"
+    onClick={() => toggleProgram(1)}
+    aria-expanded={openProgram === 1}
+  >
+    <span className="program-number">01</span>
 
-            <div className="program-image-wrap">
-              <img
-                src="/images/djembe.png"
-                alt="West African djembe drum"
-                className="program-image"
-              />
-            </div>
+    <span className="program-toggle-title">
+      Rhythm & Movement
+    </span>
 
-            <div className="program-text">
+    <span className="program-toggle-icon">
+      {openProgram === 1 ? "−" : "+"}
+    </span>
+  </button>
 
-              <p className="eyebrow">
-                RHYTHM • MOVEMENT • STORY
-              </p>
+  <div className="program-expand">
 
-              <h2>
-                Rhythm &
-                <br />
-                Movement
-              </h2>
+    <div className="program-content">
 
-              <p>
-                Experience the heartbeat of West Africa through traditional
-                rhythms, energetic dance, and powerful storytelling.
-              </p>
+      <div className="program-image-wrap">
+        {/* PHOTO OR VIDEO WILL GO HERE */}
+      </div>
 
-              <p>
-                Participants learn the cultural meaning behind the rhythms,
-                explore traditional drum-making techniques, and discover how
-                music, movement, and stories connect generations.
-              </p>
+      <div className="program-text">
 
-            </div>
+        <p className="eyebrow">
+          RHYTHM • MOVEMENT • STORY
+        </p>
 
-          </div>
+        <h2>
+          Rhythm &
+          <br />
+          Movement
+        </h2>
 
-        </div>
+        <p>
+          Experience the heartbeat of West Africa through traditional
+          rhythms, energetic dance, and powerful storytelling.
+        </p>
 
-
-        {/* PROGRAM 02 */}
-        <div className="program-item">
-
-          <div className="program-number">
-            02
-          </div>
-
-          <div className="program-content">
-
-            <div className="program-image-wrap">
-              <img
-                src="/images/teaching.png"
-                alt="Brother Ghana teaching African drumming to students"
-                className="program-image"
-              />
-            </div>
-
-            <div className="program-text">
-
-              <p className="eyebrow">
-                SCHOOLS • YOUTH • COMMUNITY
-              </p>
-
-              <h2>
-                Youth
-                <br />
-                Programs
-              </h2>
-
-              <p>
-                Bring the sounds, movement, and traditions of West Africa
-                directly to young people through engaging school programs
-                and dedicated summer camps.
-              </p>
-
-              <p>
-                Youth experience West African drumming, dance, storytelling,
-                and cultural education while building confidence, creativity,
-                and a deeper connection to culture and community.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        {/* PROGRAM 03 */}
-        <div className="program-item">
-
-          <div className="program-number">
-            03
-          </div>
-
-          <div className="program-content">
-
-            <div className="program-image-wrap">
-              <img
-                src="/images/journey.jpg"
-                alt="Brother Ghana in Senegal"
-                className="program-image"
-              />
-            </div>
-
-            <div className="program-text">
-
-              <p className="eyebrow">
-                SENEGAL • CULTURE • CONNECTION
-              </p>
-
-              <h2>
-                Bridging
-                <br />
-                Two Worlds
-              </h2>
-
-              <p>
-                Experience Senegal through an unforgettable cultural journey
-                designed to connect you with the heart of West Africa.
-              </p>
-
-              <p>
-                From music, dance, food, and traditions to meaningful
-                community experiences, the Baye Fall Djembe Foundation
-                creates opportunities to explore, connect, and experience
-                Senegal in a way that leaves a lasting impact.
-              </p>
-
-                   </div>
+        <p>
+          Participants learn the cultural meaning behind the rhythms,
+          explore traditional drum-making techniques, and discover how
+          music, movement, and stories connect generations.
+        </p>
 
       </div>
 
     </div>
 
+  </div>
 
-    {/* WHO WE SERVE */}
-    <section className="program-audience-section">
+</div>
 
-      <div className="section-label">
-        03 — WHO WE SERVE
+
+        {/* PROGRAM 02 */}
+<div className={`program-item ${openProgram === 3 ? "is-open" : ""}`}>
+
+  <button
+    className="program-toggle"
+    onClick={() => toggleProgram(3)}
+    aria-expanded={openProgram === 3}
+  >
+    <span className="program-number">03</span>
+
+    <span className="program-toggle-title">
+      Youth Programs
+    </span>
+
+    <span className="program-toggle-icon">
+      {openProgram === 3 ? "−" : "+"}
+    </span>
+  </button>
+
+  <div className="program-expand">
+
+    <div className="program-content">
+
+      <div className="program-image-wrap">
+        {/* PHOTO OR VIDEO WILL GO HERE */}
       </div>
+
+      <div className="program-text">
+
+        <p className="eyebrow">
+          SCHOOLS • YOUTH • COMMUNITY
+        </p>
+
+        <h2>
+          Youth
+          <br />
+          Programs
+        </h2>
+
+        <p>
+          Bring the sounds, movement, and traditions of West Africa
+          directly to young people through engaging school programs
+          and dedicated summer camps.
+        </p>
+
+        <p>
+          Youth experience West African drumming, dance, storytelling,
+          and cultural education while building confidence, creativity,
+          and a deeper connection to culture and community.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+        {/* PROGRAM 03 */}
+<div className={`program-item ${openProgram === 4 ? "is-open" : ""}`}>
+
+  <button
+    className="program-toggle"
+    onClick={() => toggleProgram(4)}
+    aria-expanded={openProgram === 4}
+  >
+    <span className="program-number">04</span>
+
+    <span className="program-toggle-title">
+      Bridging Two Worlds
+    </span>
+
+    <span className="program-toggle-icon">
+      {openProgram === 4 ? "−" : "+"}
+    </span>
+  </button>
+
+  <div className="program-expand">
+
+    <div className="program-content">
+
+      <div className="program-image-wrap">
+        {/* PHOTO OR VIDEO WILL GO HERE */}
+      </div>
+
+      <div className="program-text">
+
+        <p className="eyebrow">
+          SENEGAL • CULTURE • CONNECTION
+        </p>
+
+        <h2>
+          Bridging
+          <br />
+          Two Worlds
+        </h2>
+
+        <p>
+          Experience Senegal through an unforgettable cultural journey
+          designed to connect you with the heart of West Africa.
+        </p>
+
+        <p>
+          From music, dance, food, and traditions to meaningful
+          community experiences, the Baye Fall Djembe Foundation
+          creates opportunities to explore, connect, and experience
+          Senegal in a way that leaves a lasting impact.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+   {/* WHO WE SERVE */}
+<section className={`program-audience-section ${openProgram === "audience" ? "is-open" : ""}`}>
+
+  <button
+    className="program-toggle"
+    onClick={() => toggleProgram("audience")}
+    aria-expanded={openProgram === "audience"}
+  >
+    <span className="program-number">05</span>
+
+    <span className="program-toggle-title">
+      Who We Serve
+    </span>
+
+    <span className="program-toggle-icon">
+      {openProgram === "audience" ? "−" : "+"}
+    </span>
+  </button>
+
+  <div className="program-expand">
+
+    <div className="program-audience-content">
 
       <div className="program-audience-header">
 
@@ -254,78 +338,51 @@ export default function ProgramsPage() {
 
       </div>
 
-
       <div className="program-audience-grid">
 
         <div className="program-audience-item">
-
           <span>01</span>
-
-          <h3>
-            Schools
-          </h3>
-
+          <h3>Schools</h3>
           <p>
             Bring hands-on African drumming, dance, storytelling,
             and cultural education directly into the classroom.
           </p>
-
         </div>
 
-
         <div className="program-audience-item">
-
           <span>02</span>
-
-          <h3>
-            Youth
-          </h3>
-
+          <h3>Youth</h3>
           <p>
             Give young people meaningful opportunities to build
             confidence, creativity, cultural awareness, and community.
           </p>
-
         </div>
 
-
         <div className="program-audience-item">
-
           <span>03</span>
-
-          <h3>
-            Communities
-          </h3>
-
+          <h3>Communities</h3>
           <p>
             Create shared cultural experiences that bring people
             together through rhythm, movement, learning, and connection.
           </p>
-
         </div>
 
-
         <div className="program-audience-item">
-
           <span>04</span>
-
-          <h3>
-            Organizations
-          </h3>
-
+          <h3>Organizations</h3>
           <p>
             Partner with the foundation to create cultural programming
             that supports education, understanding, and community connection.
           </p>
-
         </div>
 
       </div>
 
-    </section>
+    </div>
 
-  </section>
+  </div>
 
+</section>
   
   
   {/* FOOTER */}
