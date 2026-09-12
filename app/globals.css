@@ -3260,7 +3260,7 @@ section:not(.hero)::after {
 .africa-map::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 1;
   z-index: 1;
   background: var(--gold);
 
@@ -3278,7 +3278,7 @@ section:not(.hero)::after {
   content: "";
   position: absolute;
   inset: 5px;
-  z-index: 2;
+  z-index: 0;
   background: var(--black);
 
   -webkit-mask-image: url("/images/africa-map.png");
