@@ -318,14 +318,18 @@ export default function Founder() {
 
 
       {/* CULTURAL ROOTS */}
-      <section className="founder-section">
-        <div className="section-label">05 — CULTURAL ROOTS</div>
+      <section className="founder-section cultural-roots-section">
+  <div className="section-label">05 — CULTURAL ROOTS</div>
 
-                  <h2>
-            More Than
-            <br />
-            Music
-          </h2>
+  <div className="cultural-roots-layout">
+
+    <div className="cultural-roots-content">
+
+      <h2>
+        More Than
+        <br />
+        Music
+      </h2>
 
         <p>
          Brother Ghana's connection to drumming is rooted in a cultural tradition that
@@ -345,7 +349,19 @@ export default function Founder() {
           an experience that encourages curiosity, respect, connection, and a
           deeper appreciation for African culture.
         </p>
-      </section>
+            </div>
+
+      <div className="cultural-roots-image-wrap">
+        <img
+          src="/images/cultural-roots.png"
+          alt="Brother Ghana in traditional West African attire"
+          className="cultural-roots-image"
+        />
+      </div>
+
+    </div>
+
+  </section>
 
 
       {/* BRIDGING TWO WORLDS */}
