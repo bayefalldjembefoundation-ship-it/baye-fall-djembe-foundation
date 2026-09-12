@@ -3278,7 +3278,7 @@ section:not(.hero)::after {
   content: "";
   position: absolute;
   inset: 2px;
-  z-index: 1;
+  z-index: 2;
   background: var(--black);
 
   -webkit-mask-image: url("/images/africa-map.png");
@@ -3289,6 +3289,27 @@ section:not(.hero)::after {
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+}
+
+.africa-map-image {
+  position: absolute;
+  inset: 4px;
+  z-index: 3;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  object-fit: cover;
+
+  -webkit-mask-image: url("/images/africa-map.png");
+  mask-image: url("/images/africa-map.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  opacity: 1;
+  filter: contrast(1.04);
 }
 
 .america-map {
