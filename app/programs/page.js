@@ -180,10 +180,16 @@ export default function ProgramsPage() {
 
             <div className="program-content">
 
-              <div className="program-image-wrap">
-
-                {/* DRUM MAKING COLLAGE WILL GO HERE */}
-
+                            <div className="program-image-wrap">
+              
+                {openProgram === 2 && (
+                  <img
+                    src="/images/drum-making.jpg"
+                    alt="Traditional drum making process"
+                    className="program-image"
+                  />
+                )}
+              
               </div>
 
 
