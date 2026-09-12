@@ -3254,7 +3254,10 @@ section:not(.hero)::after {
 }
 
 .africa-map {
-  background-image: none;
+  background-image: url("/images/africa-map.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .america-map {
@@ -3287,6 +3290,22 @@ section:not(.hero)::after {
     transform 0.6s ease,
     opacity 0.6s ease,
     filter 0.6s ease;
+}
+
+.africa-map::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+
+  background-image: url("/images/africa-map.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  mix-blend-mode: screen;
+  opacity: 0.55;
 }
 
 .america-map-image {
