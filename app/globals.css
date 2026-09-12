@@ -3261,18 +3261,15 @@ section:not(.hero)::after {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   background: var(--gold);
 
   -webkit-mask-image: url("/images/africa-map.png");
   mask-image: url("/images/africa-map.png");
-
   -webkit-mask-size: contain;
   mask-size: contain;
-
   -webkit-mask-position: center;
   mask-position: center;
-
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
@@ -3280,19 +3277,16 @@ section:not(.hero)::after {
 .africa-map::after {
   content: "";
   position: absolute;
-  inset: 3px;
+  inset: 2px;
   z-index: 1;
   background: var(--black);
 
   -webkit-mask-image: url("/images/africa-map.png");
   mask-image: url("/images/africa-map.png");
-
   -webkit-mask-size: contain;
   mask-size: contain;
-
   -webkit-mask-position: center;
   mask-position: center;
-
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
