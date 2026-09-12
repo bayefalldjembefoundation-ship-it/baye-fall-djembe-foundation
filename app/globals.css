@@ -4382,7 +4382,7 @@ section:not(.hero)::after {
 
 .program-item.is-open .program-expand,
 .program-audience-section.is-open .program-expand {
-  max-height: 1500px;
+  max-height: 3000px;
   opacity: 1;
 }
 
