@@ -81,7 +81,7 @@ export default function ContactPage() {
               </p>
 
               <a
-                href="mailto:info@bayefalldjembefoundation.org"
+                href="mailto:bayefalldjembefoundation@gmail.com"
                 className="contact-link"
               >
                 Ask About Programs
@@ -114,7 +114,7 @@ export default function ContactPage() {
               </p>
 
               <a
-                href="mailto:info@bayefalldjembefoundation.org"
+                href="mailto:bayefalldjembefoundation@gmail.com"
                 className="contact-link"
               >
                 Discuss a Partnership
@@ -147,7 +147,7 @@ export default function ContactPage() {
               </p>
 
               <a
-                href="mailto:info@bayefalldjembefoundation.org"
+                href="mailto:bayefalldjembefoundation@gmail.com"
                 className="contact-link"
               >
                 Send Us a Message
@@ -197,8 +197,8 @@ export default function ContactPage() {
                   EMAIL
                 </span>
 
-                <a href="mailto:info@bayefalldjembefoundation.org">
-                  info@bayefalldjembefoundation.org
+                <a href="mailto:bayefalldjembefoundation@gmail.com">
+                  bayefalldjembefoundation@gmail.com
                 </a>
 
               </div>
@@ -259,7 +259,7 @@ export default function ContactPage() {
           </p>
 
           <a
-            href="mailto:info@bayefalldjembefoundation.org"
+            href="mailto:bayefalldjembefoundation@gmail.com"
             className="contact-closing-button"
           >
             Send a Message
