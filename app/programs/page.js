@@ -142,8 +142,20 @@ export default function ProgramsPage() {
     <div className="program-content">
 
       <div className="program-image-wrap">
-        {/* PHOTO OR VIDEO WILL GO HERE */}
-      </div>
+  <video
+    className="program-video"
+    muted
+    loop
+    playsInline
+    controls
+  >
+    <source
+      src="/images/rhythm-movement.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+</div>
 
       <div className="program-text">
 
