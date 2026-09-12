@@ -3321,6 +3321,14 @@ section:not(.hero)::after {
   pointer-events: none;
 }
 
+.africa-photo-border {
+  position: absolute;
+  inset: 4px;
+  z-index: 2;
+  border: 2px solid var(--gold);
+  pointer-events: none;
+}
+
 .america-map {
   background-image: url("/images/america-map.png");
 }
