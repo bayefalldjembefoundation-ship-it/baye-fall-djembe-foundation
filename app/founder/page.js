@@ -401,10 +401,14 @@ export default function Founder() {
       <div className="world-map">
         <div className="world-map-glow"></div>
 
-        <div className="africa-map">
-          <span className="map-label">AFRICA</span>
-        </div>
-      </div>
+                  <div className="africa-map">
+            <img
+              src="/images/cult-roots.png"
+              alt="Brother Ghana"
+              className="africa-map-image"
+            />
+            <span className="map-label">AFRICA</span>
+          </div>
 
       <div className="world-content">
         <span className="world-number">01</span>
@@ -463,7 +467,14 @@ export default function Founder() {
         <div className="america-map">
           <span className="map-label">USA</span>
         </div>
-      </div>
+      </div><div className="america-map">
+  <img
+    src="/images/america-img.png"
+    alt="Community and cultural connection in the United States"
+    className="america-map-image"
+  />
+  <span className="map-label">USA</span>
+</div>
 
       <div className="world-content">
         <span className="world-number">02</span>
