@@ -3254,7 +3254,7 @@ section:not(.hero)::after {
 }
 
 .africa-map {
-  background-image: url("/images/africa-map.png");
+  background-image: none;
 }
 
 .america-map {
