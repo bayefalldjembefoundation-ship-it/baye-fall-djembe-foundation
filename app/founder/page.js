@@ -396,19 +396,21 @@ export default function Founder() {
   <div className="world-bridge">
 
     {/* AFRICA */}
+
     <div className="world world-africa">
 
       <div className="world-map">
         <div className="world-map-glow"></div>
 
-                  <div className="africa-map">
-            <img
-              src="/images/cult-roots.png"
-              alt="Brother Ghana"
-              className="africa-map-image"
-            />
-            <span className="map-label">AFRICA</span>
-          </div>
+        <div className="africa-map">
+          <img
+            src="/images/cult-roots.png"
+            alt="Brother Ghana"
+            className="africa-map-image"
+          />
+          <span className="map-label">AFRICA</span>
+        </div>
+      </div>
 
       <div className="world-content">
         <span className="world-number">01</span>
@@ -426,6 +428,7 @@ export default function Founder() {
 
 
     {/* THE BRIDGE */}
+
     <div className="bridge-center">
 
       <div className="bridge-arrow bridge-arrow-forward">
@@ -459,22 +462,21 @@ export default function Founder() {
 
 
     {/* UNITED STATES */}
+
     <div className="world world-america">
 
       <div className="world-map">
         <div className="world-map-glow"></div>
 
         <div className="america-map">
+          <img
+            src="/images/america-img.png"
+            alt="Community and cultural connection in the United States"
+            className="america-map-image"
+          />
           <span className="map-label">USA</span>
         </div>
-      </div><div className="america-map">
-  <img
-    src="/images/america-img.png"
-    alt="Community and cultural connection in the United States"
-    className="america-map-image"
-  />
-  <span className="map-label">USA</span>
-</div>
+      </div>
 
       <div className="world-content">
         <span className="world-number">02</span>
@@ -494,6 +496,7 @@ export default function Founder() {
 
 
   {/* CULTURAL EXCHANGE */}
+
   <div className="cultural-exchange">
 
     <div className="exchange-line"></div>
@@ -522,6 +525,8 @@ export default function Founder() {
 
   </div>
 
+
+  {/* CLOSING */}
 
   <div className="bridging-closing">
 
