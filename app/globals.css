@@ -3262,7 +3262,7 @@ section:not(.hero)::after {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: var(--gold);
+  background: var(--black);
 
   -webkit-mask-image: url("/images/africa-map.png");
   mask-image: url("/images/africa-map.png");
