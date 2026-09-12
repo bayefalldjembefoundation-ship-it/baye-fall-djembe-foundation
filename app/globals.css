@@ -4209,83 +4209,215 @@ section:not(.hero)::after {
 
 
 /* =========================================================
-   PROGRAMS — ACCORDION
+   PROGRAMS — PREMIUM ACCORDION
+   ========================================================= */
+
+.programs-section {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 140px 40px 0;
+}
+
+.programs-section .section-label {
+  margin-bottom: 70px;
+}
+
+.programs-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: end;
+  margin-bottom: 130px;
+}
+
+.programs-heading .eyebrow {
+  color: var(--gold);
+}
+
+.programs-heading h1 {
+  margin: 18px 0 0;
+  color: var(--ivory);
+  font-family: Georgia, serif;
+  font-size: clamp(5rem, 10vw, 9rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+}
+
+.programs-intro-text {
+  max-width: 540px;
+}
+
+.programs-intro-text p {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   ACCORDION HEADER
    ========================================================= */
 
 .program-item,
 .program-audience-section {
+  position: relative;
   border-top: 1px solid var(--line);
 }
 
+.program-item:last-of-type,
+.program-audience-section {
+  border-bottom: 1px solid var(--line);
+}
+
 .program-toggle {
+  position: relative;
+  z-index: 5;
   width: 100%;
+  min-height: 120px;
   display: grid;
-  grid-template-columns: 80px 1fr 40px;
+  grid-template-columns: 80px 1fr 60px;
   align-items: center;
-  gap: 20px;
-  padding: 32px 0;
+  gap: 25px;
+  padding: 25px 0;
   background: transparent;
   border: 0;
   color: var(--ivory);
   text-align: left;
   cursor: pointer;
-  transition: padding 0.4s ease;
+  transition:
+    padding 0.5s ease,
+    background 0.5s ease;
+}
+
+.program-toggle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.7s ease;
+}
+
+.program-toggle:hover::before,
+.program-item.is-open .program-toggle::before,
+.program-audience-section.is-open .program-toggle::before {
+  width: 100%;
 }
 
 .program-toggle:hover {
-  padding-left: 10px;
+  padding-left: 12px;
 }
 
 .program-number {
   color: var(--gold);
-  font-size: 0.75rem;
-  letter-spacing: 0.16em;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
 }
 
 .program-toggle-title {
+  color: var(--ivory);
   font-family: Georgia, serif;
-  font-size: clamp(1.8rem, 3.5vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 4.2rem);
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  transition:
+    transform 0.5s ease,
+    color 0.5s ease;
+}
+
+.program-toggle:hover .program-toggle-title {
+  transform: translateX(8px);
 }
 
 .program-toggle-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold-soft);
+  border-radius: 50%;
   color: var(--gold);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 300;
-  text-align: right;
+  transition:
+    transform 0.5s ease,
+    background 0.5s ease,
+    color 0.5s ease;
 }
+
+.program-toggle:hover .program-toggle-icon {
+  transform: rotate(90deg);
+  background: var(--gold);
+  color: var(--black);
+}
+
+.program-item.is-open .program-toggle-icon,
+.program-audience-section.is-open .program-toggle-icon {
+  transform: rotate(180deg);
+  background: var(--gold);
+  color: var(--black);
+}
+
+
+/* =========================================================
+   EXPANSION
+   ========================================================= */
 
 .program-expand {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.6s ease;
-}
-
-.program-expand > * {
-  min-height: 0;
+  max-height: 0;
   overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.5s ease;
 }
 
 .program-item.is-open .program-expand,
 .program-audience-section.is-open .program-expand {
-  grid-template-rows: 1fr;
+  max-height: 1500px;
+  opacity: 1;
 }
 
 .program-content {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 70px;
-  padding: 20px 0 80px;
   align-items: center;
+  padding: 55px 0 90px;
 }
+
+
+/* =========================================================
+   MEDIA
+   ========================================================= */
 
 .program-image-wrap {
   position: relative;
-  min-height: 420px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--black-soft);
+  background: #050505;
+  border: 1px solid rgba(185, 154, 97, 0.28);
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(243, 228, 194, 0.025);
+}
+
+.program-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(243, 228, 194, 0.14);
+  pointer-events: none;
+  z-index: 3;
 }
 
 .program-image,
@@ -4297,49 +4429,116 @@ section:not(.hero)::after {
 }
 
 .program-video {
-  min-height: 420px;
+  background: #050505;
 }
+
+.program-image-wrap:hover .program-image,
+.program-image-wrap:hover .program-video {
+  transform: scale(1.025);
+}
+
+.program-image,
+.program-video {
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+
+/* =========================================================
+   PROGRAM TEXT
+   ========================================================= */
 
 .program-text {
   max-width: 560px;
 }
 
+.program-text .eyebrow {
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
 .program-text h2 {
-  margin: 18px 0 30px;
+  margin: 0 0 32px;
   color: var(--ivory);
   font-family: Georgia, serif;
-  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
   font-weight: 400;
-  line-height: 0.95;
+  line-height: 0.86;
+  letter-spacing: -0.045em;
 }
 
-.program-text p {
+.program-text p:not(.eyebrow) {
   color: var(--text);
-  line-height: 1.8;
-  margin-bottom: 22px;
-}
-
-.program-text .eyebrow {
-  color: var(--gold);
-  margin-bottom: 0;
+  line-height: 1.85;
+  margin-bottom: 25px;
 }
 
 
 /* =========================================================
-   DRUM PHILOSOPHY
+   TEXT-ONLY PROGRAMS
    ========================================================= */
 
+.program-content-text-only {
+  display: block;
+  padding: 70px 0 100px;
+}
+
+
+/* =========================================================
+   DRUM PHILOSOPHY — INTERACTIVE
+   ========================================================= */
+
+.program-item.drum-philosophy {
+  overflow: hidden;
+}
+
 .drum-philosophy-content {
-  padding: 20px 0 80px;
+  position: relative;
+  padding: 70px 0 100px;
+}
+
+.drum-philosophy-content::before {
+  content: "DRUM";
+  position: absolute;
+  right: -30px;
+  top: 20px;
+  color: rgba(185, 154, 97, 0.035);
+  font-family: Georgia, serif;
+  font-size: clamp(10rem, 25vw, 24rem);
+  line-height: 0.7;
+  pointer-events: none;
+  transition:
+    transform 1s ease,
+    color 1s ease;
+}
+
+.program-item.drum-philosophy:hover .drum-philosophy-content::before {
+  transform: translateX(-25px);
+  color: rgba(185, 154, 97, 0.065);
+}
+
+.drum-philosophy-content > * {
+  position: relative;
+  z-index: 2;
 }
 
 .drum-philosophy-content h2 {
-  margin: 20px 0 45px;
+  margin: 15px 0 60px;
   color: var(--ivory);
   font-family: Georgia, serif;
-  font-size: clamp(4rem, 9vw, 9rem);
+  font-size: clamp(6rem, 14vw, 13rem);
   font-weight: 400;
-  line-height: 0.85;
+  line-height: 0.75;
+  letter-spacing: -0.07em;
+  transition:
+    transform 0.7s ease,
+    letter-spacing 0.7s ease;
+}
+
+.program-item.drum-philosophy:hover h2 {
+  transform: translateX(12px);
+  letter-spacing: -0.04em;
 }
 
 .drum-motto {
@@ -4347,68 +4546,151 @@ section:not(.hero)::after {
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .drum-motto > div {
-  padding: 30px 20px;
+  position: relative;
+  min-height: 180px;
+  padding: 30px 25px;
   border-right: 1px solid var(--line);
+  overflow: hidden;
+  transition:
+    background 0.5s ease,
+    transform 0.5s ease;
 }
 
 .drum-motto > div:last-child {
   border-right: 0;
 }
 
+.drum-motto > div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: var(--gold);
+  transition: width 0.6s ease;
+}
+
+.drum-motto > div:hover {
+  background: rgba(185, 154, 97, 0.045);
+  transform: translateY(-5px);
+}
+
+.drum-motto > div:hover::after {
+  width: 100%;
+}
+
 .drum-motto span {
   display: block;
   color: var(--gold);
   font-family: Georgia, serif;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
+  transition:
+    transform 0.5s ease,
+    color 0.5s ease;
+}
+
+.drum-motto > div:hover span {
+  transform: translateX(8px);
+  color: var(--ivory);
 }
 
 .drum-motto p {
   margin: 0;
   color: var(--ivory);
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
 .drum-philosophy-text {
-  max-width: 700px;
+  max-width: 720px;
   color: var(--text);
-  line-height: 1.8;
+  line-height: 1.9;
+  font-size: 1.05rem;
 }
 
 
 /* =========================================================
-   WHO WE SERVE
+   BRIDGING TWO WORLDS — INTERACTIVE
+   ========================================================= */
+
+.program-item:nth-of-type(6) .program-content-text-only {
+  position: relative;
+}
+
+.program-item:nth-of-type(6) .program-text {
+  max-width: 900px;
+}
+
+.program-item:nth-of-type(6) .program-text h2 {
+  font-size: clamp(4.5rem, 9vw, 9rem);
+}
+
+.program-item:nth-of-type(6) .program-content-text-only::after {
+  content: "AFRICA  —  AMERICA";
+  display: block;
+  margin-top: 70px;
+  padding-top: 25px;
+  border-top: 1px solid var(--line);
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  word-spacing: 0.7em;
+  transition:
+    letter-spacing 0.8s ease,
+    word-spacing 0.8s ease;
+}
+
+.program-item:nth-of-type(6):hover
+.program-content-text-only::after {
+  letter-spacing: 0.5em;
+  word-spacing: 1.2em;
+}
+
+
+/* =========================================================
+   WHO WE SERVE — INTERACTIVE
    ========================================================= */
 
 .program-audience-content {
-  padding: 20px 0 80px;
+  padding: 65px 0 100px;
 }
 
 .program-audience-header {
-  max-width: 800px;
-  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 80px;
+}
+
+.program-audience-header .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: -40px;
 }
 
 .program-audience-header h2 {
-  margin: 18px 0 25px;
+  margin: 0;
   color: var(--ivory);
   font-family: Georgia, serif;
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(4rem, 7vw, 7rem);
   font-weight: 400;
-  line-height: 0.95;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
 }
 
 .program-audience-header > p:last-child {
+  max-width: 500px;
+  margin: 0;
   color: var(--text);
-  line-height: 1.8;
-  max-width: 650px;
+  line-height: 1.85;
 }
 
 .program-audience-grid {
@@ -4418,8 +4700,14 @@ section:not(.hero)::after {
 }
 
 .program-audience-item {
-  padding: 40px 30px 45px 0;
+  position: relative;
+  min-height: 260px;
+  padding: 35px 40px 40px 0;
   border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  transition:
+    background 0.6s ease,
+    padding 0.6s ease;
 }
 
 .program-audience-item:nth-child(odd) {
@@ -4431,72 +4719,135 @@ section:not(.hero)::after {
   padding-left: 50px;
 }
 
+.program-audience-item::before {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -80px;
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(185, 154, 97, 0.12);
+  border-radius: 50%;
+  transition:
+    transform 0.8s ease,
+    border-color 0.8s ease;
+}
+
+.program-audience-item:hover {
+  background: rgba(185, 154, 97, 0.035);
+}
+
+.program-audience-item:hover::before {
+  transform: scale(1.35);
+  border-color: rgba(185, 154, 97, 0.3);
+}
+
 .program-audience-item span {
+  position: relative;
+  z-index: 2;
   color: var(--gold);
   font-size: 0.75rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
 }
 
 .program-audience-item h3 {
-  margin: 15px 0;
+  position: relative;
+  z-index: 2;
+  margin: 25px 0 15px;
   color: var(--ivory);
   font-family: Georgia, serif;
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 400;
+  transition:
+    transform 0.5s ease,
+    color 0.5s ease;
+}
+
+.program-audience-item:hover h3 {
+  transform: translateX(10px);
+  color: var(--gold);
 }
 
 .program-audience-item p {
+  position: relative;
+  z-index: 2;
   max-width: 500px;
+  margin: 0;
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 
 /* =========================================================
-   PROGRAMS CLOSING CTA
+   CLOSING CTA
    ========================================================= */
 
 .programs-closing {
-  padding: 150px 0;
-  text-align: center;
+  position: relative;
+  margin-top: 150px;
+  padding: 150px 20px;
   border-top: 1px solid var(--line);
+  text-align: center;
+  overflow: hidden;
+}
+
+.programs-closing::before {
+  content: "CULTURE";
+  position: absolute;
+  left: 50%;
+  bottom: -55px;
+  transform: translateX(-50%);
+  color: rgba(185, 154, 97, 0.035);
+  font-family: Georgia, serif;
+  font-size: clamp(7rem, 18vw, 18rem);
+  line-height: 0.7;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.programs-closing > * {
+  position: relative;
+  z-index: 2;
 }
 
 .programs-closing h2 {
-  margin: 20px auto 30px;
+  margin: 20px auto 35px;
   color: var(--ivory);
   font-family: Georgia, serif;
-  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 400;
-  line-height: 0.95;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
 }
 
 .programs-closing > p:not(.eyebrow) {
-  max-width: 600px;
-  margin: 0 auto 35px;
+  max-width: 620px;
+  margin: 0 auto 40px;
   color: var(--text);
   line-height: 1.8;
 }
 
 .programs-closing-button {
   display: inline-block;
-  padding: 15px 28px;
+  padding: 17px 32px;
   border: 1px solid var(--gold);
   color: var(--ivory);
   text-decoration: none;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease,
+    letter-spacing 0.4s ease;
 }
 
 .programs-closing-button:hover {
   background: var(--gold);
   color: var(--black);
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  letter-spacing: 0.2em;
 }
 
 
@@ -4506,36 +4857,80 @@ section:not(.hero)::after {
 
 @media (max-width: 700px) {
 
+  .programs-section {
+    padding: 90px 22px 0;
+  }
+
+  .programs-section .section-label {
+    margin-bottom: 50px;
+  }
+
+  .programs-intro {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    margin-bottom: 80px;
+  }
+
+  .programs-heading h1 {
+    font-size: 5rem;
+  }
+
   .program-toggle {
-    grid-template-columns: 45px 1fr 30px;
+    min-height: 90px;
+    grid-template-columns: 42px 1fr 44px;
     gap: 12px;
-    padding: 25px 0;
+    padding: 20px 0;
+  }
+
+  .program-toggle:hover {
+    padding-left: 0;
   }
 
   .program-toggle-title {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+  }
+
+  .program-toggle-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
   }
 
   .program-content {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding-bottom: 60px;
+    gap: 45px;
+    padding: 40px 0 65px;
   }
 
   .program-image-wrap {
-    min-height: 260px;
-  }
-
-  .program-video {
-    min-height: 260px;
+    aspect-ratio: 16 / 10;
   }
 
   .program-text h2 {
-    font-size: 3.2rem;
+    font-size: 3.7rem;
+  }
+
+  .drum-philosophy-content {
+    padding: 50px 0 70px;
+  }
+
+  .drum-philosophy-content h2 {
+    font-size: 6rem;
+    margin-bottom: 45px;
+  }
+
+  .drum-philosophy-content::before {
+    right: -20px;
+    top: 30px;
+    font-size: 9rem;
   }
 
   .drum-motto {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .drum-motto > div {
+    min-height: 145px;
   }
 
   .drum-motto > div:nth-child(2) {
@@ -4547,21 +4942,57 @@ section:not(.hero)::after {
     border-top: 1px solid var(--line);
   }
 
+  .drum-motto span {
+    font-size: 3.2rem;
+  }
+
+  .program-item:nth-of-type(6) .program-text h2 {
+    font-size: 4.3rem;
+  }
+
+  .program-audience-content {
+    padding: 50px 0 70px;
+  }
+
+  .program-audience-header {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-bottom: 55px;
+  }
+
+  .program-audience-header .eyebrow {
+    margin-bottom: 0;
+  }
+
+  .program-audience-header h2 {
+    font-size: 4rem;
+  }
+
   .program-audience-grid {
     grid-template-columns: 1fr;
   }
 
-  .program-audience-item:nth-child(odd) {
-    padding-right: 0;
-    border-right: 0;
+  .program-audience-item {
+    min-height: 220px;
+    padding: 30px 0 35px;
+    border-right: 0 !important;
   }
 
   .program-audience-item:nth-child(even) {
     padding-left: 0;
   }
 
+  .program-audience-item h3 {
+    font-size: 2.2rem;
+  }
+
   .programs-closing {
-    padding: 100px 0;
+    margin-top: 90px;
+    padding: 100px 10px;
+  }
+
+  .programs-closing h2 {
+    font-size: 4rem;
   }
 
 }
