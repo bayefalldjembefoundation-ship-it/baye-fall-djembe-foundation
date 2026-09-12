@@ -215,9 +215,24 @@ export default function ProgramsPage() {
 
     <div className="program-content">
 
-      <div className="program-image-wrap">
-        {/* PHOTO OR VIDEO WILL GO HERE */}
-      </div>
+     <div className="program-image-wrap">
+  {openProgram === 3 && (
+    <video
+      className="program-video"
+      autoPlay
+      muted
+      loop
+      playsInline
+      controls
+    >
+      <source
+        src="/images/youth-programs.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+  )}
+</div>
 
       <div className="program-text">
 
