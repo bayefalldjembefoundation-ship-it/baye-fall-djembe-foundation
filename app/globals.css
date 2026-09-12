@@ -3281,7 +3281,7 @@ section:not(.hero)::after {
   content: "";
   position: absolute;
   inset: 3px;
-  z-index: 2;
+  z-index: 0;
   background: var(--black);
 
   -webkit-mask-image: url("/images/africa-map.png");
