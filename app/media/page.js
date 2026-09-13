@@ -141,7 +141,7 @@ export default function MediaPage() {
 
     <div className="media-grid">
       <div className="media-card">
-        <img src="/images/djembe.png" alt="West African djembe drum" />
+        <img src="/images/Djembe.png" alt="West African djembe drum" />
         <div className="media-card-overlay">
           <span>THE DRUMS</span>
           <h3>Djembe</h3>

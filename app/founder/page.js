@@ -215,7 +215,7 @@ export default function Founder() {
 
           <div className="drum-item">
             <img
-              src="/images/djembe.png"
+              src="/images/Djembe.png"
               alt="West African djembe drum"
               className="drum-image"
             />
