@@ -908,9 +908,9 @@ section:not(.hero)::after {
     padding: 16px 6%;
   }
 
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+   nav {
+    flex-direction: row;
+    align-items: center;
     gap: 15px;
   }
 
@@ -933,10 +933,10 @@ section:not(.hero)::after {
     padding: 100px 7%;
   }
 
-  .hero {
-    min-height: 90vh;
-    padding: 170px 7% 100px;
-  }
+ .hero {
+  min-height: 90vh;
+  padding: 210px 7% 100px;
+}
 
   .hero-overlay {
     background:
@@ -7632,5 +7632,463 @@ section:not(.hero)::after {
 
   .home-intro-links a strong {
     font-size: 1.15rem;
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE LAYOUT FIX
+   - Keeps navigation in normal document flow on phones
+   - Prevents navigation from covering page headings
+   - Keeps Experience Senegal fully visible
+   - Stacks Cultural Heritage content for readable mobile text
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* ---------- MOBILE NAVIGATION ---------- */
+
+  html {
+    scroll-padding-top: 20px;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    left: auto;
+    width: 100%;
+    padding: 12px 6%;
+    z-index: 1000;
+  }
+
+  nav {
+    width: 100%;
+    max-width: none;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-logo {
+    align-self: center;
+  }
+
+  .nav-logo img,
+  nav > a img {
+    width: 135px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .nav-links,
+  nav div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+  }
+
+  .nav-links a,
+  nav div a {
+    padding: 5px 0;
+    font-size: 0.52rem;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+  }
+
+  .nav-links .nav-donate {
+    margin-left: 0;
+    padding: 7px 12px;
+  }
+
+  /* ---------- GLOBAL MOBILE SECTIONS ---------- */
+
+  section {
+    width: 100%;
+    max-width: 100%;
+    padding: 90px 6%;
+  }
+
+  .section-label {
+    margin-bottom: 22px;
+    font-size: 0.56rem;
+    letter-spacing: 0.22em;
+  }
+
+  /* ---------- HOME HERO ---------- */
+
+  .hero {
+    width: 100%;
+    min-height: auto;
+    padding: 80px 7% 90px;
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(3rem, 14vw, 5.2rem);
+    line-height: 0.88;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    margin-top: 28px;
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .hero-portrait {
+    width: 100%;
+  }
+
+  .hero-frame {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  /* ---------- ABOUT / CULTURAL HERITAGE ---------- */
+
+  .culture-section {
+    padding: 100px 6% 100px;
+  }
+
+  .culture-layout {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 45px;
+  }
+
+  .culture-heading,
+  .culture-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .culture-heading h2 {
+    max-width: 100%;
+    font-size: clamp(3rem, 14vw, 5rem);
+    line-height: 0.88;
+    overflow-wrap: normal;
+  }
+
+  .culture-content {
+    margin: 0;
+  }
+
+  .culture-content p {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .culture-content .culture-lead {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .culture-image-wrap,
+  .heritage-image-wrap {
+    width: 100%;
+    max-width: 100%;
+    margin: 60px 0 0;
+  }
+
+  .heritage-feature {
+    padding: 100px 6% 100px;
+  }
+
+  .heritage-feature-layout {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 45px;
+  }
+
+  .heritage-feature-heading,
+  .heritage-feature-image-wrap {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .heritage-feature-heading h2 {
+    font-size: clamp(3rem, 14vw, 5rem);
+    line-height: 0.88;
+  }
+
+  /* ---------- EXPERIENCE SENEGAL ---------- */
+
+  .involvement-senegal {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    display: block;
+    padding: 90px 6% 100px;
+    overflow: hidden;
+  }
+
+  .involvement-senegal::before {
+    left: -15px;
+    bottom: 5px;
+    font-size: clamp(7rem, 30vw, 11rem);
+    line-height: 0.75;
+  }
+
+  .senegal-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .senegal-content h2 {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0 30px;
+    font-size: clamp(3.5rem, 17vw, 6rem);
+    line-height: 0.82;
+    overflow-wrap: normal;
+  }
+
+  .senegal-content > p:not(.eyebrow) {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 35px;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .senegal-button {
+    width: 100%;
+    max-width: 100%;
+    min-height: 54px;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* ---------- EXPERIENCE / LARGE STATEMENTS ---------- */
+
+  .experience-statement {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 70px;
+    padding: 50px 0 55px;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .experience-statement p {
+    max-width: 100%;
+    font-size: clamp(3.8rem, 19vw, 7rem);
+    line-height: 0.72;
+    overflow-wrap: anywhere;
+  }
+
+  /* ---------- GENERAL MOBILE HEADINGS ---------- */
+
+  .mission-section h2,
+  .programs-section h2,
+  .involved-section > h2 {
+    max-width: 100%;
+    font-size: clamp(3rem, 14vw, 5.2rem);
+    line-height: 0.88;
+  }
+
+  .program-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 32px 0;
+  }
+
+  .program-number {
+    padding-top: 0;
+  }
+
+  /* ---------- PREVENT HORIZONTAL OVERFLOW ---------- */
+
+  .culture-section *,
+  .heritage-feature *,
+  .involvement-senegal *,
+  .hero *,
+  .involved-section * {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 420px) {
+
+  header {
+    padding: 10px 5%;
+  }
+
+  .nav-logo img,
+  nav > a img {
+    width: 120px;
+  }
+
+  .nav-links,
+  nav div {
+    gap: 5px 9px;
+  }
+
+  .nav-links a,
+  nav div a {
+    font-size: 0.48rem;
+    letter-spacing: 0.09em;
+  }
+
+  .nav-links .nav-donate {
+    padding: 6px 9px;
+  }
+
+  .hero {
+    padding: 65px 6% 80px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
+  }
+
+  .culture-heading h2,
+  .heritage-feature-heading h2 {
+    font-size: clamp(2.8rem, 14vw, 4.4rem);
+  }
+
+  .senegal-content h2 {
+    font-size: clamp(3.2rem, 17vw, 5rem);
+  }
+}
+
+
+
+/* =========================================================
+   MOBILE TEXT OVERFLOW FIX
+   Only oversized text scrolls horizontally.
+   Normal Founder page layout stays untouched.
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Keep normal headings wrapping naturally */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    min-width: 0;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  /*
+     Large headings/statements:
+     the parent becomes the scroll window
+     only when the heading needs more width.
+  */
+
+  .programs-heading,
+  .culture-heading,
+  .mission-heading,
+  .founder-content,
+  .founder-section,
+  .founder-closing,
+  .senegal-content,
+  .experience-statement,
+  .program-text,
+  .programs-closing {
+
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .programs-heading::-webkit-scrollbar,
+  .culture-heading::-webkit-scrollbar,
+  .mission-heading::-webkit-scrollbar,
+  .founder-content::-webkit-scrollbar,
+  .founder-section::-webkit-scrollbar,
+  .founder-closing::-webkit-scrollbar,
+  .senegal-content::-webkit-scrollbar,
+  .experience-statement::-webkit-scrollbar,
+  .program-text::-webkit-scrollbar,
+  .programs-closing::-webkit-scrollbar {
+    display: none;
+  }
+
+  /*
+     Only the oversized text gets its natural width.
+     This prevents ugly "PROGRAM / S" wrapping.
+  */
+
+  .programs-heading h1,
+  .culture-heading h2,
+  .mission-heading h2,
+  .founder-content h1,
+  .founder-section h2,
+  .founder-closing h2,
+  .senegal-content h2,
+  .experience-statement p,
+  .program-text h2,
+  .programs-closing h2 {
+
+    width: max-content;
+    max-width: none;
+    min-width: max-content;
+
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  /* Normal paragraphs must NEVER become giant horizontal lines */
+
+  p {
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  /* Images and media stay inside the phone */
+
+  img,
+  video,
+  svg,
+  iframe {
+    max-width: 100%;
   }
 }
