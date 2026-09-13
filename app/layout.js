@@ -1,15 +1,89 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Baye Fall Djembe Foundation",
+  metadataBase: new URL("https://bayefalldjembefoundation.org"),
+
+  title: {
+    default: "Baye Fall Djembe Foundation | Brother Ghana & Ghana Mbaye",
+    template: "%s | Baye Fall Djembe Foundation",
+  },
+
   description:
-    "Connecting communities through West African culture, music, education, and heritage.",
+    "Baye Fall Djembe Foundation, founded by Ghana Mbaye, also known as Brother Ghana, preserves and shares West African cultural heritage through djembe, music, education, cultural exchange, and community connection.",
+
+  keywords: [
+    "Baye Fall Djembe Foundation",
+    "Baye Fall Djembe",
+    "Ghana Mbaye",
+    "Brother Ghana",
+    "Brother Ghana Djembe",
+    "Ghana Mbaye Djembe",
+    "West African drumming",
+    "African drumming",
+    "Djembe",
+    "Senegalese drumming",
+    "West African culture",
+    "West African heritage",
+    "Senegal cultural exchange",
+    "African cultural education",
+  ],
+
+  authors: [
+    {
+      name: "Ghana Mbaye",
+    },
+  ],
+
+  creator: "Baye Fall Djembe Foundation",
+  publisher: "Baye Fall Djembe Foundation",
+
+  alternates: {
+    canonical: "https://bayefalldjembefoundation.org",
+  },
+
+  openGraph: {
+    title: "Baye Fall Djembe Foundation | Brother Ghana & Ghana Mbaye",
+    description:
+      "Discover the Baye Fall Djembe Foundation, founded by Ghana Mbaye — Brother Ghana — and dedicated to preserving West African cultural heritage through music, education, and cultural exchange.",
+    url: "https://bayefalldjembefoundation.org",
+    siteName: "Baye Fall Djembe Foundation",
+    type: "website",
+    locale: "en_US",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Baye Fall Djembe Foundation",
+      url: "https://bayefalldjembefoundation.org",
+      description:
+        "The Baye Fall Djembe Foundation preserves and shares West African cultural heritage through music, education, cultural exchange, and community.",
+      founder: {
+        "@type": "Person",
+        name: "Ghana Mbaye",
+        alternateName: "Brother Ghana",
+      },
+    }),
+  }}
+/>
+
         <header>
           <nav>
             <a href="/" className="nav-logo">

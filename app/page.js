@@ -12,8 +12,10 @@ export default function Home() {
           </h1>
 
           <p className="hero-description">
-            Preserving West African heritage through music, education,
-            cultural exchange, and transformative experiences.
+            The Baye Fall Djembe Foundation, founded by Ghana Mbaye —
+            Brother Ghana — preserves and shares West African heritage
+            through music, education, cultural exchange, and transformative
+            experiences.
           </p>
 
           <a href="/about" className="hero-button">
@@ -25,7 +27,7 @@ export default function Home() {
           <div className="hero-frame">
             <img
               src="/images/hero-dad.png"
-              alt="Founder of the Baye Fall Djembe Foundation"
+              alt="Ghana Mbaye, also known as Brother Ghana, founder of the Baye Fall Djembe Foundation"
               className="hero-image"
             />
           </div>
@@ -41,7 +43,7 @@ export default function Home() {
         <div className="hero-scroll">
           EXPLORE THE FOUNDATION
         </div>
-            </section>
+      </section>
 
       <section className="home-intro">
         <div className="section-label">02 — THE FOUNDATION</div>
@@ -63,9 +65,11 @@ export default function Home() {
             </p>
 
             <p>
-              The Baye Fall Djembe Foundation creates opportunities
-              for people to connect with West African heritage through
-              music, education, cultural exchange, and community.
+              Founded by master percussionist and cultural educator
+              Ghana Mbaye, also known as Brother Ghana, the Baye Fall
+              Djembe Foundation creates opportunities for people to
+              experience West African heritage through music, education,
+              cultural exchange, and community.
             </p>
 
             <div className="home-intro-links">
